@@ -24,12 +24,13 @@ public class PlayerMovement : MonoBehaviour
 	void FixedUpdate()
     {
 		isGrounded = Physics2D.OverlapArea(groundedCheckLeft.position, groundedCheckRight.position);
-  //calcul d'un déplacement set d'une velocity pour pouvoir avoir un mouvement continue 
+    //calcul d'un déplacement set d'une velocity pour pouvoir avoir un mouvement continue 
 		float horizontalMovoment = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
   		
   		if(Input.GetButtonDown("Jump") && isGrounded){
         //si Jump alors boolean jump = true
   			isJumping = true;
+        isGrounded = false;
   		}
       //fonction d'envoie d'un mouvement
   		MovePlayer(horizontalMovoment);
@@ -48,7 +49,6 @@ public class PlayerMovement : MonoBehaviour
       }
       else if( velocity < -0.1f){
         spriteRenderer.flipX = true;
-
       }
     }
     //crée un "SmoothDamp" qui est un déplacement "Smooth" pour permettre de faire avancer notre charcater
@@ -57,9 +57,8 @@ public class PlayerMovement : MonoBehaviour
     	Vector3 targetVelocity = new Vector2(_horizontalMovement,rb.velocity.y);
     	rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
     	if(isJumping == true){
-    		rb.AddForce(new Vector2(0f , jumpForce));
     		isJumping = false;
-        isGrounded = false;
+        rb.AddForce(new Vector2(0f , jumpForce));
     	}
     }
 }

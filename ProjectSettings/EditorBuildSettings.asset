@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Level_Jacques.unity
+    guid: d6adf0ecc5dbf694d96406f3f32d2129
   m_configObjects: {}
