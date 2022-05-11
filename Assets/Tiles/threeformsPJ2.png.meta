@@ -116,9 +116,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 80
-        height: 110
+        y: 8
+        width: 79
+        height: 94
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -136,10 +136,10 @@ TextureImporter:
       name: threeformsPJ2_1
       rect:
         serializedVersion: 2
-        x: 80
-        y: 0
-        width: 80
-        height: 110
+        x: 88
+        y: 7
+        width: 122
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,9 +157,9 @@ TextureImporter:
       name: threeformsPJ2_2
       rect:
         serializedVersion: 2
-        x: 160
+        x: 231
         y: 0
-        width: 80
+        width: 86
         height: 110
       alignment: 0
       pivot: {x: 0, y: 0}
