@@ -6,6 +6,8 @@ public class PlayerMovement : MonoBehaviour
   public float jumpForce; 
   public bool isGrounded;
   public bool isJumping;
+  
+  //yo les boys
  
  //var a link dans la scene (ici 2 point placer sur les pieds du joueurs)
   public Transform groundedCheckLeft;
