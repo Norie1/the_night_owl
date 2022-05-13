@@ -2,63 +2,112 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-  public float moveSpeed;
-  public float jumpForce; 
-  public bool isGrounded;
-  public bool isJumping;
-  
-  //yo les boys
- 
- //var a link dans la scene (ici 2 point placer sur les pieds du joueurs)
-  public Transform groundedCheckLeft;
-  public Transform groundedCheckRight;
-  
-  public Rigidbody2D rb;
-  public SpriteRenderer spriteRenderer;
-  public Animator animator; 
- //initialise un vecteur3 a zero, unity même en 2D a besoin d'un vecteur 3
- //parfois on devras parfois crée un vecteur 2 et cast un vecteur 3 a celui ci, unity va mettre la position z a zero,
- //il n'y a pas vraient de 2d unique
-  private Vector3 velocity = Vector3.zero;
+    public float moveSpeed;
+    public float climbSpeed;
+    public float jumpForce;
+    private bool isJumping;
+    private bool isGrounded;
+    [HideInInspector] public bool isClimbing;
 
-	void FixedUpdate()
+    public Rigidbody2D rb;
+    public Animator animator;
+    public SpriteRenderer spriteRenderer;
+    public CapsuleCollider2D playerCollider;
+    private Vector3 velocity = Vector3.zero;
+
+    public Transform groundCheck;
+    public float groundCheckRadius;
+    public LayerMask collisionLayer;
+    private float horizontalMovement;
+    private float verticalMovement;
+
+    public static PlayerMovement instance;
+	
+    private void Awake()
     {
-		isGrounded = Physics2D.OverlapArea(groundedCheckLeft.position, groundedCheckRight.position);
-    //calcul d'un déplacement set d'une velocity pour pouvoir avoir un mouvement continue 
-		float horizontalMovoment = Input.GetAxis("Horizontal") * moveSpeed * Time.deltaTime;
-  		
-  		if(Input.GetButtonDown("Jump") && isGrounded){
-        //si Jump alors boolean jump = true
-  			isJumping = true;
-        isGrounded = false;
-  		}
-      //fonction d'envoie d'un mouvement
-  		MovePlayer(horizontalMovoment);
-      //flip x si besoin 
-      flip(rb.velocity.x);
+        if (instance != null)
+        {
+            Debug.LogWarning("Il y a plus d'une instance PlayerMovement dans la scène");
+            return;
+        }
 
-      //on prend la valeur absolu de x car si on ce déplace dans le sens inverse de l'axe (x ou y) ici il y aurras des valeurs négatives, 
-      //donc pour cela nous devons prendre la valeur absolus  
-  		float characterVelocity = Mathf.Abs(rb.velocity.x);
-  		animator.SetFloat("Speed" , characterVelocity);
+        instance = this;
     }
-    //calcule par rapport a la position de base du character si il doit flip (tourner) a gauche ou a droite
-    void flip(float velocity){
-      if(velocity > 0.1f){
-        spriteRenderer.flipX = false;
-      }
-      else if( velocity < -0.1f){
-        spriteRenderer.flipX = true;
-      }
+
+    void Update()
+    {
+        //On récupère mouvement horizontal
+        horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
+
+        //On récupère mouvement vertical
+        verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
+        
+        if(Input.GetButtonDown("Jump") && isGrounded && !isClimbing)
+        {
+            isJumping = true;
+        }
+
+        Flip(rb.velocity.x);
+
+        float characterVelocity = Mathf.Abs(rb.velocity.x);
+        animator.SetFloat("Speed", characterVelocity);
+        animator.SetBool("isClimbing", isClimbing);
     }
-    //crée un "SmoothDamp" qui est un déplacement "Smooth" pour permettre de faire avancer notre charcater
-    void MovePlayer(float _horizontalMovement){
-    	
-    	Vector3 targetVelocity = new Vector2(_horizontalMovement,rb.velocity.y);
-    	rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-    	if(isJumping == true){
-    		isJumping = false;
-        rb.AddForce(new Vector2(0f , jumpForce));
-    	}
+
+    void FixedUpdate()
+    {
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
+        MovePlayer(horizontalMovement, verticalMovement);
+    }
+
+    void MovePlayer(float _horizontalMovement, float _verticalMovement)
+    {
+        if (!isClimbing)
+        {   
+            //Déplacement horizontal
+            Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+   
+            if(isJumping){
+                rb.AddForce(new Vector2(0f, jumpForce));
+                isJumping = false;
+            }
+        }
+        else
+        {
+            //Déplacement vertical
+            Vector3 targetVelocity = new Vector2(0f, _verticalMovement);
+            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        }
+    }
+
+    void Flip(float _velocity){
+        if(_velocity > 0.1f){
+            spriteRenderer.flipX = false;
+        }
+        else if (_velocity < -0.1f){
+            spriteRenderer.flipX = true;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision){
+        if(collision.gameObject.tag == "Platform")
+        {
+            isGrounded = true;
+        }
+    }
+
+    void OnTriggerExit2D(Collider2D collision){
+        if(collision.gameObject.tag == "Platform")
+        {
+            isGrounded = false;
+        }
+    }
+	
+	//Crée Gizmos pour le cercle de groundCheck
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
     }
 }
