@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     private bool isJumping;
     private bool isGrounded;
-    public bool isClimbing;
+    [HideInInspector] public bool isClimbing;
 
     public Rigidbody2D rb;
     public Animator animator;
