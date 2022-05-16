@@ -1,14 +1,16 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using System;
 public class transition_Shop : MonoBehaviour
 {
-     public string sceneName;
-     private void OnTriggerEnter2D(Collider2D collision)
+    public bool trigger = false;
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.CompareTag("Player"))
+        Debug.Log(collision.gameObject.tag);           
+        if(collision.gameObject.tag == "Player" )
         {
-            SceneManager.LoadScene(sceneName);
+            trigger = true;
+            SceneManager.LoadScene("Level_Shop");
         }
     }
 }

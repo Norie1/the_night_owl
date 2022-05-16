@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovementTemp : MonoBehaviour
 {
@@ -12,12 +13,12 @@ public class PlayerMovementTemp : MonoBehaviour
     public Rigidbody2D rb;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
-    public CapsuleCollider2D playerCollider;
+   
     private Vector3 velocity = Vector3.zero;
 
     public Transform groundCheck;
     public float groundCheckRadius;
-    public LayerMask collisionLayer;
+
     private float horizontalMovement;
     private float verticalMovement;
 
@@ -42,7 +43,7 @@ public class PlayerMovementTemp : MonoBehaviour
         // On récupère mouvement vertical
         verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
         
-        if(Input.GetButtonDown("Jump") && isGrounded && !isClimbing)
+        if(Input.GetButtonDown("Jump"))
         {
             isJumping = true;
         }
@@ -56,15 +57,21 @@ public class PlayerMovementTemp : MonoBehaviour
 
     void FixedUpdate()
     {
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
+        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
         MovePlayer(horizontalMovement, verticalMovement);
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
+<<<<<<< Updated upstream:Assets/Scripts/PlayerMovement/PlayerMovementTemp.cs
         if (!isClimbing)
         {   
             // Déplacement horizontal
+=======
+      // if (!isClimbing)
+       // {   
+            //Déplacement horizontal
+>>>>>>> Stashed changes:Assets/Scripts/PlayerMovement.cs
             Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
    
@@ -72,6 +79,7 @@ public class PlayerMovementTemp : MonoBehaviour
                 rb.AddForce(new Vector2(0f, jumpForce));
                 isJumping = false;
             }
+<<<<<<< Updated upstream:Assets/Scripts/PlayerMovement/PlayerMovementTemp.cs
         }
         else
         {
@@ -79,13 +87,22 @@ public class PlayerMovementTemp : MonoBehaviour
             Vector3 targetVelocity = new Vector2(0f, _verticalMovement);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
         }
+=======
+       // }
+       // else
+       // {
+            //Déplacement vertical
+           // Vector3 targetVelocity = new Vector2(0f, _verticalMovement);
+           // rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+      //  }
+>>>>>>> Stashed changes:Assets/Scripts/PlayerMovement.cs
     }
 
     void Flip(float _velocity){
         if(_velocity > 0.1f){
             spriteRenderer.flipX = false;
         }
-        else if (_velocity < -0.1f){
+        else if (_velocity < -0.1f){ 
             spriteRenderer.flipX = true;
         }
     }
@@ -93,12 +110,16 @@ public class PlayerMovementTemp : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision){
         if(collision.gameObject.tag == "Platform")
         {
-            isGrounded = true;
-        }
+          isGrounded = true;
+       }
+       else if (collision.gameObject.tag == "Door_Shop"){
+             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+
+       }
     }
 
-    void OnTriggerExit2D(Collider2D collision){
-        if(collision.gameObject.tag == "Platform")
+ void OnTriggerExit2D(Collider2D collision){
+       if(collision.gameObject.tag == "Platform")
         {
             isGrounded = false;
         }
