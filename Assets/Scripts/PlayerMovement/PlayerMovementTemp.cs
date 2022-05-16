@@ -63,15 +63,10 @@ public class PlayerMovementTemp : MonoBehaviour
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-<<<<<<< Updated upstream:Assets/Scripts/PlayerMovement/PlayerMovementTemp.cs
-        if (!isClimbing)
-        {   
-            // Déplacement horizontal
-=======
+
       // if (!isClimbing)
        // {   
             //Déplacement horizontal
->>>>>>> Stashed changes:Assets/Scripts/PlayerMovement.cs
             Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
    
@@ -79,15 +74,7 @@ public class PlayerMovementTemp : MonoBehaviour
                 rb.AddForce(new Vector2(0f, jumpForce));
                 isJumping = false;
             }
-<<<<<<< Updated upstream:Assets/Scripts/PlayerMovement/PlayerMovementTemp.cs
-        }
-        else
-        {
-            // Déplacement vertical
-            Vector3 targetVelocity = new Vector2(0f, _verticalMovement);
-            rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-        }
-=======
+
        // }
        // else
        // {
@@ -95,7 +82,6 @@ public class PlayerMovementTemp : MonoBehaviour
            // Vector3 targetVelocity = new Vector2(0f, _verticalMovement);
            // rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
       //  }
->>>>>>> Stashed changes:Assets/Scripts/PlayerMovement.cs
     }
 
     void Flip(float _velocity){
