@@ -301,6 +301,7 @@ GameObject:
   - component: {fileID: 220926061}
   - component: {fileID: 220926066}
   - component: {fileID: 220926067}
+  - component: {fileID: 220926068}
   - component: {fileID: 220926063}
   m_Layer: 0
   m_Name: Player
@@ -356,35 +357,22 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &220926063
-MonoBehaviour:
+--- !u!70 &220926063
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 220926060}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3db73eeee28ba4f61bf00f154ba7a94c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  movementSpeed: 250
-  jumpForce: 250
-  isGrounded: 0
-  onTheWallR: 0
-  onTheWallL: 0
-  groundCheckRight: {fileID: 1024686993}
-  groundCheckLeft: {fileID: 2040355423}
-  WallCheckRUp: {fileID: 0}
-  WallCheckRDown: {fileID: 0}
-  WallCheckLUp: {fileID: 0}
-  WallCheckLDown: {fileID: 0}
-  fallDetector: {fileID: 0}
-  rb: {fileID: 220926062}
-  animator: {fileID: 220926067}
-  spriteRenderer: {fileID: 220926064}
-  playerHealth: {fileID: 0}
-  inventory: {fileID: 0}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.028453827, y: -0.036585808}
+  m_Size: {x: 0.81301117, y: 1.2113819}
+  m_Direction: 0
 --- !u!212 &220926064
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -487,6 +475,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &220926068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220926060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0517f540890ab49ddb8c7f09182d23d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 250
+  climbSpeed: 250
+  jumpForce: 250
+  isJumping: 0
+  isGrounded: 0
+  isClimbing: 0
+  rb: {fileID: 220926062}
+  animator: {fileID: 220926067}
+  spriteRenderer: {fileID: 220926064}
+  playerCollider: {fileID: 220926063}
+  velocity: {x: 0, y: 0, z: 0}
+  groundCheck: {fileID: 2040355423}
+  groundCheckRadius: 0.5
+  collisionLayer:
+    m_Bits: 4294967295
+  horizontalMovement: 0
+  verticalMovement: 0
 --- !u!1 &298585424
 GameObject:
   m_ObjectHideFlags: 0
