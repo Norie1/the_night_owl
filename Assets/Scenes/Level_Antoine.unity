@@ -301,8 +301,8 @@ GameObject:
   - component: {fileID: 220926061}
   - component: {fileID: 220926066}
   - component: {fileID: 220926067}
-  - component: {fileID: 220926068}
   - component: {fileID: 220926063}
+  - component: {fileID: 220926068}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -484,26 +484,22 @@ MonoBehaviour:
   m_GameObject: {fileID: 220926060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0517f540890ab49ddb8c7f09182d23d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 276e5abc6187548ffbb5c39a26152ba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 250
   climbSpeed: 250
   jumpForce: 250
-  isJumping: 0
-  isGrounded: 0
   isClimbing: 0
   rb: {fileID: 220926062}
   animator: {fileID: 220926067}
   spriteRenderer: {fileID: 220926064}
   playerCollider: {fileID: 220926063}
-  velocity: {x: 0, y: 0, z: 0}
   groundCheck: {fileID: 2040355423}
   groundCheckRadius: 0.5
   collisionLayer:
+    serializedVersion: 2
     m_Bits: 4294967295
-  horizontalMovement: 0
-  verticalMovement: 0
 --- !u!1 &298585424
 GameObject:
   m_ObjectHideFlags: 0

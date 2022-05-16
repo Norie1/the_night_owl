@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovementTemp : MonoBehaviour
 {
     public float moveSpeed;
     public float climbSpeed;
@@ -21,7 +21,7 @@ public class PlayerMovement : MonoBehaviour
     private float horizontalMovement;
     private float verticalMovement;
 
-    public static PlayerMovement instance;
+    public static PlayerMovementTemp instance;
 	
     private void Awake()
     {
