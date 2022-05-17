@@ -104,6 +104,9 @@ public class PlayerMovementTemp_J : MonoBehaviour
         if (collision.gameObject.tag == "Door_Donjon1"){        
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
         }
+        if (collision.gameObject.tag == "Door_Donjon1_Exit"){        
+            SceneManager.LoadScene("Level_Jacques");
+        }
        }
 
  void OnTriggerExit2D(Collider2D collision){
