@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System;
-public class transition_Shop : MonoBehaviour
+using System; 
+public class TransitionShop : MonoBehaviour
 {
     public bool trigger = false;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         Debug.Log(collision.gameObject.tag);           

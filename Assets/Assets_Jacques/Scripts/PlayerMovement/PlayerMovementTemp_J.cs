@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMovementTemp : MonoBehaviour
+public class PlayerMovementTemp_J : MonoBehaviour
 {
 
     public float moveSpeed;
@@ -13,7 +13,7 @@ public class PlayerMovementTemp : MonoBehaviour
     public float jumpForce;
     private bool isJumping;
     private bool isGrounded;
-    [HideInInspector] public bool isClimbing;
+   // [HideInInspector] public bool isClimbing;
 
     public Rigidbody2D rb;
     public Animator animator;
@@ -29,7 +29,7 @@ public class PlayerMovementTemp : MonoBehaviour
     private float horizontalMovement;
     private float verticalMovement;
 
-    public static PlayerMovementTemp instance;
+    public static PlayerMovementTemp_J instance;
 	
     private void Awake()
     {
@@ -57,7 +57,7 @@ public class PlayerMovementTemp : MonoBehaviour
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
         animator.SetFloat("Speed", characterVelocity);
-        animator.SetBool("isClimbing", isClimbing);
+      //  animator.SetBool("isClimbing", isClimbing);
     }
 
     void FixedUpdate()
@@ -100,7 +100,10 @@ public class PlayerMovementTemp : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.gameObject.tag == "Door_Shop"){        
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-                  }
+        }
+        if (collision.gameObject.tag == "Door_Donjon1"){        
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+        }
        }
 
  void OnTriggerExit2D(Collider2D collision){
