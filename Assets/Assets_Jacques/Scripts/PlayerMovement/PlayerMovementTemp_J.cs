@@ -11,8 +11,11 @@ public class PlayerMovementTemp_J : MonoBehaviour
     public float moveSpeed;
     public float climbSpeed;
     public float jumpForce;
+    public float speedDashing;
     private bool isJumping;
     private bool isGrounded;
+    private bool isDashing = false;
+    private bool canDashing = false;
    // [HideInInspector] public bool isClimbing;
 
     public Rigidbody2D rb;
@@ -35,6 +38,7 @@ public class PlayerMovementTemp_J : MonoBehaviour
     {
         if (instance != null)
         {
+            Debug.Log("yop");
             Debug.LogWarning("Il y a plus d'une instance PlayerMovement dans la scène");
             return;
         }
@@ -48,7 +52,11 @@ public class PlayerMovementTemp_J : MonoBehaviour
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
         // On récupère mouvement vertical
         verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetKeyDown(KeyCode.R))
+        {
+            isDashing = true;
+        }
+        else if(Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
         }
@@ -62,14 +70,36 @@ public class PlayerMovementTemp_J : MonoBehaviour
 
     void FixedUpdate()
     {      
+
         isGrounded = Physics2D.OverlapArea(groundedCheckLeft.position, groundedCheckRight.position);
+    if(isDashing){
+        DashPlayer(horizontalMovement);
+    }
         MovePlayer(horizontalMovement, verticalMovement);
+    }
+
+    void DashPlayer(float _horizontalMovement)
+    {
+        //target du Dash
+         Vector3 target;
+        if(spriteRenderer.flipX == true){
+            //move Left
+            target = new Vector3(Mathf.Abs(_horizontalMovement)-speedDashing,0,rb.velocity.y);
+        }
+        else {
+            //move Right
+            target = new Vector3(Mathf.Abs(_horizontalMovement)+speedDashing,0,rb.velocity.y);
+        }
+        //apply target to position player
+        rb.MovePosition(transform.position + target * Time.deltaTime * speedDashing);
+        isDashing = false;
+        //play animation of Dash
+        animator.Play("PlayerDashing");
+
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
-     
-
             //Déplacement horizontal
             Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
@@ -78,14 +108,6 @@ public class PlayerMovementTemp_J : MonoBehaviour
                 isGrounded = false;
                 isJumping = false;
             }
-
-       // }
-       // else
-       // {
-            //Déplacement vertical
-           // Vector3 targetVelocity = new Vector2(0f, _verticalMovement);
-           // rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-      //  }
     }
 
     void Flip(float _velocity){
@@ -111,11 +133,4 @@ public class PlayerMovementTemp_J : MonoBehaviour
 
  void OnTriggerExit2D(Collider2D collision){
     }
-	
-/*	// Crée Gizmos pour le cercle de groundCheck
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }*/
 }
