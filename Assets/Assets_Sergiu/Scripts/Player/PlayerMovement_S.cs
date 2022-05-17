@@ -14,8 +14,8 @@ public class PlayerMovement_S : MonoBehaviour
     private bool superJump;
     private bool doubleJump;
 
-    public Transform groundCheckRight;
-    public Transform groundCheckLeft;    
+    public Transform groundCheck;
+    public LayerMask collisionLayer;
 
     public Transform WallCheckRUp;
     public Transform WallCheckRDown;
@@ -87,7 +87,8 @@ public class PlayerMovement_S : MonoBehaviour
     void FixedUpdate()
     {
         //Verification of proximity with the floor
-        isGrounded = Physics2D.OverlapArea(groundCheckRight.position, groundCheckLeft.position);
+        //Circle radius = 0.34f, to be adapted to Player size if necessary (use OnDrawGizmos to test the radius)
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.34f, collisionLayer);
 
         //Reinitialization of Double/Wall jump when grounded
         if (isGrounded)
