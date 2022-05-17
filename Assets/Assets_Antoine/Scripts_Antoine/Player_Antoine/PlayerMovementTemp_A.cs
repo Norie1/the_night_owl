@@ -49,15 +49,11 @@ public class PlayerMovementTemp_A : MonoBehaviour
         // On récupère mouvement vertical
         verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
         
-        if (Input.GetButtonDown("Jump") && count < 3)
+        if (Input.GetButtonDown("Jump") && count < 2)
         {
             isJumping = true;
             count++;
         }
-        else if (isGrounded) {
-			count = 0;
-		}
-
         Flip(rb.velocity.x);
 
         float characterVelocity = Mathf.Abs(rb.velocity.x);
@@ -69,6 +65,9 @@ public class PlayerMovementTemp_A : MonoBehaviour
     {      
         isGrounded = Physics2D.OverlapArea(groundedCheckLeft.position, groundedCheckRight.position);
         MovePlayer(horizontalMovement, verticalMovement);
+        if (isGrounded) {
+			count = 0;
+		}
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
@@ -78,11 +77,10 @@ public class PlayerMovementTemp_A : MonoBehaviour
             Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
             
-            if (isJumping && count < 3) {
+            if (isJumping && count < 2) {
                 rb.AddForce(new Vector2(0f, jumpForce));
                 isGrounded = false;
                 isJumping = false;
-                count++;
             }
     }
 
