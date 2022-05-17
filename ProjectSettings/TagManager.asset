@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Pnj_Log
+  - Door_Donjon1
+  - Door_Shop
+  - Door_Donjon1_Exit
   layers:
   - Default
   - TransparentFX

@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: bad33ca262b7e4eda973b68c7d57eb17
+=======
+guid: cdf5d24aa0445fd48b31d06b87a00674
+>>>>>>> Stashed changes
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 11400000
