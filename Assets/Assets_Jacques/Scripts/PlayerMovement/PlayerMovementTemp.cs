@@ -22,7 +22,8 @@ public class PlayerMovementTemp : MonoBehaviour
    
     private Vector3 velocity = Vector3.zero;
 
-    public Transform groundCheck;
+    public Transform groundedCheckRight;
+    public Transform groundedCheckLeft;
     public float groundCheckRadius;
 
     private float horizontalMovement;
@@ -45,11 +46,9 @@ public class PlayerMovementTemp : MonoBehaviour
     {
         // On récupère mouvement horizontal
         horizontalMovement = Input.GetAxis("Horizontal") * moveSpeed * Time.fixedDeltaTime;
-
         // On récupère mouvement vertical
         verticalMovement = Input.GetAxis("Vertical") * climbSpeed * Time.fixedDeltaTime;
-        
-        if(Input.GetButtonDown("Jump"))
+        if(Input.GetButtonDown("Jump") && isGrounded)
         {
             isJumping = true;
         }
@@ -62,22 +61,21 @@ public class PlayerMovementTemp : MonoBehaviour
     }
 
     void FixedUpdate()
-    {
-        //isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, collisionLayer);
+    {      
+        isGrounded = Physics2D.OverlapArea(groundedCheckLeft.position, groundedCheckRight.position);
         MovePlayer(horizontalMovement, verticalMovement);
     }
 
     void MovePlayer(float _horizontalMovement, float _verticalMovement)
     {
+     
 
-      // if (!isClimbing)
-       // {   
             //Déplacement horizontal
             Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
             rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
-   
-            if(isJumping){
+            if(isJumping && isGrounded){
                 rb.AddForce(new Vector2(0f, jumpForce));
+                isGrounded = false;
                 isJumping = false;
             }
 
@@ -100,26 +98,18 @@ public class PlayerMovementTemp : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.tag == "Platform")
-        {
-          isGrounded = true;
-       }
         if (collision.gameObject.tag == "Door_Shop"){        
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
                   }
        }
 
  void OnTriggerExit2D(Collider2D collision){
-       if(collision.gameObject.tag == "Platform")
-        {
-            isGrounded = false;
-        }
     }
 	
-	// Crée Gizmos pour le cercle de groundCheck
+/*	// Crée Gizmos pour le cercle de groundCheck
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(groundCheck.position, groundCheckRadius);
-    }
+    }*/
 }
