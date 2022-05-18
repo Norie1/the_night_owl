@@ -26,8 +26,23 @@ public class MovingPlatform : MonoBehaviour
             index = (index+1) % waypoints.Length;
             target = waypoints[index];
         }
+    }
 
-    
+    private void OnTriggerEnter2D(Collider2D collision) 
+    {
+        if(collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(transform);
+        }
+        
+    }
 
+    private void OnTriggerExit2D(Collider2D collision) 
+    {
+        if(collision.CompareTag("Player"))
+        {
+            collision.transform.SetParent(null);
+        }
+        
     }
 }

@@ -10,7 +10,7 @@ public class PlayerHealth : MonoBehaviour
 
     public HealthBar healthBar;
 
-    public PlayerHealth instance;
+    public static PlayerHealth instance;
 
     private void Awake() 
     {

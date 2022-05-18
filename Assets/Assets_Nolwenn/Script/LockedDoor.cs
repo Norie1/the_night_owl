@@ -10,7 +10,7 @@ public class LockedDoor : MonoBehaviour
     private void Update() {
         if(isInRange && Input.GetKeyDown(KeyCode.E) && openable)
         {
-            Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
         }
     }
 
