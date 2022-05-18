@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class HealthBar_J : MonoBehaviour
+public class HealthBar : MonoBehaviour
 {
     public Slider slider;
 
@@ -11,7 +11,7 @@ public class HealthBar_J : MonoBehaviour
 
     }
     public void SetHealth(int health){
-        slider.value= health;
+        slider.value = health;
     }
 
 }
