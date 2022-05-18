@@ -154,7 +154,7 @@ public class PlayerMovement_S : MonoBehaviour
         transform.position = respawnPoint;
         playerHealth.reinitializePlayerHealth();
         spriteRenderer.flipX = false;
-        inventory.reinitializeWallet();
+        //inventory.reinitializeWallet();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
