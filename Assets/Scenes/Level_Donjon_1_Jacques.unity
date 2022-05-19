@@ -1019,7 +1019,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1330643854}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f9b796f3c21b3404685e2ba1fd11c164, type: 3}
+  m_Script: {fileID: 11500000, guid: 1c4948824621eea47be61f6203822632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!212 &1330643857
@@ -11835,6 +11835,7 @@ MonoBehaviour:
   moveSpeed: 250
   climbSpeed: 0
   jumpForce: 500
+  speedDashing: 0
   rb: {fileID: 1859187704}
   animator: {fileID: 1859187709}
   animatorPnjLog: {fileID: 0}
@@ -11890,7 +11891,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1859187707
