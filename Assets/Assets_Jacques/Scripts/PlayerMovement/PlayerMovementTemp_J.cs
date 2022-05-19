@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+
 using UnityEngine.UI;
 
 public class PlayerMovementTemp_J : MonoBehaviour
@@ -15,7 +15,7 @@ public class PlayerMovementTemp_J : MonoBehaviour
     private bool isJumping;
     private bool isGrounded;
     private bool isDashing = false;
-    private bool canDashing = false;
+    //private bool canDashing = false;
    // [HideInInspector] public bool isClimbing;
 
     public Rigidbody2D rb;

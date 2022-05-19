@@ -6,9 +6,9 @@ public class PlayerMovement_S : MonoBehaviour
     public float jumpForce;
 
     private bool isJumping;
-    public bool isGrounded;
-    public bool onTheWallR;
-    public bool onTheWallL;
+    private bool isGrounded;
+    private bool onTheWallR;
+    private bool onTheWallL;
     private bool wallJumpR;
     private bool wallJumpL;
     private bool superJump;
@@ -25,19 +25,18 @@ public class PlayerMovement_S : MonoBehaviour
     private Vector3 respawnPoint;
     public GameObject fallDetector;
 
-    public Rigidbody2D rb;
+    public Rigidbody2D rigidBody;
     public Animator animator;
     public SpriteRenderer spriteRenderer;
 
-    //Import of public methods from PlayerHealth_S and Inventory_s scripts
+    //Import of public methods from PlayerHealth_S scripts
     public PlayerHealth_S playerHealth;
-    public Inventory_S inventory;
 
     private Vector3 velocity = Vector3.zero;
 
     private void Start()
     {
-        //respawnPoint intialization to respawn position of the player
+        //respawnPoint intialization to the initial spawn position of the player
         respawnPoint = transform.position;
     }
 
@@ -87,8 +86,8 @@ public class PlayerMovement_S : MonoBehaviour
     void FixedUpdate()
     {
         //Verification of proximity with the floor
-        //Circle radius = 0.34f, to be adapted to Player size if necessary (use OnDrawGizmos to test the radius)
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.34f, collisionLayer);
+        //groundCheckRadius = 0.38f, to be adapted to Player size if necessary (use OnDrawGizmos to test the radius)
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         //Reinitialization of Double/Wall jump when grounded
         if (isGrounded)
@@ -102,17 +101,17 @@ public class PlayerMovement_S : MonoBehaviour
 
         MovePlayer(horizontalMovement);
 
-        Flip(rb.velocity.x);
+        Flip(rigidBody.velocity.x);
 
         //Movement animation
-        float playerVelocity = Mathf.Abs(rb.velocity.x);
+        float playerVelocity = Mathf.Abs(rigidBody.velocity.x);
         animator.SetFloat("PlayerSpeed", playerVelocity);
     }
 
-    void MovePlayer(float _horizontalMovement)
+    private void MovePlayer(float _horizontalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rb.velocity.y);
-        rb.velocity = Vector3.SmoothDamp(rb.velocity, targetVelocity, ref velocity, .05f);
+        Vector3 targetVelocity = new Vector2(_horizontalMovement, rigidBody.velocity.y);
+        rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocity, ref velocity, .05f);
 
         //Jump////////
         if (isJumping)
@@ -130,12 +129,12 @@ public class PlayerMovement_S : MonoBehaviour
             {
                 impulse = jumpForce;
             }
-            rb.AddForce(new Vector2(0f, impulse));
+            rigidBody.AddForce(new Vector2(0f, impulse));
             isJumping = false;
         }
     }
 
-    void Flip(float _velocity)
+    private void Flip(float _velocity)
     {
         if (_velocity > 0.1f)
         {
@@ -154,7 +153,7 @@ public class PlayerMovement_S : MonoBehaviour
         transform.position = respawnPoint;
         playerHealth.reinitializePlayerHealth();
         spriteRenderer.flipX = false;
-        //inventory.reinitializeWallet();
+        Inventory_S.instance.reinitializeWallet();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

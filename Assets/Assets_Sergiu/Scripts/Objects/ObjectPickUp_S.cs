@@ -1,14 +1,13 @@
 using UnityEngine;
 
-public class ObjectPickUp_S : MonoBehaviour
+public class ObjectPickup_S : MonoBehaviour
 {
-    public Inventory_S inventory;
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            //inventory.addCoins(1);
+            Inventory_S.instance.addCoins(1);
+            //gameObject = object that contains this script
             Destroy(gameObject);
         }
     }

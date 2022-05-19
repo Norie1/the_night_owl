@@ -5,7 +5,7 @@ using UnityEngine;
 //Necessary import for level restart
 using UnityEngine.SceneManagement;
 
-public class RestartLevel : MonoBehaviour
+public class RestartLevel_S : MonoBehaviour
 {
     private void Update()
     {

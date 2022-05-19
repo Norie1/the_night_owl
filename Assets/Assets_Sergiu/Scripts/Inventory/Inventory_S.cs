@@ -8,27 +8,29 @@ public class Inventory_S : MonoBehaviour
 
     private int initialWallet;
 
-    public static Inventory_S inventory;
+    public static Inventory_S instance;
 
-    private void Start()
-    {
-        initialWallet = 0;
-    }
-
+    //Awake is called before any other method (Start/Update/etc)
     private void Awake()
     {
-        if (inventory != null)
+        if (instance != null)
         {
             Debug.LogWarning("Inventory already initialized in current scene");
             return;
         }
 
-        inventory = this;
+        instance = this;
     }
 
-    public void addCoins(int nbOfCoins)
+    private void Start()
     {
-        wallet += nbOfCoins;
+        initialWallet = 0;
+        wallet = initialWallet;
+    }
+
+    public void addCoins(int amount)
+    {
+        wallet += amount;
         walletText.text = wallet.ToString();
     }
 
