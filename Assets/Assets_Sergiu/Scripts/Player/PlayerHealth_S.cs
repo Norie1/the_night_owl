@@ -3,13 +3,13 @@ using System.Collections;
 
 public class PlayerHealth_S : MonoBehaviour
 {
-    public int maxHealth = 100;
-    public int currentHealth;
+    private int maxHealth = 100;
+    private int currentHealth;
 
     private bool isInvincible;
 
-    //Import of public methods from PlayerMovement_S script
-    public PlayerMovement_S playerMovement;
+    
+    private PlayerMovement_S playerMovement;
 
     public SpriteRenderer playerSprite;
 
@@ -18,6 +18,9 @@ public class PlayerHealth_S : MonoBehaviour
     void Start()
     {
         reinitializePlayerHealth();
+
+        //Import of public methods from PlayerMovement_S script
+        playerMovement = gameObject.GetComponent<PlayerMovement_S>();
     }
 
 
@@ -25,7 +28,7 @@ public class PlayerHealth_S : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.H))
         {
-            takeDamage(20);
+            takeDamage(50);
         }
     }
 
@@ -40,6 +43,7 @@ public class PlayerHealth_S : MonoBehaviour
             //Respawn
             if (currentHealth <= 0)
             {
+                reinitializePlayerHealth();
                 //Use of respawn() method from the PlayerMovement_S script
                 playerMovement.respawnPlayer();
             }
@@ -49,22 +53,7 @@ public class PlayerHealth_S : MonoBehaviour
                 StartCoroutine(invincibilityFlash());
                 StartCoroutine(invincible());
             }            
-        }
-        
-    }
-
-    [HideInInspector]
-    public void reinitializePlayerHealth()
-    {
-        currentHealth = maxHealth;
-        healthBar.setHealth(currentHealth);
-    }
-
-    [HideInInspector]
-    public void killPlayer()
-    {
-        currentHealth = 0;
-        healthBar.setHealth(currentHealth);
+        }   
     }
 
     //Apply a flash effect on the player (graphics only) when invincible - after taking damage
@@ -83,10 +72,17 @@ public class PlayerHealth_S : MonoBehaviour
         }
     }
 
-    //Dsiable player invicibility after 3 seconds
+    //Disable player invicibility after 3 seconds
     public IEnumerator invincible()
     {
         yield return new WaitForSeconds(3f);
         isInvincible = false;
+    }
+
+    [HideInInspector]
+    public void reinitializePlayerHealth()
+    {
+        currentHealth = maxHealth;
+        healthBar.setHealth(currentHealth);
     }
 }

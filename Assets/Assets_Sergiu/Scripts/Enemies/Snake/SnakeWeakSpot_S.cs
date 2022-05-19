@@ -2,14 +2,12 @@ using UnityEngine;
 
 public class SnakeWeakSpot_S : MonoBehaviour
 {
-    public GameObject snake;
-
+    //Killed by the player on collision with the weakspot
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Destroy(snake);
-            //Destroy(transform.parent.parent.gameObject);
+            Destroy(transform.parent.parent.gameObject);
         }
     }
 }

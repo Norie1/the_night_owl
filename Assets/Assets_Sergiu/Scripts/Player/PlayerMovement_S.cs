@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class PlayerMovement_S : MonoBehaviour
 {
@@ -22,20 +23,24 @@ public class PlayerMovement_S : MonoBehaviour
     public Transform WallCheckLUp;
     public Transform WallCheckLDown;
 
-    private Vector3 respawnPoint;
+    [HideInInspector]
+    public Vector3 respawnPoint;
     public GameObject fallDetector;
 
     public Rigidbody2D rigidBody;
-    public Animator animator;
+    public Animator playerAnimator;
     public SpriteRenderer spriteRenderer;
-
-    //Import of public methods from PlayerHealth_S scripts
-    public PlayerHealth_S playerHealth;
+    public Animator fadeSystem;
+    
+    private PlayerHealth_S playerHealth;
 
     private Vector3 velocity = Vector3.zero;
 
     private void Start()
     {
+        //Import of public methods from PlayerHealth_S scripts
+        playerHealth = gameObject.GetComponent<PlayerHealth_S>();
+
         //respawnPoint intialization to the initial spawn position of the player
         respawnPoint = transform.position;
     }
@@ -87,6 +92,7 @@ public class PlayerMovement_S : MonoBehaviour
     {
         //Verification of proximity with the floor
         //groundCheckRadius = 0.38f, to be adapted to Player size if necessary (use OnDrawGizmos to test the radius)
+        //collisionLayer = Foundation
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         //Reinitialization of Double/Wall jump when grounded
@@ -105,7 +111,7 @@ public class PlayerMovement_S : MonoBehaviour
 
         //Movement animation
         float playerVelocity = Mathf.Abs(rigidBody.velocity.x);
-        animator.SetFloat("PlayerSpeed", playerVelocity);
+        playerAnimator.SetFloat("PlayerSpeed", playerVelocity);
     }
 
     private void MovePlayer(float _horizontalMovement)
@@ -146,20 +152,20 @@ public class PlayerMovement_S : MonoBehaviour
         }
     }
 
-    //Respawn
     [HideInInspector]
     public void respawnPlayer()
     {
         transform.position = respawnPoint;
-        playerHealth.reinitializePlayerHealth();
         spriteRenderer.flipX = false;
-        Inventory_S.instance.reinitializeWallet();
+        //Inventory_S.instance.reinitializeWallet();
     }
 
+    //Respawn when falling into a hole
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FallDetector")
+        if (collision.tag == "FallDetector_S")
         {
+            playerHealth.takeDamage(10);
             respawnPlayer();
         }
     }
