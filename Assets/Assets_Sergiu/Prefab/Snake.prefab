@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9698eb2ec4187241b2de864870f177d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  snake: {fileID: 5925025574188319965}
 --- !u!1 &5925025574188319965
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,8 +81,8 @@ GameObject:
   - component: {fileID: 5925025573842756710}
   - component: {fileID: 5925025574188319969}
   - component: {fileID: 5925025574188319970}
-  - component: {fileID: 5925025574188319971}
   - component: {fileID: 5925025574188319964}
+  - component: {fileID: 5925025574188319971}
   m_Layer: 7
   m_Name: Snake
   m_TagString: Untagged
@@ -183,24 +182,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0695629, y: 0.87864614}
   m_EdgeRadius: 0
---- !u!114 &5925025574188319971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5925025574188319965}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d495d51e0b4abf745a8acf24413be46f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 3
-  waypoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  damageOnCollision: 10
-  snake: {fileID: 5925025574188319969}
 --- !u!95 &5925025574188319964
 Animator:
   serializedVersion: 3
@@ -220,3 +201,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5925025574188319971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5925025574188319965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d495d51e0b4abf745a8acf24413be46f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  damageOnCollision: 10
+  snake: {fileID: 5925025574188319969}

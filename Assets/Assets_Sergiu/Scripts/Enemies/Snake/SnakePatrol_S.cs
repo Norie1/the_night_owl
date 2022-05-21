@@ -22,10 +22,10 @@ public class SnakePatrol_S : MonoBehaviour
 
     void Update()
     {
-        Vector3 dir = target.position - transform.position;
+        Vector3 direction = target.position - transform.position;
 
         //Snake movement (normalization of the movement vector)
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
 
         //When the enemy is close to the target
         if (Vector3.Distance(transform.position, target.position) < 0.3f)
@@ -43,8 +43,7 @@ public class SnakePatrol_S : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            PlayerHealth_S playerHealth = collision.transform.GetComponent<PlayerHealth_S>();
-            playerHealth.takeDamage(damageOnCollision);
+            PlayerHealth.instance.TakeDamage(damageOnCollision);
         }
     }
 }

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
  
-public class PlayerHealth : MonoBehaviour
+public class PlayerHealthN : MonoBehaviour
 {
     public int maxHealth = 100 ;
     public int currentHealth ;
 
-    public HealthBar healthBar;
+    public HealthBarN healthBar;
 
-    public static PlayerHealth instance;
+    public static PlayerHealthN instance;
 
     private void Awake() 
     {

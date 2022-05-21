@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ObjectPickup_S : MonoBehaviour
+public class ObjectPickup : MonoBehaviour
 {
-    public static ObjectPickup_S instance;
+    public static ObjectPickup instance;
 
     private void Awake()
     {
@@ -16,7 +16,7 @@ public class ObjectPickup_S : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerHealth_S.instance.playerDeath)
+        if (PlayerHealth.instance.playerDeath)
         {
             RestoreObject();
         }
@@ -26,7 +26,7 @@ public class ObjectPickup_S : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Inventory_S.instance.AddCoins(1);
+            Inventory.instance.AddCoins(1);
             RemoveObject();
         }
     }

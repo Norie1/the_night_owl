@@ -1,20 +1,20 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerHealth_S : MonoBehaviour
+public class PlayerHealth : MonoBehaviour
 {
     private int maxHealth = 100;
     private int currentHealth;
 
     private bool isInvincible;
 
-    public HealthBar_S healthBar;
+    public HealthBar healthBar;
     public SpriteRenderer playerSprite;
 
-    private PlayerMovement_S playerMovement;
-    private Inventory_S inventory;
+    private PlayerMovement playerMovement;
+    private Inventory inventory;
 
-    public static PlayerHealth_S instance;
+    public static PlayerHealth instance;
 
     //Attribute used by enemies and pickups to know when to respawn
     [HideInInspector]
@@ -37,8 +37,8 @@ public class PlayerHealth_S : MonoBehaviour
         ResetPlayerHealth();
 
         //Import of public methods and attributes from PlayerMovement script
-        playerMovement = PlayerMovement_S.instance;
-        inventory = Inventory_S.instance;
+        playerMovement = PlayerMovement.instance;
+        inventory = Inventory.instance;
     }
 
 
@@ -49,10 +49,9 @@ public class PlayerHealth_S : MonoBehaviour
             TakeDamage(50);
         }
 
-        //Appuyer sur J ajoute 20HP au joueur
         if (Input.GetKeyDown(KeyCode.J))
         {
-            HealPlayer(20);
+            HealPlayer(50);
         }
     }
 
@@ -107,7 +106,7 @@ public class PlayerHealth_S : MonoBehaviour
         playerDeath = false;
     }
 
-    //Apply a flash effect on the player (graphics only) when invincible - after taking damage
+    //Apply a flash effect on the player (graphics only) when invincible (after taking damage)
     public IEnumerator InvincibilityFlash()
     {
         while (isInvincible)

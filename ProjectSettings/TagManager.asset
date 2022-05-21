@@ -9,8 +9,8 @@ TagManager:
   - Door_Shop
   - Door_Donjon1_Exit
   - Foundation_S
-  - PlayerSpawn_S
-  - FallDetector_S
+  - PlayerSpawn
+  - FallDetector
   layers:
   - Default
   - TransparentFX

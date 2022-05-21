@@ -1,16 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Inventory_S : MonoBehaviour
+public class Inventory : MonoBehaviour
 {
     public int wallet;
     public Text walletText;
 
     private int initialWallet;
 
-    public static Inventory_S instance;
+    public static Inventory instance;
 
-    //Awake is called before any other method (Start/Update/etc)
     private void Awake()
     {
         if (instance != null)

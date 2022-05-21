@@ -1,12 +1,16 @@
 using UnityEngine;
 using System.Collections;
 
-public class PlayerMovement_S : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public float movementSpeed;
     public float jumpForce;
+    public float dashSpeed;
+
+    private float horizontalMovement;
 
     private bool isJumping;
+    private bool activeDash;
     private bool isGrounded;
     private bool onTheWallR;
     private bool onTheWallL;
@@ -27,23 +31,23 @@ public class PlayerMovement_S : MonoBehaviour
     public Vector3 respawnPoint;
     public GameObject fallDetector;
 
-    public Rigidbody2D rigidBody;
-    public Animator playerAnimator;
-    public SpriteRenderer spriteRenderer;
-    public Animator fadeSystem;
+    
+    private Rigidbody2D rigidBody;
+    private Animator playerAnimator;
+    private SpriteRenderer spriteRenderer;
 
     private Vector3 velocity = Vector3.zero;
 
-    private PlayerHealth_S playerHealth;
-    private Inventory_S inventory;
+    private PlayerHealth playerHealth;
+    private Inventory inventory;
 
-    public static PlayerMovement_S instance;
+    public static PlayerMovement instance;
 
     private void Awake()
     {
         if (instance != null)
         {
-            Debug.LogWarning("player movement already initialized.");
+            Debug.LogWarning("Player movement already initialized.");
             return;
         }
         instance = this;
@@ -54,9 +58,15 @@ public class PlayerMovement_S : MonoBehaviour
         //respawnPoint intialization to the initial spawn position of the player
         respawnPoint = transform.position;
 
-        //Import of public methods and attributes from PlayerHealth and Inventory scripts
-        playerHealth = PlayerHealth_S.instance;
-        inventory = Inventory_S.instance;
+        activeDash = true;
+
+        //Import of public methods and attributes from PlayerHealth script
+        playerHealth = PlayerHealth.instance;
+
+        //Importing the rigid body, animator and the sprite renderer of the player
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        playerAnimator = gameObject.GetComponent<Animator>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -95,7 +105,11 @@ public class PlayerMovement_S : MonoBehaviour
                 isJumping = true;
                 doubleJump = false;
             }
-            
+        }
+        if (Input.GetKeyDown(KeyCode.X) && activeDash)
+        {
+            StartCoroutine(Dash(horizontalMovement));
+            activeDash = false;
         }
 
         //Fall detector following the player
@@ -105,8 +119,7 @@ public class PlayerMovement_S : MonoBehaviour
     void FixedUpdate()
     {
         //Verification of proximity with the floor
-        //groundCheckRadius = 0.38f, to be adapted to Player size if necessary (use OnDrawGizmos to test the radius)
-        //collisionLayer = Foundation
+        //groundCheckRadius = 0.38f, to be adapted to the Player size if necessary (use OnDrawGizmos to test the radius)
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         //Reinitialization of Double/Wall jump when grounded
@@ -117,7 +130,7 @@ public class PlayerMovement_S : MonoBehaviour
             wallJumpR = true;
         }
 
-        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;        
+        horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
 
         MovePlayer(horizontalMovement);
 
@@ -154,6 +167,33 @@ public class PlayerMovement_S : MonoBehaviour
         }
     }
 
+    private IEnumerator Dash(float _horizontalMovement)
+    {
+        //Dash destination
+        Vector3 destination;
+        
+
+        //Move player to the target
+        if (spriteRenderer.flipX == true)
+        {
+            //Right dash
+            destination = new Vector3(Mathf.Abs(_horizontalMovement) - dashSpeed, 0, rigidBody.velocity.y);
+        }
+        else
+        {
+            //Left dash
+            destination = new Vector3(Mathf.Abs(_horizontalMovement) + dashSpeed, 0, rigidBody.velocity.y);
+        }
+
+        rigidBody.MovePosition(transform.position + destination * Time.deltaTime * dashSpeed);
+        //2 second delay before reactivating the dash
+        yield return new WaitForSeconds(2f);
+        activeDash = true;
+
+        //Play animation of Dash
+        //playerAnimator.Play("PlayerDashing");
+    }
+
     private void Flip(float _velocity)
     {
         if (_velocity > 0.1f)
@@ -176,7 +216,7 @@ public class PlayerMovement_S : MonoBehaviour
     //Respawn when falling into a hole
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FallDetector_S")
+        if (collision.tag == "FallDetector")
         {
             playerHealth.TakeDamage(10);
             RespawnPlayer();
