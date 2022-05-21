@@ -7,17 +7,17 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float dashSpeed;
 
-    private float horizontalMovement;
+    public float horizontalMovement;
 
-    private bool isJumping;
-    private bool activeDash;
-    private bool isGrounded;
-    private bool onTheWallR;
-    private bool onTheWallL;
-    private bool wallJumpR;
-    private bool wallJumpL;
-    private bool superJump;
-    private bool doubleJump;
+    public bool isJumping;
+    public bool activeDash;
+    public bool isGrounded;
+    public bool onTheWallR;
+    public bool onTheWallL;
+    public bool wallJumpR;
+    public bool wallJumpL;
+    public bool superJump;
+    public bool doubleJump;
 
     public Transform groundCheck;
     public LayerMask collisionLayer;
