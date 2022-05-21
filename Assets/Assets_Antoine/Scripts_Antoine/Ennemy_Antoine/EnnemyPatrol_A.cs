@@ -36,8 +36,8 @@ public class EnnemyPatrol_A : MonoBehaviour
     {
       if (collision.transform.gameObject.tag == "Player")
       {
-        Player_Health_A playerHealth = collision.transform.GetComponent<Player_Health_A>();
-        playerHealth.TakeDamages(damageOnCollision);
+        PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamage(damageOnCollision);
       }
     }
 }
