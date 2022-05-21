@@ -76,6 +76,7 @@ GameObject:
   - component: {fileID: 38590340428404401}
   - component: {fileID: 38590340428404406}
   - component: {fileID: 38590340428404405}
+  - component: {fileID: 908554028}
   m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
@@ -142,7 +143,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 3.9840329, y: 1}
+  m_Size: {x: 3.9840329, y: 0.53914857}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -197,20 +198,20 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 1dcaaf5d58256b74685a27e9c54f4682, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: 0.000000029802322}
   m_SpriteTilingProperty:
-    border: {x: 0.34375, y: 0, z: 0.28125, w: 0}
+    border: {x: 0.34375, y: 0.53125, z: 0.28125, w: 0.3125}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 3.9840329, y: 1}
+    newSize: {x: 3.9840329, y: 0.53914857}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9876432, y: 1}
+  m_Size: {x: 3.9876432, y: 0.54537994}
   m_EdgeRadius: 0
 --- !u!61 &38590340428404405
 BoxCollider2D:
@@ -225,19 +226,38 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03170395, y: 0.43219036}
+  m_Offset: {x: 0.03170395, y: 0.2880176}
   m_SpriteTilingProperty:
-    border: {x: 0.34375, y: 0, z: 0.28125, w: 0}
+    border: {x: 0.34375, y: 0.53125, z: 0.28125, w: 0.3125}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 3.9840329, y: 1}
+    newSize: {x: 3.9840329, y: 0.53914857}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7044506, y: 0.24596584}
+  m_Size: {x: 3.7044506, y: 0.13513297}
   m_EdgeRadius: 0
+--- !u!251 &908554028
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38590340428404403}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &38590340518143391
 GameObject:
   m_ObjectHideFlags: 0

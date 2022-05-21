@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
-    public static bool gameIsPaused = false;
+    public bool gameIsPaused = false;
     public GameObject pauseMenuUI;
     public GameObject settingsWindow;
     
@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     void Pause()
     {
         //Disable PlayerMovement
-       PlayerMov.instance.enabled = false;
+       PlayerMovement.instance.enabled = false;
        //Activate pauseMenu
        pauseMenuUI.SetActive(true);
        //Stop time
@@ -38,7 +38,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        PlayerMov.instance.enabled = true;
+        PlayerMovement.instance.enabled = true;
         pauseMenuUI.SetActive(false);
         Time.timeScale = 1;
         gameIsPaused = false;

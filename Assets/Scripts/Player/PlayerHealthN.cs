@@ -8,7 +8,7 @@ public class PlayerHealthN : MonoBehaviour
     public int maxHealth = 100 ;
     public int currentHealth ;
 
-    public HealthBarN healthBar;
+    public HealthBar healthBar;
 
     public static PlayerHealthN instance;
 
