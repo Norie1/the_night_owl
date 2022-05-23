@@ -3,21 +3,21 @@ using System.Collections;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int maxHealth = 100;
-    private int currentHealth;
+    public int maxHealth = 100;
+    public int currentHealth;
 
-    private bool isInvincible;
+    public bool isInvincible;
 
     public HealthBar healthBar;
     public SpriteRenderer playerSprite;
 
-    private PlayerMovement playerMovement;
-    private Inventory inventory;
+    public PlayerMovement playerMovement;
+    public Inventory inventory;
 
     public static PlayerHealth instance;
 
     //Attribute used by enemies and pickups to know when to respawn
-    [HideInInspector]
+    //[HideInInspector]
     public bool playerDeath;
 
     private void Awake()
@@ -55,7 +55,7 @@ public class PlayerHealth : MonoBehaviour
         }
     }
 
-    [HideInInspector]
+    //[HideInInspector]
     public void TakeDamage(int damage)
     {
         if (!isInvincible)
@@ -94,7 +94,7 @@ public class PlayerHealth : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    [HideInInspector]
+    //[HideInInspector]
     public IEnumerator RespawnPlayer()
     {
         playerDeath = true;
@@ -129,7 +129,7 @@ public class PlayerHealth : MonoBehaviour
         isInvincible = false;
     }
 
-    [HideInInspector]
+    //[HideInInspector]
     public void ResetPlayerHealth()
     {
         currentHealth = maxHealth;

@@ -190,12 +190,13 @@ public class PlayerMovement : MonoBehaviour
         }
 
         rigidBody.MovePosition(transform.position + destination * Time.deltaTime * dashSpeed);
+        
+        //Play animation of Dash
+        playerAnimator.Play("PlayerDashing");
+        
         //2 second delay before reactivating the dash
         yield return new WaitForSeconds(2f);
         activeDash = true;
-
-        //Play animation of Dash
-        //playerAnimator.Play("PlayerDashing");
     }
 
     private void Flip(float _velocity)
