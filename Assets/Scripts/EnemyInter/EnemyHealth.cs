@@ -2,11 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnnemyHealth : MonoBehaviour
+public class EnemyHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
     
+    public GameObject objectToDestroy;
 
     // Start is called before the first frame update
     void Start()
@@ -26,7 +27,7 @@ public class EnnemyHealth : MonoBehaviour
 	
 	public void Die()
 	{
-		Debug.Log("Enemy died !");
+		Destroy(objectToDestroy);
 	}
     
     
