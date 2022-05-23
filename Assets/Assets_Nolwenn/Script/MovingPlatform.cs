@@ -18,14 +18,16 @@ public class MovingPlatform : MonoBehaviour
     void Update()
     {
 
-        Vector2 dir = target.position - transform.position;
-        transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        //Vector2 dir = target.position - transform.position;
+        //transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
 
         if (Vector2.Distance(transform.position, target.position) < 0.3f)
         {
             index = (index+1) % waypoints.Length;
             target = waypoints[index];
         }
+
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);
     }
 
     private void OnTriggerEnter2D(Collider2D collision) 
