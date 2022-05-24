@@ -11,6 +11,8 @@ TagManager:
   - Foundation_S
   - PlayerSpawn
   - FallDetector
+  - Ground
+  - Block
   layers:
   - Default
   - TransparentFX
@@ -22,7 +24,7 @@ TagManager:
   - Foundation
   - Player
   - Enemies
-  - 
+  - Bosses
   - 
   - 
   - 
