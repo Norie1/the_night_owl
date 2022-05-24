@@ -72,6 +72,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -496,6 +497,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      dungeon_stairs_2: 5861382420114482278
+      dungeon_stairs_7: 8309600895240146789
+      dungeon_stairs_0: -6901633665339280953
+      dungeon_stairs_11: 177100793229169267
+      dungeon_stairs_10: 629767823738013098
+      dungeon_stairs_14: 1853236901119725151
+      dungeon_stairs_4: 6619030207016297307
+      dungeon_stairs_12: 283036835864252780
+      dungeon_stairs_1: 8630879983759605845
+      dungeon_stairs_9: -7924926874733468870
+      dungeon_stairs_8: -7002314399148555476
+      dungeon_stairs_6: -2509511594129308737
+      dungeon_stairs_5: -294211437311267522
+      dungeon_stairs_3: 751322763849676295
+      dungeon_stairs_15: 1367832259511623572
+      dungeon_stairs_13: 5446747682533297581
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

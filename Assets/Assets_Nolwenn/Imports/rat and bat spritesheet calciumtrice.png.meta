@@ -324,6 +324,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -2500,6 +2501,107 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      rat and bat spritesheet calciumtrice_91: 4784336503724824360
+      rat and bat spritesheet calciumtrice_58: 2095211568611765923
+      rat and bat spritesheet calciumtrice_47: 9175771471647966094
+      rat and bat spritesheet calciumtrice_72: 316398792931138929
+      rat and bat spritesheet calciumtrice_57: -7211317907172274295
+      rat and bat spritesheet calciumtrice_90: 3178190192666942749
+      rat and bat spritesheet calciumtrice_66: -6171777151666641473
+      rat and bat spritesheet calciumtrice_83: 990816981767200960
+      rat and bat spritesheet calciumtrice_63: -7125437513169751926
+      rat and bat spritesheet calciumtrice_61: -1608725175957541496
+      rat and bat spritesheet calciumtrice_16: 3948456007486346272
+      rat and bat spritesheet calciumtrice_76: 4995250062421366648
+      rat and bat spritesheet calciumtrice_22: 1676338318348494950
+      rat and bat spritesheet calciumtrice_97: 6386146734858884624
+      rat and bat spritesheet calciumtrice_81: 4895582693491365806
+      rat and bat spritesheet calciumtrice_54: 4769990707019201711
+      rat and bat spritesheet calciumtrice_85: -4212465388927023695
+      rat and bat spritesheet calciumtrice_9: -1696450532059307614
+      rat and bat spritesheet calciumtrice_13: -7090256717605556366
+      rat and bat spritesheet calciumtrice_42: -6758666351243677039
+      rat and bat spritesheet calciumtrice_28: 6696345471456541967
+      rat and bat spritesheet calciumtrice_80: 8601161355662976824
+      rat and bat spritesheet calciumtrice_60: -7487560981378262791
+      rat and bat spritesheet calciumtrice_1: -3702492971230316670
+      rat and bat spritesheet calciumtrice_29: -357811777122077706
+      rat and bat spritesheet calciumtrice_71: 3836765662871907116
+      rat and bat spritesheet calciumtrice_94: 7763121995644059912
+      rat and bat spritesheet calciumtrice_43: 8460234765694935255
+      rat and bat spritesheet calciumtrice_98: 295498813667871579
+      rat and bat spritesheet calciumtrice_45: 3670694057128030080
+      rat and bat spritesheet calciumtrice_67: -7685946102356752209
+      rat and bat spritesheet calciumtrice_0: 323693096002886931
+      rat and bat spritesheet calciumtrice_36: -6697186699507648285
+      rat and bat spritesheet calciumtrice_4: 8421845831840707640
+      rat and bat spritesheet calciumtrice_69: 4228931288240819047
+      rat and bat spritesheet calciumtrice_59: 2008407622740217224
+      rat and bat spritesheet calciumtrice_26: -1417091629541207338
+      rat and bat spritesheet calciumtrice_21: -1762430211402940931
+      rat and bat spritesheet calciumtrice_25: 1463871042987437446
+      rat and bat spritesheet calciumtrice_77: 3467220417390789115
+      rat and bat spritesheet calciumtrice_40: 7734492385092135866
+      rat and bat spritesheet calciumtrice_27: 7945419008171355870
+      rat and bat spritesheet calciumtrice_93: -4945286047492116536
+      rat and bat spritesheet calciumtrice_17: -4601988382224654824
+      rat and bat spritesheet calciumtrice_44: 4898562285967545245
+      rat and bat spritesheet calciumtrice_41: -8100611569297447319
+      rat and bat spritesheet calciumtrice_56: -646210550728908508
+      rat and bat spritesheet calciumtrice_10: -1301831432761882213
+      rat and bat spritesheet calciumtrice_48: 7660243175575898894
+      rat and bat spritesheet calciumtrice_52: 6170163567625030645
+      rat and bat spritesheet calciumtrice_96: -7413234911162667827
+      rat and bat spritesheet calciumtrice_64: -2104203896710142152
+      rat and bat spritesheet calciumtrice_82: -143343320132941883
+      rat and bat spritesheet calciumtrice_34: 1265623027769405597
+      rat and bat spritesheet calciumtrice_79: 2193854879779676094
+      rat and bat spritesheet calciumtrice_11: -8754746083159199749
+      rat and bat spritesheet calciumtrice_65: -6717265397252381784
+      rat and bat spritesheet calciumtrice_20: -3991866233813351203
+      rat and bat spritesheet calciumtrice_62: -911138566128396072
+      rat and bat spritesheet calciumtrice_68: 6010709849385853830
+      rat and bat spritesheet calciumtrice_88: -6814220599109922080
+      rat and bat spritesheet calciumtrice_46: -6092853309026183560
+      rat and bat spritesheet calciumtrice_51: -1042164555016993459
+      rat and bat spritesheet calciumtrice_24: 505496080972403133
+      rat and bat spritesheet calciumtrice_75: -8409965350234330080
+      rat and bat spritesheet calciumtrice_53: -540294304341214563
+      rat and bat spritesheet calciumtrice_15: 5375286752347455213
+      rat and bat spritesheet calciumtrice_19: -807791923123824297
+      rat and bat spritesheet calciumtrice_18: 677249688632782394
+      rat and bat spritesheet calciumtrice_12: 3054434967973602518
+      rat and bat spritesheet calciumtrice_50: 1873720628862862171
+      rat and bat spritesheet calciumtrice_2: -5270343908103819466
+      rat and bat spritesheet calciumtrice_38: 3924569798458910081
+      rat and bat spritesheet calciumtrice_84: -3977683317819655059
+      rat and bat spritesheet calciumtrice_49: -1664859230233393625
+      rat and bat spritesheet calciumtrice_3: 5528527773927614048
+      rat and bat spritesheet calciumtrice_73: 2458815571293882741
+      rat and bat spritesheet calciumtrice_7: -9145191126214388257
+      rat and bat spritesheet calciumtrice_33: -5818204083043150975
+      rat and bat spritesheet calciumtrice_70: 3007215062007360594
+      rat and bat spritesheet calciumtrice_95: 4990973794211219464
+      rat and bat spritesheet calciumtrice_87: -5087967701348803069
+      rat and bat spritesheet calciumtrice_8: -9002366753376885290
+      rat and bat spritesheet calciumtrice_74: 6675261146213414815
+      rat and bat spritesheet calciumtrice_23: -5365990000048617483
+      rat and bat spritesheet calciumtrice_14: 4982357147354173050
+      rat and bat spritesheet calciumtrice_32: 2095786376280926495
+      rat and bat spritesheet calciumtrice_37: -760459274536009657
+      rat and bat spritesheet calciumtrice_86: -7390071439855469793
+      rat and bat spritesheet calciumtrice_5: -1844584949375771044
+      rat and bat spritesheet calciumtrice_78: 6990219466387203150
+      rat and bat spritesheet calciumtrice_30: 3187686413624671999
+      rat and bat spritesheet calciumtrice_6: 5615208417868258477
+      rat and bat spritesheet calciumtrice_92: -1809141659390701815
+      rat and bat spritesheet calciumtrice_99: -1908797149189956828
+      rat and bat spritesheet calciumtrice_89: 9172464464861451429
+      rat and bat spritesheet calciumtrice_31: 6220366000582436819
+      rat and bat spritesheet calciumtrice_39: 1626977542644450330
+      rat and bat spritesheet calciumtrice_35: 6584854572083153558
+      rat and bat spritesheet calciumtrice_55: 1821555110687782320
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

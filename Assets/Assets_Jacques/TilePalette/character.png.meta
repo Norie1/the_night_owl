@@ -258,6 +258,7 @@ TextureImporter:
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -1984,6 +1985,85 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      character_J_39: -9115046293732605975
+      character_J_19: 3120183230998473405
+      character_J_63: -5262703194038950657
+      character_J_59: -5004285004140964676
+      character_J_40: 8231147036760310518
+      character_J_21: 8955318443143074461
+      character_J_74: -6240848503973643397
+      character_J_64: -7014535607967084299
+      character_J_52: 9147284092121031994
+      character_J_43: -8029099252999129245
+      character_J_1: -8401299372637309748
+      character_J_15: 4317895620976236899
+      character_J_61: 8893380570891501873
+      character_J_69: 1558985818872761103
+      character_J_28: -3752610048239235461
+      character_J_45: 8550130744123651256
+      character_J_20: 1702461848202391425
+      character_J_31: 6173604120769958727
+      character_J_35: -7688675938649945466
+      character_J_46: 4449409528876068468
+      character_J_25: -4717118960225384899
+      character_J_26: -7820336193824509384
+      character_J_53: 7116410874369725819
+      character_J_10: -7654451630640947955
+      character_J_29: 4047369250516663902
+      character_J_71: 9088440006956358327
+      character_J_66: -8379077424721970671
+      character_J_68: 8749252225142035798
+      character_J_57: -2672390352481462393
+      character_J_76: 246200786679882585
+      character_J_2: 5616593349487554566
+      character_J_4: 3638105256041590036
+      character_J_27: 5170374237942700046
+      character_J_38: 7216377111710963973
+      character_J_65: -4319713074296000830
+      character_J_42: 1431302235680910559
+      character_J_17: -6440745950933081728
+      character_J_13: -975212939660299520
+      character_J_6: 6666528731021361471
+      character_J_34: -8553584805579901795
+      character_J_60: -1115970366952162290
+      character_J_11: -5172102136199706028
+      character_J_9: 2608593510311843724
+      character_J_5: 8055954870584841673
+      character_J_23: 4211733350921315689
+      character_J_48: -2193080605106592086
+      character_J_0: -4041140162619917590
+      character_J_12: -5444690576805369821
+      character_J_54: -6159896998666246865
+      character_J_8: 7371224160206200719
+      character_J_37: 5560518672766673568
+      character_J_70: -6221298389814638099
+      character_J_36: -606541290014186826
+      character_J_30: 7139054120452800456
+      character_J_44: 7978417760041162946
+      character_J_51: -7296120547726783824
+      character_J_49: -238449969022905899
+      character_J_41: 5643970152268459606
+      character_J_75: 1198732537208462902
+      character_J_55: 5964561144797256817
+      character_J_22: 5755585417046507023
+      character_J_33: -8335108050261877789
+      character_J_50: 7282386842162916872
+      character_J_32: -6845746603450744349
+      character_J_18: 832650460922248451
+      character_J_58: 8568819161616945585
+      character_J_77: -6283534049419367452
+      character_J_14: -1708839338121469247
+      character_J_67: -5669997458880020403
+      character_J_24: 1701486720635288824
+      character_J_7: -2006608039682597194
+      character_J_3: -3329482049976946943
+      character_J_56: 1711362162798242294
+      character_J_72: 614840875611021605
+      character_J_73: 8211665546812494614
+      character_J_47: -7518993880989480401
+      character_J_62: 378410795862959140
+      character_J_16: 2906519923755246672
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
