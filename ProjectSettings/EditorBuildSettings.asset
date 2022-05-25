@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Donjon_1_Jacques.unity
     guid: 8376836a7a36fd44c923045f16972fca
+  - enabled: 1
+    path: Assets/Scenes/Level_Antoine.unity
+    guid: 01018d088a5bfa84286a1cba0115ea44
+  - enabled: 1
+    path: Assets/Scenes/BossFight_Antoine.unity
+    guid: 87630c9f7904b4dc591ff08a2b695012
   m_configObjects: {}

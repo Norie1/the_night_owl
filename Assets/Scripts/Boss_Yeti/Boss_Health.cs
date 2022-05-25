@@ -14,12 +14,10 @@ public class Boss_Health : MonoBehaviour
     {
 		if (isInvulnerable)
 		{
-			GetComponent<Animator>().SetBool("isAttack", false);
 			return;
 		}
 		
 		health -= damage;
-		GetComponent<Animator>().SetBool("isAttack", true);
 		
 		if (health <= 200)
 		{
