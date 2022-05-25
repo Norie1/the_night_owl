@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 41787842}
   - component: {fileID: 41787841}
   - component: {fileID: 41787840}
+  - component: {fileID: 41787843}
   m_Layer: 0
   m_Name: EnemyRat
   m_TagString: Untagged
@@ -158,6 +159,7 @@ Transform:
   - {fileID: 107422891}
   - {fileID: 1377959101}
   - {fileID: 2063706569}
+  - {fileID: 67310437}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -173,15 +175,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 600d7461150bbb74f9c66145cf44395e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackDistance: 1
+  attackDistance: 0.8
   moveSpeed: 2
-  timer: 1
+  timer: 2
   leftLimit: {fileID: 1893495604}
   rightLimit: {fileID: 1880332253}
   target: {fileID: 0}
   isInRange: 0
   hotZone: {fileID: 2063706568}
   triggerArea: {fileID: 1377959100}
+  attackMode: 0
+  cooling: 0
 --- !u!95 &41787841
 Animator:
   serializedVersion: 4
@@ -223,6 +227,55 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &41787843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41787838}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68e4f75c0712e74db96069384c3a62d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackArea: {fileID: 67310437}
+  attackRadius: 0.25
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 256
+  damage: 10
+--- !u!1 &67310436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 67310437}
+  m_Layer: 0
+  m_Name: attackArea
+  m_TagString: Untagged
+  m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &67310437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 67310436}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.293, y: -0.432, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 41787839}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &107422890
 GameObject:
   m_ObjectHideFlags: 0
@@ -233,7 +286,7 @@ GameObject:
   m_Component:
   - component: {fileID: 107422891}
   - component: {fileID: 107422892}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: collider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -290,7 +343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 123192973}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WCLD
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -321,7 +374,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 144617111}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: -5487077368411116049, guid: 0000000000000000d000000000000000, type: 0}
@@ -564,7 +617,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 406122263}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WCRD
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -2888,7 +2941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1045421187}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WCLU
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -3127,7 +3180,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1327979700}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: WCRU
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
@@ -3808,7 +3861,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1812532877}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: FallDetector
   m_TagString: Untagged
   m_Icon: {fileID: 0}

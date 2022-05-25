@@ -34,7 +34,7 @@ public class PlayerHealthN : MonoBehaviour
         //Appuyer sur H retire 20HP au joueur
        if(Input.GetKeyDown(KeyCode.H))
        {
-           TakeDamages(20);
+           TakeDamage(20);
        }
 
        //Appuyer sur J ajoute 20HP au joueur
@@ -46,14 +46,14 @@ public class PlayerHealthN : MonoBehaviour
    
 
    //Inflige des dégats au joueur
-    void TakeDamages(int damage)
+    public void TakeDamage(int damage)
     {
         currentHealth = currentHealth - damage;
         healthBar.SetHealth(currentHealth);
     }
 
     //Restaure la vie du joueur
-    void HealPlayer(int amount)
+    public void HealPlayer(int amount)
     {
         if(currentHealth + amount > maxHealth)
         {
