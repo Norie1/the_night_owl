@@ -13,6 +13,7 @@ TagManager:
   - FallDetector
   - Ground
   - Block
+  - InteractUI
   layers:
   - Default
   - TransparentFX
