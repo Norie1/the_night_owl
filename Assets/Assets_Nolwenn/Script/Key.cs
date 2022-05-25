@@ -1,11 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Key : MonoBehaviour
 {
     public GameObject door;
     public bool isInRange;
+    private Text interactUI;
+
+    private void Start() {
+        interactUI = GameObject.FindGameObjectWithTag("InteractUI").GetComponent<Text>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -13,6 +17,7 @@ public class Key : MonoBehaviour
        if(isInRange && Input.GetKeyDown(KeyCode.E))
        {
            door.GetComponent<LockedDoor>().openable = true;
+           interactUI.enabled = false;
            Destroy(gameObject);
        }
     }
@@ -22,6 +27,7 @@ public class Key : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             isInRange = true;
+            interactUI.enabled = true;
         }
     }
 
@@ -30,6 +36,7 @@ public class Key : MonoBehaviour
         if(other.CompareTag("Player"))
         {
             isInRange = false;
+            interactUI.enabled = false;
         }
     }
 }
