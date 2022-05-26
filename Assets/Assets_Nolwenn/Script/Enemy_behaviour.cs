@@ -6,8 +6,6 @@ public class Enemy_behaviour : MonoBehaviour
 {
     //Name attack animation "Enemy_Attack" so script can be used for multiple enemy
     //Flip may not work properly, use sprite facing left
-
-    //Fix this shit, it's not working properly
     
     public float attackDistance; //Minimum distance for attack
     public float moveSpeed;
@@ -15,15 +13,15 @@ public class Enemy_behaviour : MonoBehaviour
     public Transform leftLimit;
     public Transform rightLimit;
     [HideInInspector] public Transform target;
-    public bool isInRange; //Check if enemy is in range
+    [HideInInspector] public bool isInRange; //Check if enemy is in range
     public GameObject hotZone;
     public GameObject triggerArea;
 
     private Animator anim;
     private float distance; //Store distance between enemy and target
     private bool inAttackRange;
-    [SerializeField] private bool attackMode;
-    [SerializeField] private bool cooling; //Check if enemy is cooling after attack
+    private bool attackMode;
+    private bool cooling; //Check if enemy is cooling after attack
     private float intTimer;
 
     private void Awake() {
