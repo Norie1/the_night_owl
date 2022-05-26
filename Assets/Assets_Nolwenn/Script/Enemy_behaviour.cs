@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_behavior : MonoBehaviour
+public class Enemy_behaviour : MonoBehaviour
 {
     //Name attack animation "Enemy_Attack" so script can be used for multiple enemy
     //Flip may not work properly, use sprite facing left
 
-    //Bug : Attack animation isn't played completely, enemy doesn't wait for end of cooldown to attack again
+    //Fix this shit, it's not working properly
     
     public float attackDistance; //Minimum distance for attack
     public float moveSpeed;
@@ -21,6 +21,7 @@ public class Enemy_behavior : MonoBehaviour
 
     private Animator anim;
     private float distance; //Store distance between enemy and target
+    private bool inAttackRange;
     [SerializeField] private bool attackMode;
     [SerializeField] private bool cooling; //Check if enemy is cooling after attack
     private float intTimer;
@@ -34,55 +35,46 @@ public class Enemy_behavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if(!InsideOfLimits() && !isInRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack")) //Enemy isn't inside his boundaries, player isn't in range and enemy isn't attacking
-        {
-            SelectTarget(); //Select next target to move towards
-        } 
-
-        if(!attackMode) //Enemy is not in attackMode
+        if(!attackMode && !inAttackRange) //Enemy isn't in attack mode and player isn't in attack range
         {
             Move();
-
-            if(!isInRange)
-            {
-                StopAttack();
-            }
         }
 
-        if(isInRange) //Player is in range
+        if(isInRange) //If player is in range
         {
             EnemyLogic();
         }
-        /* else 
+
+        if(!InsideOfLimits() && !isInRange && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack")) //If enemy not in limits, player not in range, not playing attack animation
         {
-            StopAttack();
-        }*/
+            SelectTarget();
+        }
     }
 
     void EnemyLogic()
     {
         distance = Vector2.Distance(transform.position, target.position);
+        inAttackRange = attackDistance >= distance;
 
-        if(distance > attackDistance && !anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack")) //Target is too far to be attacked
+        if(distance > attackDistance) //Target is too far to be attacked
         {
-            StopAttack();
+            attackMode = false;
         }
-        else if(attackDistance >= distance && !cooling) //Target is near enemy and can be attacked
+        else if(inAttackRange && !cooling) //Target is near enemy and can be attacked
         {
             Attack();
         }
 
-        if(cooling)
+        if(cooling) //Enemy attack cooling
         {   
             Cooldown();
-            //anim.SetBool("Attack", false);
         }
     }
 
     void Move(){
-        anim.SetBool("canWalk", true);
-        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack"))
+        anim.SetBool("canWalk", true); //Activate walk animation
+
+        if(!anim.GetCurrentAnimatorStateInfo(0).IsName("Enemy_Attack")) //If not in attack animation
         {
             Vector2 targetPosition = new Vector2(target.position.x, transform.position.y);
 
@@ -92,13 +84,13 @@ public class Enemy_behavior : MonoBehaviour
 
     void Attack(){
         timer = intTimer; //Reset timer when player enter attack range
-        attackMode = true;
+        attackMode = true; //Enter attack mode
 
-        anim.SetBool("canWalk", false);
-        anim.SetBool("Attack", true);
+        anim.SetBool("canWalk", false); //Deactivate walk animation
+        anim.SetBool("Attack", true); //Activate attack animation
     }
 
-    void StopAttack(){
+    public void StopAttack(){
         cooling = false;
         attackMode = false;
         anim.SetBool("Attack", false);
@@ -106,8 +98,9 @@ public class Enemy_behavior : MonoBehaviour
 
     void Cooldown() {
         timer -= Time.deltaTime;
+        if(inAttackRange) { anim.SetBool("canWalk", false); }
 
-        if(timer <= 0 && cooling && attackMode)
+        if(timer <= 0 /*&& cooling*/) //Cooling check before cooldown is called
         {
             cooling = false;
             timer = intTimer;
@@ -115,10 +108,11 @@ public class Enemy_behavior : MonoBehaviour
     }
 
     public void TriggerCooling() {
+        //Debug.Log("Trigger cooling");
         cooling = true;
     }
 
-    public void TriggerEndAttack() 
+    public void TriggerAttackFalse()
     {
         anim.SetBool("Attack", false);
     }
@@ -128,7 +122,7 @@ public class Enemy_behavior : MonoBehaviour
         return transform.position.x > leftLimit.position.x && transform.position.x < rightLimit.position.x;
     }
     
-
+    //Select waypoints to move towards
     public void SelectTarget()
     {
         float distanceToLeft = Vector2.Distance(transform.position, leftLimit.position);
@@ -146,6 +140,7 @@ public class Enemy_behavior : MonoBehaviour
         Flip();
     }
 
+    //Rotate enemy to face target
     public void Flip()
     {
         Vector3 rotation = transform.eulerAngles;
