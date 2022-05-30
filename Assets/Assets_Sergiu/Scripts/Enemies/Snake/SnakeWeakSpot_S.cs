@@ -16,7 +16,7 @@ public class SnakeWeakSpot_S : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerHealth.instance.playerDeath)
+        if (PlayerHealth_S.instance.playerDeath)
         {
             RestoreEnemy();
         }

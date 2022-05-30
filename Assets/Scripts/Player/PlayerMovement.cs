@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float jumpForce;
     public float dashSpeed;
 
-    public float horizontalMovement;
+    private float horizontalMovement;
 
     public bool isJumping;
     public bool activeDash;

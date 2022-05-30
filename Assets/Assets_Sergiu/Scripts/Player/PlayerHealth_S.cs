@@ -41,7 +41,6 @@ public class PlayerHealth_S : MonoBehaviour
         inventory = Inventory_S.instance;
     }
 
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H))

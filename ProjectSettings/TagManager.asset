@@ -8,12 +8,13 @@ TagManager:
   - Door_Donjon1
   - Door_Shop
   - Door_Donjon1_Exit
-  - Foundation_S
   - PlayerSpawn
   - FallDetector
   - Ground
   - Block
   - InteractUI
+  - Foundation
+  - InteractMessage
   layers:
   - Default
   - TransparentFX

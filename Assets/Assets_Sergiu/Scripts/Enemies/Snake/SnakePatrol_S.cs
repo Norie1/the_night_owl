@@ -43,7 +43,7 @@ public class SnakePatrol_S : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            PlayerHealth.instance.TakeDamage(damageOnCollision);
+            PlayerHealth_S.instance.TakeDamage(damageOnCollision);
         }
     }
 }

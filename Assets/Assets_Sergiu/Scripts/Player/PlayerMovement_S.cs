@@ -5,8 +5,12 @@ public class PlayerMovement_S : MonoBehaviour
 {
     public float movementSpeed;
     public float jumpForce;
+    public float dashSpeed;
+
+    private float horizontalMovement;
 
     private bool isJumping;
+    private bool activeDash;
     private bool isGrounded;
     private bool onTheWallR;
     private bool onTheWallL;
@@ -14,6 +18,9 @@ public class PlayerMovement_S : MonoBehaviour
     private bool wallJumpL;
     private bool superJump;
     private bool doubleJump;
+
+    [HideInInspector]
+    public bool freezePlayerMovement;
 
     public Transform groundCheck;
     public LayerMask collisionLayer;
@@ -25,12 +32,12 @@ public class PlayerMovement_S : MonoBehaviour
 
     [HideInInspector]
     public Vector3 respawnPoint;
-    public GameObject fallDetector;
+    public GameObject deathZone;
 
-    public Rigidbody2D rigidBody;
-    public Animator playerAnimator;
-    public SpriteRenderer spriteRenderer;
-    public Animator fadeSystem;
+
+    private Rigidbody2D rigidBody;
+    private Animator playerAnimator;
+    private SpriteRenderer spriteRenderer;
 
     private Vector3 velocity = Vector3.zero;
 
@@ -43,7 +50,7 @@ public class PlayerMovement_S : MonoBehaviour
     {
         if (instance != null)
         {
-            Debug.LogWarning("player movement already initialized.");
+            Debug.LogWarning("Player movement already initialized.");
             return;
         }
         instance = this;
@@ -54,9 +61,17 @@ public class PlayerMovement_S : MonoBehaviour
         //respawnPoint intialization to the initial spawn position of the player
         respawnPoint = transform.position;
 
-        //Import of public methods and attributes from PlayerHealth and Inventory scripts
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
+
+        activeDash = true;
+
+        //Import of public methods and attributes from PlayerHealth script
         playerHealth = PlayerHealth_S.instance;
-        inventory = Inventory_S.instance;
+
+        //Importing the rigid body, animator and the sprite renderer of the player
+        rigidBody = gameObject.GetComponent<Rigidbody2D>();
+        playerAnimator = gameObject.GetComponent<Animator>();
+        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -65,6 +80,8 @@ public class PlayerMovement_S : MonoBehaviour
         //Verification of proximity with a wall
         onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
         onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
+
+        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         if (Input.GetButtonDown("Jump"))
         {
@@ -95,18 +112,18 @@ public class PlayerMovement_S : MonoBehaviour
                 isJumping = true;
                 doubleJump = false;
             }
-            
         }
-
-        //Fall detector following the player
-        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
+        if (Input.GetKeyDown(KeyCode.X) && activeDash)
+        {
+            StartCoroutine(Dash(horizontalMovement));
+            activeDash = false;
+        }
     }
 
     void FixedUpdate()
     {
         //Verification of proximity with the floor
-        //groundCheckRadius = 0.38f, to be adapted to Player size if necessary (use OnDrawGizmos to test the radius)
-        //collisionLayer = Foundation
+        //groundCheckRadius = 0.38f, to be adapted to the Player size if necessary (use OnDrawGizmos to test the radius)
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         //Reinitialization of Double/Wall jump when grounded
@@ -117,7 +134,7 @@ public class PlayerMovement_S : MonoBehaviour
             wallJumpR = true;
         }
 
-        float horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;        
+        horizontalMovement = Input.GetAxis("Horizontal") * movementSpeed * Time.deltaTime;
 
         MovePlayer(horizontalMovement);
 
@@ -130,9 +147,19 @@ public class PlayerMovement_S : MonoBehaviour
 
     private void MovePlayer(float _horizontalMovement)
     {
-        Vector3 targetVelocity = new Vector2(_horizontalMovement, rigidBody.velocity.y);
+        Vector3 targetVelocity;
+        if (!freezePlayerMovement)
+        {
+            targetVelocity = new Vector2(_horizontalMovement, rigidBody.velocity.y);
+        }
+        else
+        {
+            targetVelocity = new Vector2(0, 0);
+        }
+        
         rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocity, ref velocity, .05f);
 
+        
         //Jump////////
         if (isJumping)
         {
@@ -152,6 +179,37 @@ public class PlayerMovement_S : MonoBehaviour
             rigidBody.AddForce(new Vector2(0f, impulse));
             isJumping = false;
         }
+       
+        
+    }
+
+    private IEnumerator Dash(float _horizontalMovement)
+    {
+        //Dash destination
+        Vector3 destination;
+
+        //Move player to the target
+        if (spriteRenderer.flipX == true)
+        {
+            //Right dash
+            destination = new Vector3(Mathf.Abs(_horizontalMovement) - dashSpeed, 0, rigidBody.velocity.y);
+        }
+        else
+        {
+            //Left dash
+            destination = new Vector3(Mathf.Abs(_horizontalMovement) + dashSpeed, 0, rigidBody.velocity.y);
+        }
+
+        rigidBody.MovePosition(transform.position + destination * Time.deltaTime * dashSpeed);
+
+        //Play animation of Dash
+        playerAnimator.Play("PlayerDash_S");
+        yield return new WaitForSeconds(1f);
+        playerAnimator.Play("PlayerIdle");
+
+        //2 second delay before reactivating the dash
+        yield return new WaitForSeconds(1f);
+        activeDash = true;
     }
 
     private void Flip(float _velocity)
@@ -176,7 +234,7 @@ public class PlayerMovement_S : MonoBehaviour
     //Respawn when falling into a hole
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "FallDetector_S")
+        if (collision.tag == "FallDetector")
         {
             playerHealth.TakeDamage(10);
             RespawnPlayer();
