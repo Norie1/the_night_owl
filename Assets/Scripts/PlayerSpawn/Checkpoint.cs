@@ -4,6 +4,9 @@ public class Checkpoint : MonoBehaviour
 {
     private Transform respawnPoint;
 
+    [SerializeField]
+    private int checkpointID;
+
     private void Awake()
     {
         //Initializing respawnPoint to the position PlayerSpawn (initial player spawn position)
@@ -16,9 +19,13 @@ public class Checkpoint : MonoBehaviour
         {
             //Moving respawnPoint to the next checkpoint
             respawnPoint.position = transform.position;
-            //Update of the respawnPoint attribute from PlayerMovement_S script          
-            PlayerMovement.instance.respawnPoint = transform.position;
+
+            //Update of the respawnPoint attribute from PlayerMovement_S script
+            PlayerMovement_S.instance.respawnPoint = transform.position;
             Destroy(gameObject);
+
+            //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
+            RespawnManager_S.instance.checkpointReached(checkpointID);
         }
     }
 }

@@ -4,6 +4,7 @@ public class SnakeWeakSpot_S : MonoBehaviour
 {
     public SpriteRenderer snakeSprite;
     public BoxCollider2D snakeCollider;
+    public int checkpointID;
 
     //Killed by the player on collision with the weakspot
     private void OnTriggerEnter2D(Collider2D collision)
@@ -16,7 +17,11 @@ public class SnakeWeakSpot_S : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerHealth_S.instance.playerDeath)
+        //Verification of reached checkpoint
+        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
+
+        //Enemy restored on player death if already destroyed and checkpoint not yet reached
+        if (PlayerHealth_S.instance.playerDeath && activeRespawn)
         {
             RestoreEnemy();
         }

@@ -4,6 +4,10 @@ public class ObjectPickup_S : MonoBehaviour
 {
     public static ObjectPickup_S instance;
 
+    public int checkpointID;
+
+    private bool obtained;
+
     private void Awake()
     {
         if (instance != null)
@@ -16,7 +20,14 @@ public class ObjectPickup_S : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerHealth_S.instance.playerDeath)
+        //Verification of reached checkpoint
+        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID] || !obtained;
+
+        //True if the player is dead
+        bool playerDeath = PlayerHealth_S.instance.playerDeath;
+
+        //Object restored on player death if already destroyed and checkpoint not yet reached
+        if (playerDeath && activeRespawn)
         {
             RestoreObject();
         }
@@ -26,8 +37,11 @@ public class ObjectPickup_S : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Inventory_S.instance.AddCoins(1);
-            RemoveObject();
+            if (gameObject.CompareTag("Coin"))
+            {
+                Inventory_S.instance.AddCoins(1);
+                RemoveObject();
+            }   
         }
     }
 
@@ -37,6 +51,7 @@ public class ObjectPickup_S : MonoBehaviour
     {
         gameObject.GetComponent<CircleCollider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        obtained = true;
     }
 
     //Restores object collider and graphics
@@ -45,5 +60,6 @@ public class ObjectPickup_S : MonoBehaviour
     {
         gameObject.GetComponent<CircleCollider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        obtained = false;
     }
 }
