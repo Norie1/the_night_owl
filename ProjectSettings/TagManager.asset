@@ -15,6 +15,7 @@ TagManager:
   - InteractUI
   - Foundation
   - InteractMessage
+  - Ennemie
   layers:
   - Default
   - TransparentFX
