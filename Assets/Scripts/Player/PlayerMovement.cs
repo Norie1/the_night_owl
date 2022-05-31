@@ -209,7 +209,7 @@ public class PlayerMovement : MonoBehaviour
         {
             spriteRenderer.flipX = true;
             //To shoot the fire ball to the left, we have to rotate the transform of the fire ball movement
-            transform.Rotate(0f,180f,0f);
+            //transform.Rotate(0f,180f,0f);
             
         }
     }
