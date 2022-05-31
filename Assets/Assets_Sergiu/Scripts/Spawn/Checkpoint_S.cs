@@ -21,6 +21,10 @@ public class Checkpoint_S : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            //Displaying checkpoint indicator
+            checkpointText.enabled = true;
+            yield return new WaitForSeconds(3f);
+            checkpointText.enabled = false;
 
             //Moving respawnPoint to the next checkpoint
             respawnPoint.position = transform.position;
@@ -31,11 +35,6 @@ public class Checkpoint_S : MonoBehaviour
 
             //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
             RespawnManager_S.instance.checkpointReached(checkpointID);
-
-            //Displaying checkpoint indicator
-            checkpointText.enabled = true;
-            yield return new WaitForSeconds(3f);
-            checkpointText.enabled = false;
         }
     }
 }

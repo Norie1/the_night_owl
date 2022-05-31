@@ -2,19 +2,7 @@ using UnityEngine;
 
 public class ObjectPickup_S : MonoBehaviour
 {
-    public static ObjectPickup_S instance;
-
     public int checkpointID;
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("ObjectPickup already initiliazed");
-            return;
-        }
-        instance = this;
-    }
 
     private void Update()
     {
