@@ -2,21 +2,18 @@ using UnityEngine;
 
 public class ObjectPickup_S : MonoBehaviour
 {
-    public static ObjectPickup_S instance;
-
-    private void Awake()
-    {
-        if (instance != null)
-        {
-            Debug.LogWarning("ObjectPickup already initiliazed");
-            return;
-        }
-        instance = this;
-    }
+    public int checkpointID;
 
     private void Update()
     {
-        if (PlayerHealth_S.instance.playerDeath)
+        //Verification of reached checkpoint
+        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
+
+        //True if the player is dead
+        bool playerDeath = PlayerHealth_S.instance.playerDeath;
+
+        //Object restored on player death if already destroyed and checkpoint not yet reached
+        if (playerDeath && activeRespawn)
         {
             RestoreObject();
         }
@@ -26,8 +23,11 @@ public class ObjectPickup_S : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Inventory_S.instance.AddCoins(1);
-            RemoveObject();
+            if (gameObject.CompareTag("Coin"))
+            {
+                Inventory_S.instance.AddCoins(1);
+                RemoveObject();
+            }   
         }
     }
 

@@ -4,6 +4,8 @@ public class ObjectPickup : MonoBehaviour
 {
     public static ObjectPickup instance;
 
+    public int checkpointID;
+
     private void Awake()
     {
         if (instance != null)
@@ -16,7 +18,14 @@ public class ObjectPickup : MonoBehaviour
 
     private void Update()
     {
-        if (PlayerHealth.instance.playerDeath)
+        //Verification of reached checkpoint
+        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
+
+        //True if the player is dead
+        bool playerDeath = PlayerHealth_S.instance.playerDeath;
+
+        //Object restored on player death if already destroyed and checkpoint not yet reached
+        if (playerDeath && activeRespawn)
         {
             RestoreObject();
         }
@@ -26,8 +35,12 @@ public class ObjectPickup : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            Inventory.instance.AddCoins(1);
-            RemoveObject();
+            if (gameObject.CompareTag("Coin"))
+            {
+                Inventory_S.instance.AddCoins(1);
+                RemoveObject();
+            }
+
         }
     }
 

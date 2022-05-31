@@ -42,7 +42,6 @@ public class PlayerMovement_S : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     private PlayerHealth_S playerHealth;
-    private Inventory_S inventory;
 
     public static PlayerMovement_S instance;
 
@@ -83,7 +82,7 @@ public class PlayerMovement_S : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && !freezePlayerMovement)
         {
             //Normal jump
             if (isGrounded)
@@ -158,8 +157,7 @@ public class PlayerMovement_S : MonoBehaviour
         }
         
         rigidBody.velocity = Vector3.SmoothDamp(rigidBody.velocity, targetVelocity, ref velocity, .05f);
-
-        
+       
         //Jump////////
         if (isJumping)
         {
@@ -178,9 +176,7 @@ public class PlayerMovement_S : MonoBehaviour
             }
             rigidBody.AddForce(new Vector2(0f, impulse));
             isJumping = false;
-        }
-       
-        
+        }       
     }
 
     private IEnumerator Dash(float _horizontalMovement)
@@ -224,7 +220,6 @@ public class PlayerMovement_S : MonoBehaviour
         }
     }
 
-    [HideInInspector]
     public void RespawnPlayer()
     {
         transform.position = respawnPoint;

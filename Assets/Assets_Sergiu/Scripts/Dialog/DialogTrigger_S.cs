@@ -23,11 +23,11 @@ public class DialogTrigger_S : MonoBehaviour
         {
             if (!dialogManager.dialogStarted)
             {
-                dialogManager.StartDialogue(dialog);
+                dialogManager.StartDialog(dialog);
             }
             else
             {
-                dialogManager.DisplayNextSentece();
+                dialogManager.DisplayNextSentence();
             }
         }
     }

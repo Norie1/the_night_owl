@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -11,7 +10,7 @@ public class DialogManager_S : MonoBehaviour
 
     private Queue<string> queue;
 
-    //[HideInInspector]
+    [HideInInspector]
     public bool dialogStarted;
 
     public static DialogManager_S instance;
@@ -34,8 +33,8 @@ public class DialogManager_S : MonoBehaviour
         dialogText.enabled = false;
     }
 
-    //Method called by the DialogueTrigger_S script
-    public void StartDialogue(Dialog_S dialog)
+    //Method called by the DialogueTrigger_S and LevelIntro_S scripts
+    public void StartDialog(Dialog_S dialog)
     {
         nameText.text = dialog.name;
 
@@ -56,14 +55,14 @@ public class DialogManager_S : MonoBehaviour
         //Blocking player movement while dialog is active
         PlayerMovement_S.instance.freezePlayerMovement = true;
 
-        DisplayNextSentece();
+        DisplayNextSentence();
     }
 
-    public void DisplayNextSentece()
+    public void DisplayNextSentence()
     {
         if (queue.Count == 0)
         {
-            EndDialogue();
+            EndDialog();
             return;
         }
 
@@ -71,7 +70,7 @@ public class DialogManager_S : MonoBehaviour
         dialogText.text = sentence;
     }
 
-    public void EndDialogue()
+    public void EndDialog()
     {
         //Disactivating the graphic representation of the dialog box
         dialogBox.enabled = false;
