@@ -13,7 +13,7 @@ public class Enemy_attack : MonoBehaviour
     {
         if(Physics2D.OverlapCircle(attackArea.position, attackRadius,layerMask))
         {
-            PlayerHealthN.instance.TakeDamage(damage);
+            PlayerHealth.instance.TakeDamage(damage);
         }
     }
 
