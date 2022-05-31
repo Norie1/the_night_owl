@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
 
 public class Checkpoint_S : MonoBehaviour
 {
@@ -7,16 +9,19 @@ public class Checkpoint_S : MonoBehaviour
     [SerializeField]
     private int checkpointID;
 
+    public Text checkpointText;
+
     private void Awake()
     {
         //Initializing respawnPoint to the position PlayerSpawn (initial player spawn position)
         respawnPoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
+
             //Moving respawnPoint to the next checkpoint
             respawnPoint.position = transform.position;
 
@@ -26,6 +31,11 @@ public class Checkpoint_S : MonoBehaviour
 
             //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
             RespawnManager_S.instance.checkpointReached(checkpointID);
+
+            //Displaying checkpoint indicator
+            checkpointText.enabled = true;
+            yield return new WaitForSeconds(3f);
+            checkpointText.enabled = false;
         }
     }
 }
