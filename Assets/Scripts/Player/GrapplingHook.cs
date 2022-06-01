@@ -52,6 +52,7 @@
 						
 						Line.SetPosition(0, new Vector3(transform.position.x, transform.position.y, -4));
 						Line.SetPosition(1, new Vector3(hit.point.x, hit.point.y, -4));
+						Line.GetComponent<RopeRatio>().grabPos = hit.point;
 						
 						
 					}

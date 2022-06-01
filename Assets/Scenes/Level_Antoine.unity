@@ -73076,6 +73076,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1875838108}
   - component: {fileID: 1875838107}
+  - component: {fileID: 1875838109}
   m_Layer: 0
   m_Name: Line
   m_TagString: Untagged
@@ -73103,7 +73104,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 2100000, guid: f606a64e1ae0d4543b8592ead1a26c72, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -73197,6 +73198,21 @@ Transform:
   m_Father: {fileID: 220926065}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1875838109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1875838106}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 069585af72c104e47b588fa40a83e6fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 220926060}
+  grabPos: {x: 0, y: 0, z: 0}
+  ratio: 3
 --- !u!1 &1883614352
 GameObject:
   m_ObjectHideFlags: 0
