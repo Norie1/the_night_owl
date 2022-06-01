@@ -5,6 +5,7 @@ public class MovingPlatform : MonoBehaviour
     public float speed;
     public Transform[] waypoints;
     private Transform target;
+    public bool activated;
 
     [SerializeField] private int index;
 
@@ -20,6 +21,10 @@ public class MovingPlatform : MonoBehaviour
 
         //Vector2 dir = target.position - transform.position;
         //transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
+        if(!activated)
+        {
+            return;
+        }
 
         if (Vector2.Distance(transform.position, target.position) < 0.3f)
         {
@@ -46,5 +51,10 @@ public class MovingPlatform : MonoBehaviour
             collision.transform.SetParent(null);
         }
         
+    }
+
+    public void activateMovement()
+    {
+        activated = true;
     }
 }
