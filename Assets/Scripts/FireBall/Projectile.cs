@@ -4,25 +4,27 @@ using UnityEngine;
 
 public class Projectile : MonoBehaviour
 {
-    public GameObject player;
     public float projectileSpeed = 20f;
     public GameObject impactEffect; 
+    public bool isFlipped = false;
 
     private Rigidbody2D rb;
 
     void Start()
     {
-        SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
         rb = GetComponent<Rigidbody2D>();
-        //if(sprite.flipX == false)
-        //{
-            rb.velocity = transform.right * projectileSpeed;    
-        //}
-       /* else 
+        GameObject player = GameObject.Find("Player");
+        SpriteRenderer sprite = player.GetComponent<SpriteRenderer>(); 
+        if(sprite.flipX == false)
         {
-            transform.Rotate(0f,180f,0f);
-            rb.velocity = transform.right * projectileSpeed;
-        }*/
+            rb.velocity = transform.right * projectileSpeed;    
+        }
+        else 
+        {
+            SpriteRenderer fireBall = GetComponent<SpriteRenderer>();
+            fireBall.flipX = true;
+            rb.velocity = (transform.right * -1) * projectileSpeed;    
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -34,5 +36,10 @@ public class Projectile : MonoBehaviour
         Instantiate(impactEffect, transform.position, transform.rotation);
         }
         Destroy(gameObject);
+    }
+
+    public void flip()
+    {
+        isFlipped = !isFlipped;
     }
 }

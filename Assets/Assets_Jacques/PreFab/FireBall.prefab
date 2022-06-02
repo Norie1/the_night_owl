@@ -76,7 +76,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 246956405
   m_SortingLayer: 2
-  m_SortingOrder: 4
+  m_SortingOrder: 3
   m_Sprite: {fileID: 21300000, guid: 523bcb59eb9f47a44acc7abd71a424b5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -141,9 +141,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7499095b5d4e6024ba99e4f1c659f531, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 7483487525388633807, guid: e2ac0e4e1ff9b6046bd42f528bec5994, type: 3}
   projectileSpeed: 10
   impactEffect: {fileID: 288177569095503478, guid: f13828c73ffbbc74783ee66c98b5af0b, type: 3}
+  isFlipped: 0
 --- !u!58 &1308702027999096623
 CircleCollider2D:
   m_ObjectHideFlags: 0

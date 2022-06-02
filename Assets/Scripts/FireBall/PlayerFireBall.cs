@@ -13,13 +13,12 @@ public class PlayerFireBall : MonoBehaviour
         if(Input.GetButtonDown("Fire1"))
         {
             SpriteRenderer player = GetComponent<SpriteRenderer>();
-           // if(player.flipX == false){
+            if(player.flipX == true){
             Instantiate(projectile, fireProjectileLeft.position, fireProjectileLeft.rotation);
-           //
-            /*}
+            }
             else {
             Instantiate(projectile, fireProjectileRight.position, fireProjectileRight.rotation);
-            }*/
+            }
        }
     }
 }
