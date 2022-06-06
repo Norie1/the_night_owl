@@ -30,7 +30,7 @@ public class EnnemyPatrol_J : MonoBehaviour
 	    graphic.flipX = !graphic.flipX; 
   	}
     }
-
+/*
     private void OnCollisionEnter2D(Collision2D collision)
     {
       if(collision.transform.gameObject.tag == "Player")
@@ -39,5 +39,5 @@ public class EnnemyPatrol_J : MonoBehaviour
         playerHealth.TakeDamages(damageOnCollision);
       }
     }
-
+*/
 }

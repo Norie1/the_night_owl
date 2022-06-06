@@ -267,7 +267,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -324,6 +324,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -2006,27 +2018,28 @@ TextureImporter:
       character_J_31: 6173604120769958727
       character_J_35: -7688675938649945466
       character_J_46: 4449409528876068468
-      character_J_25: -4717118960225384899
-      character_J_26: -7820336193824509384
+      character_J_66: -8379077424721970671
+      character_J_71: 9088440006956358327
       character_J_53: 7116410874369725819
       character_J_10: -7654451630640947955
       character_J_29: 4047369250516663902
-      character_J_71: 9088440006956358327
-      character_J_66: -8379077424721970671
-      character_J_68: 8749252225142035798
-      character_J_57: -2672390352481462393
       character_J_76: 246200786679882585
+      character_J_68: 8749252225142035798
+      character_J_26: -7820336193824509384
+      character_J_57: -2672390352481462393
+      character_J_25: -4717118960225384899
       character_J_2: 5616593349487554566
-      character_J_4: 3638105256041590036
       character_J_27: 5170374237942700046
+      character_J_72: 614840875611021605
+      character_J_4: 3638105256041590036
       character_J_38: 7216377111710963973
       character_J_65: -4319713074296000830
       character_J_42: 1431302235680910559
       character_J_17: -6440745950933081728
       character_J_13: -975212939660299520
-      character_J_6: 6666528731021361471
-      character_J_34: -8553584805579901795
       character_J_60: -1115970366952162290
+      character_J_34: -8553584805579901795
+      character_J_6: 6666528731021361471
       character_J_11: -5172102136199706028
       character_J_9: 2608593510311843724
       character_J_5: 8055954870584841673
@@ -2059,7 +2072,6 @@ TextureImporter:
       character_J_7: -2006608039682597194
       character_J_3: -3329482049976946943
       character_J_56: 1711362162798242294
-      character_J_72: 614840875611021605
       character_J_73: 8211665546812494614
       character_J_47: -7518993880989480401
       character_J_62: 378410795862959140

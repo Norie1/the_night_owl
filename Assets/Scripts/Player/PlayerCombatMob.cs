@@ -7,7 +7,8 @@
 		
 		public Animator animator;
 		
-		public Transform attackPoint;
+		public Transform attackPointLeft;
+		public Transform attackPointRight;
 		
 		public float attackRange = 1f;
 		
@@ -34,9 +35,15 @@
 	    public void PlayerAttack()
 	    {
 			animator.SetTrigger("PlayerAttack");
-			
-			Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, Enemies);
-			
+			GameObject player = GameObject.Find("Player");
+            SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
+			Collider2D[] hitEnemies;
+			if(sprite.flipX == false){
+				hitEnemies = Physics2D.OverlapCircleAll(attackPointRight.position, attackRange, Enemies);
+			}
+			else {
+				hitEnemies = Physics2D.OverlapCircleAll(attackPointLeft.position, attackRange, Enemies);
+			}
 			foreach(Collider2D enemy in hitEnemies)
 			{
 				
@@ -45,14 +52,14 @@
 			}
 		}
 		
-		public void OnDrawGizmosSelected()
+		/*public void OnDrawGizmosSelected()
 		{
 			if (attackPoint == null) {
 				return;
 			}
 				
 			Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-		}
+		}*/
 	    
 	}
 	
