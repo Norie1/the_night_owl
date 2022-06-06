@@ -11,7 +11,7 @@ public class MovingPlatform_S : MonoBehaviour
 
     private void Start()
     {
-        index = startingPoint - 1;
+        index = 0;
     }
 
     private void Update()
@@ -24,5 +24,15 @@ public class MovingPlatform_S : MonoBehaviour
         {
             index = (index + 1) % waypoints.Length;
         }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        collision.transform.SetParent(transform);
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        collision.transform.SetParent(null);
     }
 }

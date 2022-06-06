@@ -28,6 +28,7 @@ public class DialogManager_S : MonoBehaviour
     {
         queue = new Queue<string>();
 
+        //Disabling the graphic representation of the dialog box
         dialogBox.enabled = false;
         nameText.enabled = false;
         dialogText.enabled = false;
