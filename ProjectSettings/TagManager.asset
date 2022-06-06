@@ -16,6 +16,7 @@ TagManager:
   - Foundation
   - InteractMessage
   - Ennemie
+  - Coin
   layers:
   - Default
   - TransparentFX
