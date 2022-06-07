@@ -19,6 +19,11 @@ public class LockedDoor : MonoBehaviour
         }
     }
 
+    public void makeOpenable()
+    {
+        openable = true;
+    }
+
     private void OnTriggerEnter2D(Collider2D other) 
     {
         if(other.CompareTag("Player"))

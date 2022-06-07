@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Events;
 
 public class Key : MonoBehaviour
 {
-    public GameObject door;
+    public UnityEvent myEvents;
     public bool isInRange;
     private Text interactUI;
 
@@ -16,7 +17,7 @@ public class Key : MonoBehaviour
     {
        if(isInRange && Input.GetKeyDown(KeyCode.E))
        {
-           door.GetComponent<LockedDoor>().openable = true;
+           myEvents.Invoke();
            interactUI.enabled = false;
            Destroy(gameObject);
        }

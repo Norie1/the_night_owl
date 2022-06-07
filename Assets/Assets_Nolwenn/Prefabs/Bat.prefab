@@ -216,7 +216,7 @@ MonoBehaviour:
   checkSide: {fileID: 3857564812481404642}
   layerMask:
     serializedVersion: 2
-    m_Bits: 320
+    m_Bits: 2368
 --- !u!114 &652746220465998150
 MonoBehaviour:
   m_ObjectHideFlags: 0
