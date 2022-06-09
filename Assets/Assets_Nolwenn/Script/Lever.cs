@@ -2,9 +2,11 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class Key : MonoBehaviour
-{
+
+public class Lever : MonoBehaviour
+{   
     public UnityEvent myEvents;
+    [SerializeField] private bool activated;
     private bool isInRange;
     private Text interactUI;
 
@@ -15,12 +17,12 @@ public class Key : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       if(isInRange && Input.GetKeyDown(KeyCode.E))
-       {
-           myEvents.Invoke();
-           interactUI.enabled = false;
-           Destroy(gameObject);
-       }
+        if(Input.GetKeyDown(KeyCode.E) && !activated && isInRange)
+        {
+            activated = true;
+            interactUI.enabled = false;
+            myEvents.Invoke();
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other) 

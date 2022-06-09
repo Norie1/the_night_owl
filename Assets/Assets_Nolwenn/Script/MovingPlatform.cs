@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public float speed;
+    public float speed = 2;
     public Transform[] waypoints;
     private Transform target;
-    public bool activated;
+    [SerializeField] private bool activated;
 
     [SerializeField] private int index;
 
