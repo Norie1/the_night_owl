@@ -17806,7 +17806,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ee0e5bfaabb124988c3a6c57cbef85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointID: 0
 --- !u!1 &708775502
 GameObject:
   m_ObjectHideFlags: 0
@@ -18370,7 +18369,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838813563}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 309.89, y: 15.967999, z: 0}
+  m_LocalPosition: {x: -17.17, y: 4.11, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -20099,7 +20098,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c1ee0e5bfaabb124988c3a6c57cbef85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkpointID: 1
 --- !u!58 &1308018332
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -21138,6 +21136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e20c874156645f4b9b13ffeacb4078c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 0
+  waypoints:
+  - {fileID: 1527470369}
+  playerSprite: {fileID: 0}
+  animator: {fileID: 0}
 --- !u!61 &1527470371
 BoxCollider2D:
   m_ObjectHideFlags: 0

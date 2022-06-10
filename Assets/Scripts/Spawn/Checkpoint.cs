@@ -26,11 +26,11 @@ public class Checkpoint : MonoBehaviour
             respawnPoint.position = transform.position;
 
             //Update of the respawnPoint attribute from PlayerMovement_S script
-            PlayerMovement_S.instance.respawnPoint = transform.position;
+            PlayerMovement.instance.respawnPoint = transform.position;
             Destroy(gameObject);
 
             //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
-            RespawnManager_S.instance.checkpointReached(checkpointID);
+            RespawnManager.instance.checkpointReached(checkpointID);
 
             //Displaying checkpoint indicator
             checkpointText.enabled = true;
