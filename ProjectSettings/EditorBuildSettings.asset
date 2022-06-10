@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/CutScene.unity
+    path: Assets/Scenes/IntroScene.unity
     guid: e01926c341846314197b776e6ca2eed1
   - enabled: 1
     path: Assets/Scenes/Level_Jacques.unity
@@ -18,7 +18,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Shop.unity
     guid: 4185097a11dd8a94e88dc53841bf837c
   - enabled: 1
-    path: Assets/Scenes/Level_Donjon_1_Jacques.unity
+    path: Assets/Scenes/Level_Donjon_Jacques.unity
     guid: 8376836a7a36fd44c923045f16972fca
   - enabled: 1
     path: Assets/Scenes/Level_Antoine.unity
