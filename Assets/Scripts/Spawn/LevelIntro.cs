@@ -28,7 +28,7 @@ public class LevelIntro : MonoBehaviour
 
     void Update()
     {
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
+        if ( Input.GetKeyDown(KeyCode.E))
         {
             dialogManager.DisplayNextSentence();
         }
