@@ -17,6 +17,8 @@ TagManager:
   - InteractMessage
   - Ennemie
   - Coin
+  - Bat
+  - Projectile
   layers:
   - Default
   - TransparentFX

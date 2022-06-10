@@ -834,7 +834,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -843,6 +843,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -6227,7 +6239,6 @@ TextureImporter:
       Tile7_15: -5735337688598295108
       Tile7_54: -3300897044940406255
       Tile7_200: 6687879466043964439
-      Tile7_198: 534833630558304731
       Tile7_113: -724515058874614484
       Tile7_13: 5437906147610953277
       Tile7_132: 4303596186337108043
@@ -6262,8 +6273,8 @@ TextureImporter:
       Tile7_104: -8321171164794037015
       Tile7_169: 258250773075310971
       Tile7_44: -1123682983672573955
-      Tile7_47: -2549160357472979964
       Tile7_138: 4266545644129109357
+      Tile7_47: -2549160357472979964
       Tile7_1: -9088668079127705589
       Tile7_8: 7387048946801349456
       Tile7_203: -3550175588909478692
@@ -6288,8 +6299,8 @@ TextureImporter:
       Tile7_183: 4761816127067725152
       Tile7_124: 5323181822867182640
       Tile7_184: -4115185577842617147
-      Tile7_11: 5332837083244543596
       Tile7_218: 4142123709351116713
+      Tile7_11: 5332837083244543596
       Tile7_25: -1126891686158399067
       Tile7_210: 2380135225129798687
       Tile7_174: 7718734421402985555
@@ -6300,8 +6311,8 @@ TextureImporter:
       Tile7_230: -9083606910704410977
       Tile7_57: -1395639003820338839
       Tile7_62: 7927187288888877234
-      Tile7_163: -116738502073474022
       Tile7_197: -6717842698296553962
+      Tile7_163: -116738502073474022
       Tile7_35: -4485130297815931991
       Tile7_73: 1779944785505155514
       Tile7_77: -5216908884518074489
@@ -6340,11 +6351,11 @@ TextureImporter:
       Tile7_176: 2086388835734850499
       Tile7_99: -5569122288450544787
       Tile7_159: -4235893591175379863
-      Tile7_50: -4306386540048843793
       Tile7_180: -6720400054032065547
+      Tile7_50: -4306386540048843793
+      Tile7_209: 3170283789494960264
       Tile7_87: 5534384682498592742
       Tile7_83: 3290213094945719362
-      Tile7_209: 3170283789494960264
       Tile7_229: 1486172359671047528
       Tile7_112: 4176797377179660592
       Tile7_253: 6759356982182496520
@@ -6386,8 +6397,8 @@ TextureImporter:
       Tile7_189: 1607384837118653170
       Tile7_66: 4877157377347188704
       Tile7_202: 8471008411158407747
-      Tile7_206: -3376211032915125852
       Tile7_224: 3427312374291444062
+      Tile7_206: -3376211032915125852
       Tile7_213: 4582021236459798898
       Tile7_118: 4221390537381638179
       Tile7_108: 7188948864220262837
@@ -6465,6 +6476,7 @@ TextureImporter:
       Tile7_249: 411911448287079648
       Tile7_246: 5041399332720577146
       Tile7_107: -1877775815010195625
+      Tile7_198: 534833630558304731
       Tile7_102: 5169380624918109108
       Tile7_70: -8799073353752733678
       Tile7_27: 7979954106561164833

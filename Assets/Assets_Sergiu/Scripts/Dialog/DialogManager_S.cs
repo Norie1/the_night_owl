@@ -19,6 +19,7 @@ public class DialogManager_S : MonoBehaviour
     {
         if (instance != null)
         {
+            Debug.Log("DialogManager already initiated.");
             return;
         }
         instance = this;
@@ -59,16 +60,17 @@ public class DialogManager_S : MonoBehaviour
         DisplayNextSentence();
     }
 
-    public void DisplayNextSentence()
+    public bool DisplayNextSentence()
     {
         if (queue.Count == 0)
         {
             EndDialog();
-            return;
+            return false;
         }
 
         string sentence = queue.Dequeue();
         dialogText.text = sentence;
+        return true;
     }
 
     public void EndDialog()

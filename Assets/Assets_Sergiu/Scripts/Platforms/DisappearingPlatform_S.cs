@@ -7,7 +7,7 @@ public class DisappearingPlatform_S : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(0.35f);
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
             gameObject.GetComponent<SpriteRenderer>().enabled = false;
 

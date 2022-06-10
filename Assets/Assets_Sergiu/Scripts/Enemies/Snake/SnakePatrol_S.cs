@@ -11,7 +11,7 @@ public class SnakePatrol_S : MonoBehaviour
     private Transform target;
     private int destPoint;
 
-    public SpriteRenderer snake; 
+    public SpriteRenderer enemySprite; 
 
     void Start()
     {
@@ -35,7 +35,7 @@ public class SnakePatrol_S : MonoBehaviour
             target = waypoints[destPoint];
 
             //Snake flip
-            snake.flipX = !snake.flipX;
+            enemySprite.flipX = !enemySprite.flipX;
         }
     }
 

@@ -20,6 +20,9 @@ public class PlayerMovement_S : MonoBehaviour
     private bool doubleJump;
 
     [HideInInspector]
+    private bool flipPlayer;
+
+    [HideInInspector]
     public bool freezePlayerMovement;
 
     public Transform groundCheck;
@@ -34,6 +37,10 @@ public class PlayerMovement_S : MonoBehaviour
     public Vector3 respawnPoint;
     public GameObject deathZone;
 
+    public Projectile_S projectilePrefab;
+    public Transform launchOffsetR;
+    public Transform launchOffsetL;
+    private bool activeProjectile;
 
     private Rigidbody2D rigidBody;
     private Animator playerAnimator;
@@ -63,6 +70,7 @@ public class PlayerMovement_S : MonoBehaviour
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         activeDash = true;
+        activeProjectile = true;
 
         //Import of public methods and attributes from PlayerHealth script
         playerHealth = PlayerHealth_S.instance;
@@ -116,6 +124,35 @@ public class PlayerMovement_S : MonoBehaviour
         {
             StartCoroutine(Dash(horizontalMovement));
             activeDash = false;
+        }
+        if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
+        {
+            projectilePrefab.flipPlayer = flipPlayer;
+
+            /*
+            Vector3 launchOffset;
+            if (!flipPlayer)
+            {
+                launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
+            }
+            else
+            {
+                launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
+            }
+            Instantiate(projectilePrefab, launchOffset, transform.rotation);
+            */
+            Vector3 launchOffset;
+            if (!flipPlayer)
+            {
+                launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
+                Instantiate(projectilePrefab, launchOffset, launchOffsetR.rotation);
+            }
+            else
+            {
+                launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
+                Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
+            }
+            
         }
     }
 
@@ -213,10 +250,12 @@ public class PlayerMovement_S : MonoBehaviour
         if (_velocity > 0.1f)
         {
             spriteRenderer.flipX = false;
+            flipPlayer = false;
         }
         else if (_velocity < -0.1f)
         {
             spriteRenderer.flipX = true;
+            flipPlayer = true;
         }
     }
 

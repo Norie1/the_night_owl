@@ -4,7 +4,24 @@ public class SnakeWeakSpot_S : MonoBehaviour
 {
     public SpriteRenderer snakeSprite;
     public BoxCollider2D snakeCollider;
-    public int checkpointID;
+
+    [SerializeField]
+    private int checkpointID;  
+
+    private void Update()
+    {
+        //Verification of reached checkpoint
+        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
+
+        //True if the player is dead
+        bool playerDeath = PlayerHealth_S.instance.playerDeath;
+
+        //Enemy restored on player death if already destroyed and checkpoint not yet reached
+        if (playerDeath && activeRespawn)
+        {
+            RestoreEnemy();
+        }
+    }
 
     //Killed by the player on collision with the weakspot
     private void OnTriggerEnter2D(Collider2D collision)
@@ -15,20 +32,7 @@ public class SnakeWeakSpot_S : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        //Verification of reached checkpoint
-        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
-
-        //Enemy restored on player death if already destroyed and checkpoint not yet reached
-        if (PlayerHealth_S.instance.playerDeath && activeRespawn)
-        {
-            RestoreEnemy();
-        }
-    }
-
     //Disables object collider and graphics
-    [HideInInspector]
     public void RemoveEnemy()
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -37,7 +41,6 @@ public class SnakeWeakSpot_S : MonoBehaviour
     }
 
     //Restores object collider and graphics
-    [HideInInspector]
     public void RestoreEnemy()
     {
         gameObject.GetComponent<BoxCollider2D>().enabled = true;

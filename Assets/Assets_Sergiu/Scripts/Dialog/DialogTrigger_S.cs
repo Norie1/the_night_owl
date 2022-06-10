@@ -24,10 +24,14 @@ public class DialogTrigger_S : MonoBehaviour
             if (!dialogManager.dialogStarted)
             {
                 dialogManager.StartDialog(dialog);
+                interactMessage.enabled = false;
             }
             else
             {
-                dialogManager.DisplayNextSentence();
+                if (!dialogManager.DisplayNextSentence())
+                {
+                    interactMessage.enabled = true;
+                }
             }
         }
     }

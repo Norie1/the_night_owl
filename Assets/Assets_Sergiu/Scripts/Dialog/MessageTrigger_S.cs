@@ -11,10 +11,9 @@ public class MessageTrigger_S : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
             StartCoroutine(DisplayMessage());
-        }
-
-        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        }  
     }
 
     private IEnumerator DisplayMessage()

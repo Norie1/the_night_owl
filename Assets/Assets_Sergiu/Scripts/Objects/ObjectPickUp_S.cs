@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ObjectPickup_S : MonoBehaviour
 {
-    public int checkpointID;
+    [SerializeField]
+    private int checkpointID;
 
     private void Update()
     {
