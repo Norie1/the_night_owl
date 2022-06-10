@@ -29,15 +29,15 @@ public class EnnemyPatrol_J : MonoBehaviour
 		target = waypoint[destPoint];
 	    graphic.flipX = !graphic.flipX; 
   	}
-    }
-/*
+  }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
       if(collision.transform.gameObject.tag == "Player")
       {
-        Player_Health_J playerHealth = collision.transform.GetComponent<Player_Health_J>();
-        playerHealth.TakeDamages(damageOnCollision);
+        PlayerHealth playerHealth = collision.transform.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamage(damageOnCollision);
       }
     }
-*/
+
 }
