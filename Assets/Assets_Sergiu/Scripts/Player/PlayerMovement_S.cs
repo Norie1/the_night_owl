@@ -10,6 +10,7 @@ public class PlayerMovement_S : MonoBehaviour
     private float horizontalMovement;
 
     private bool isJumping;
+    private bool isDancing;
     private bool activeDash;
     private bool isGrounded;
     private bool onTheWallR;
@@ -49,8 +50,13 @@ public class PlayerMovement_S : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     private PlayerHealth_S playerHealth;
+    private Moonwalk_S moonwalk;
 
     public static PlayerMovement_S instance;
+    private Transform[] waypoints;
+    private Transform target;
+    private int destPoint;
+    public int speed;
 
     private void Awake()
     {
@@ -74,86 +80,107 @@ public class PlayerMovement_S : MonoBehaviour
 
         //Import of public methods and attributes from PlayerHealth script
         playerHealth = PlayerHealth_S.instance;
+        moonwalk = Moonwalk_S.instance;
+
 
         //Importing the rigid body, animator and the sprite renderer of the player
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         playerAnimator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        waypoints = Moonwalk_S.instance.waypoints;
+
+        //Initialization of the first target/destination
+        target = waypoints[0];
+        destPoint = 0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Verification of proximity with a wall
-        onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
-        onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
+        isDancing = moonwalk.isDancing;
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
-        if (Input.GetButtonDown("Jump") && !freezePlayerMovement)
+        if (isDancing)
         {
-            //Normal jump
-            if (isGrounded)
+            Vector3 direction = target.position - transform.position;
+
+            //Player movement (normalization of the movement vector)
+            transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
+
+            //When the enemy is close to the target
+            if (Vector3.Distance(transform.position, target.position) < 0.3f)
             {
-                isJumping = true;
-            }
-            //Wall jump right side
-            else if (onTheWallR && wallJumpR)
-            {
-                isJumping = true;
-                wallJumpR = false;
-                wallJumpL = true;
-                superJump = true;
-            }
-            //Wall jump left side
-            else if (onTheWallL && wallJumpL)
-            {
-                isJumping = true;
-                wallJumpL = false;
-                wallJumpR = true;
-                superJump = true;
-            }
-            //Double jump
-            else if (doubleJump && !onTheWallL && !onTheWallR)
-            {
-                isJumping = true;
-                doubleJump = false;
+                //target = next target
+                destPoint = (destPoint + 1) % waypoints.Length;
+                target = waypoints[destPoint];
+
+                //Player flip
+                spriteRenderer.flipX = !spriteRenderer.flipX;
             }
         }
-        if (Input.GetKeyDown(KeyCode.X) && activeDash)
+        else
         {
-            StartCoroutine(Dash(horizontalMovement));
-            activeDash = false;
-        }
-        if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
-        {
-            projectilePrefab.flipPlayer = flipPlayer;
+            //Verification of proximity with a wall
+            onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
+            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
 
-            /*
-            Vector3 launchOffset;
-            if (!flipPlayer)
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
+
+            if (Input.GetButtonDown("Jump") && !freezePlayerMovement)
             {
-                launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
+                //Normal jump
+                if (isGrounded)
+                {
+                    isJumping = true;
+                }
+                //Wall jump right side
+                else if (onTheWallR && wallJumpR)
+                {
+                    isJumping = true;
+                    wallJumpR = false;
+                    wallJumpL = true;
+                    superJump = true;
+                }
+                //Wall jump left side
+                else if (onTheWallL && wallJumpL)
+                {
+                    isJumping = true;
+                    wallJumpL = false;
+                    wallJumpR = true;
+                    superJump = true;
+                }
+                //Double jump
+                else if (doubleJump && !onTheWallL && !onTheWallR)
+                {
+                    isJumping = true;
+                    doubleJump = false;
+                }
             }
-            else
+            if (Input.GetKeyDown(KeyCode.X) && activeDash)
             {
-                launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
+                StartCoroutine(Dash(horizontalMovement));
+                activeDash = false;
             }
-            Instantiate(projectilePrefab, launchOffset, transform.rotation);
-            */
-            Vector3 launchOffset;
-            if (!flipPlayer)
+            if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
             {
-                launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
-                Instantiate(projectilePrefab, launchOffset, launchOffsetR.rotation);
+                projectilePrefab.flipPlayer = flipPlayer;
+
+                Vector3 launchOffset;
+                if (!flipPlayer)
+                {
+                    launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
+                    Instantiate(projectilePrefab, launchOffset, launchOffsetR.rotation);
+                }
+                else
+                {
+                    launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
+                    Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
+                }
+
             }
-            else
-            {
-                launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
-                Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
-            }
-            
         }
+
+        
     }
 
     void FixedUpdate()
