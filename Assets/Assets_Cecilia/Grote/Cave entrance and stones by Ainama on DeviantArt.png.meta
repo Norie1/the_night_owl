@@ -1,0 +1,3026 @@
+fileFormatVersion: 2
+guid: f2c24a61e5429e14dadec0770a3a41f8
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_0
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 932
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e1b02e15fdd1a4f81622980c7cda2e
+      internalID: 1192826973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_1
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 932
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c4b4366d10b0c4db1c268fe946d5db
+      internalID: -1781201136
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_2
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 868
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ca6b4f6ac5d5de4e957df4cde4856a5
+      internalID: -289747071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_3
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 868
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485129750e91a9f40a5dc559d8377198
+      internalID: -1793139943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_4
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 868
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da72eb480e0e4e74d8e9e89824db9e58
+      internalID: 543982586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_5
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 868
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe02afc5d124594bb82bac850c3173f
+      internalID: 803259220
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_6
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 804
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c068da163bffdfd4f9f9cc465e9b4023
+      internalID: 78450089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_7
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 804
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0224b4deb7624d24a9d7bf031f65880e
+      internalID: -1679711696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_8
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 804
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a25b74220edb946b2ac0442401b80e
+      internalID: -275254868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_9
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 804
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f976d4f742f915e4ca30361521d12774
+      internalID: 302675113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_10
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 804
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15cf75dce9022bf49ae9983533663ada
+      internalID: -1099016571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_11
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 804
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb26e9a23e6dc104c857da457368276f
+      internalID: -1100266668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d93465e62e564c40ba6f1ea610fefcd
+      internalID: -1203370582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_13
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb73156ff590e6042baa5b84c745efbb
+      internalID: 1206430998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_14
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec8de83edcf9d7f4889aedce5f56ef35
+      internalID: -1607672450
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_15
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6b6c769ed821f5489e0ddb4e76ebe01
+      internalID: -292591191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_16
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29b85c824b4fb684287b3ca07acac214
+      internalID: -1741280941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_17
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfbdabf3270d4344adedc28a4e3b381
+      internalID: 330600305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_18
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b4f3a9c9a67614428476262f985bfc4
+      internalID: -1202678480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_19
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 740
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b56040671bdb7f469af47a9334574c4
+      internalID: -2120349907
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2014c72432b93874cb49bd819bcecca2
+      internalID: -424899780
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c55d107a3d912bc4bab7e4aaffce152a
+      internalID: 2106159495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca84c1de3cfe425418effaf329da94a7
+      internalID: 606730840
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa49ee15af05b564d8114e154eba71ac
+      internalID: -1466723819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_24
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 815edbee6c0987046b0fdd06c9167ae5
+      internalID: -130955636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d274d252b9cc713409f2e9fbfe4739b4
+      internalID: -1128116067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_26
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e11d83dae7d285b43aa01989ad5fc71c
+      internalID: 1340365477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_27
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 676
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1178f741e99a90c4097e2a9f1bb871c1
+      internalID: -2054679622
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edbe637c94c9d1349846e827f1a7e86f
+      internalID: -2121328291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_29
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 064fae536c1a51349b1c59762a93ae18
+      internalID: 1397118281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_30
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e347baff75b395498b30eafde038c1b
+      internalID: -1068008893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_31
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b5d74832e5dac144afb4cfa8d1bcbce
+      internalID: 1322076462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_32
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47ec1956d0cb1c545b33fedf21bc072f
+      internalID: 952195954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_33
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db8d8f882397a04ea2d1c481e895011
+      internalID: -801521446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_34
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e69fa48185c38c43807d91f0a85ea8c
+      internalID: -309017143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_35
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 612
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 104b5f5ff404bce4494ed0f10c2dfbff
+      internalID: 1636491062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_36
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e86cc2cf81393842b408022b084d73b
+      internalID: -27899239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_37
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cea57fe712b56e14e8de02c2fb57b5fb
+      internalID: -1937701388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_38
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f67fd9383c33ed14daeba973cdc482e2
+      internalID: -1070991819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_39
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14c291042f416f4449a4429a20a09a33
+      internalID: 1925068153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_40
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c459c1f0951f349aba737bc86d3cee
+      internalID: -609065794
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_41
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 561d76e026734b641b7c4f9dd7807e46
+      internalID: 1594956451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_42
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1630279c1d622fe438e3a696d8a806dc
+      internalID: -279729714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_43
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb83d0f862905ab468e3d3f2ba2bc6ff
+      internalID: -1473451905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_44
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 548
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 111ffbbfef5c2264b8182da00ae64d81
+      internalID: 841506428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_45
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af1f9796d02b4b47a15e7ab6c270e31
+      internalID: 2073906548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3613cf2b7d7aa4f48be1830b68847ec5
+      internalID: -1234045170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce706700842e5944ba85f842e6d36661
+      internalID: 336066477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1ae5978c9f0349478bb159e13de25c7
+      internalID: -360503456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33cc7b0b5bb16bf4c8a5b62c5f10199d
+      internalID: 514168523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02ba5156463d4394a9976d0212d763dd
+      internalID: -1456693065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_51
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74ceeff322911e44e924d896be69287e
+      internalID: -888825644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62c2e713266864b45bbf73248195ef4d
+      internalID: 788007181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_53
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b21f0f6d9c5ebc84abe91df97747be0d
+      internalID: 438636531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_54
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 484
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b51c83bd5185ad40841fa6046e91628
+      internalID: -1528114498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_55
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bdbb035650a4dd4a931310e4f2b4cd9
+      internalID: -1772314939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_56
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f74baf96f1ab0e24bbab88352c7c0ae9
+      internalID: 1361047769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_57
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a02523034f2c71d4fb8a366b4a5c4068
+      internalID: -1730389911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_58
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 839ca3ebd6f7f814c9c417c31b6a14f1
+      internalID: -1310420104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_59
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 046614b84f30cc54f81ba09e6762a8ac
+      internalID: -729456807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_60
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a05044643026e3409dffaf41654f998
+      internalID: 894665848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_61
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04a7b687c767bdd44b42b8c1a63a6efa
+      internalID: 513998386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_62
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c32297eadf54d2f4a8c02946cc08b05a
+      internalID: 1906494599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_63
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ba4adb2929e0904390a0ea1743e48b8
+      internalID: -1691926510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_64
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1e24e72664f9a84487bcca6096edec5
+      internalID: -1588392195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_65
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 420
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db6a974eaeaece04a86c5392eb134ba3
+      internalID: -284352889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_66
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0c9886bf8e65a47bbe8a8900630659
+      internalID: 1832095152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_67
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3bfd7f4ede6b174a898c1bd917d08f6
+      internalID: 1039121959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_68
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 469127ca4f77dbb479b395609361e29e
+      internalID: 2062945842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_69
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15f61b47ddc0a14498bb8894d1ede6ff
+      internalID: 567236008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_70
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 574ee394fc331ab4998c97736d98660c
+      internalID: 2020030565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_71
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32a13bf0737eec9408c89e68be01972d
+      internalID: -789059941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_72
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2b41e0f88ecec43a8dd3934f1cad75
+      internalID: 406623462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_73
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1c73aa851173504c921f056f5fa50ce
+      internalID: 1567791162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_74
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 289ae961212ae714e83664db7c77ebe8
+      internalID: 2132082921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_75
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d1fd502438f44b4280c538c9453666b
+      internalID: 1284127784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_76
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 356
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aae5c1ed62d768f408328a6252f96462
+      internalID: 1111850113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_77
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abf72dcf1dc879143aa1bf47edebba43
+      internalID: -1372122422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_78
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5066a142bf8737440abbcbabc6649971
+      internalID: 1844404806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_79
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c2e8bac46ba4347a021e223e8d7d97
+      internalID: -1363692613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fedd969cf8340174b81eef2b16d5febb
+      internalID: -1603176022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_81
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41d2c1513fce5648b84d26ebf4e8182
+      internalID: 1183269309
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_82
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb773b358a295e94b87ccc5f2ef3507f
+      internalID: 1603961467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_83
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58ead36b9e89147479f74fc33b7d8dfa
+      internalID: 2140964000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_84
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9165fbdc3d192aa4c91278acff229ade
+      internalID: -931327643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_85
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5e6112c1f48f043883839daa2c249f
+      internalID: 49700301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_86
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19071ee4014baf24299d55dc69a59fcd
+      internalID: 2096413737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_87
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 292
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b65c6ec0bd7c30c4db8ce80803cd0683
+      internalID: 373214197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_88
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64ae1b982e53c0a49bc1887156f95166
+      internalID: 1699282148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_89
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41db69280cc9393458c3db6396008501
+      internalID: 879419988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_90
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259bb046be95bed4ba9f86b894f50a34
+      internalID: 1105699559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_91
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87dce949d206fb1489d032efe85502b3
+      internalID: -2110881893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_92
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014b0de9c582c474f9395cfb4602c164
+      internalID: -1412112061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_93
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb78a7fd64252f4a940b19758da597b
+      internalID: -11466368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_94
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 599d6a4342d030b4ea97f5939d91d489
+      internalID: -549446326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_95
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 924c4d3e177772442abbecb25c3927ba
+      internalID: 666860155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_96
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55e15b26f8075741913278586b972e5
+      internalID: 2074054441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_97
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 228
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b144bc2a2e7be741a015d3e9373ce31
+      internalID: 1089739154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_98
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 716501e30a0f27f459dc708121fa9e5d
+      internalID: -495142208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_99
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e88f49b928c11f749ab292faeb6d4b5e
+      internalID: -1591515113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_100
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35831e331892628479d4dc510977d726
+      internalID: 2065141509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_101
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71825cced6aa0384982ca5aeef65b83d
+      internalID: -1910293083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_102
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e44840f295f4141a54a4e643ff26fa
+      internalID: -767379642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_103
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b606dc30e09047640b0cb1afecf39285
+      internalID: 1611782135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_104
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e504b02aab81c0846859c36957d5ed47
+      internalID: 558416951
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_105
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e71270cf8b0a943afdfb5290cb8291
+      internalID: 1769346825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_106
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7645f9ab05d69f5488b777f818127c44
+      internalID: 887147194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_107
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adf3fab26c6a6f243932340db43115bc
+      internalID: 710726048
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_108
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da45e074983c08c4886679169c83f6f5
+      internalID: -1966422687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_109
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 164
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e579ca0bf66a3489f38521288b7292
+      internalID: -201381119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_110
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 356fc51e55fe63945b1d9acda9d15cf0
+      internalID: 902151833
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_111
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 759c30919e74ffc44a0ca92810c07c92
+      internalID: 928507303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_112
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4a15f739cf09624aa620b478f8f0f2d
+      internalID: 981675500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_113
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98d31dd17c25a104589188e7e5d86f02
+      internalID: 996650653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_114
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 493d92b06475af249826c2c8a60009e7
+      internalID: -725400099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_115
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d46d097d6763c4544adbe230437b7467
+      internalID: -894686465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_116
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5f79ba3a6545e54d85a61d81acd2ebe
+      internalID: 1843837318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_117
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aeddfd7d74b3a047ad3657f227aca69
+      internalID: 440598913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_118
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 667f2770636923c45b8e43e634333409
+      internalID: -1995671062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_119
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 691289a715a8fe440b00e1b86b30d276
+      internalID: -1276847583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_120
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72feb6e8b493694cab09668aab6218b
+      internalID: -2125156734
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_121
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 100
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62523a1188dc375458c9f5cba786be68
+      internalID: -162037419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_122
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0162c8b1066b14b41b1519cc85322eaf
+      internalID: 1120477845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_123
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55c657369e5ac643841e5d04a379e33
+      internalID: -548234129
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_124
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aabdac0870b9ff0438e22fa25ae8d5f0
+      internalID: 678779743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_125
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b756f41c29a8d64489d3c1a2d5882fc4
+      internalID: -90299200
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_126
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8be3ff845dcbe5547a9e0551834ba580
+      internalID: 287235470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_127
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b686a12e58e7094ba61ce4c4e3e47d4
+      internalID: 1681339077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_128
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ece8234fd5c48554da8aad14feae8c69
+      internalID: 385658101
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_129
+      rect:
+        serializedVersion: 2
+        x: 576
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d020e2f29511d5e4c9d51a92be3d3c1a
+      internalID: -848687401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_130
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0672631107022c458b28ed7119c9cab
+      internalID: 2033635778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cave entrance and stones by Ainama on DeviantArt_131
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 36
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d55f5bb8c94dfc146bf537508d8cd8c1
+      internalID: 1040875827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cave entrance and stones by Ainama on DeviantArt_30: -1068008893
+      Cave entrance and stones by Ainama on DeviantArt_131: 1040875827
+      Cave entrance and stones by Ainama on DeviantArt_16: -1741280941
+      Cave entrance and stones by Ainama on DeviantArt_37: -1937701388
+      Cave entrance and stones by Ainama on DeviantArt_82: 1603961467
+      Cave entrance and stones by Ainama on DeviantArt_33: -801521446
+      Cave entrance and stones by Ainama on DeviantArt_42: -279729714
+      Cave entrance and stones by Ainama on DeviantArt_102: -767379642
+      Cave entrance and stones by Ainama on DeviantArt_117: 440598913
+      Cave entrance and stones by Ainama on DeviantArt_66: 1832095152
+      Cave entrance and stones by Ainama on DeviantArt_8: -275254868
+      Cave entrance and stones by Ainama on DeviantArt_72: 406623462
+      Cave entrance and stones by Ainama on DeviantArt_29: 1397118281
+      Cave entrance and stones by Ainama on DeviantArt_101: -1910293083
+      Cave entrance and stones by Ainama on DeviantArt_113: 996650653
+      Cave entrance and stones by Ainama on DeviantArt_2: -289747071
+      Cave entrance and stones by Ainama on DeviantArt_84: -931327643
+      Cave entrance and stones by Ainama on DeviantArt_20: -424899780
+      Cave entrance and stones by Ainama on DeviantArt_120: -2125156734
+      Cave entrance and stones by Ainama on DeviantArt_5: 803259220
+      Cave entrance and stones by Ainama on DeviantArt_88: 1699282148
+      Cave entrance and stones by Ainama on DeviantArt_81: 1183269309
+      Cave entrance and stones by Ainama on DeviantArt_67: 1039121959
+      Cave entrance and stones by Ainama on DeviantArt_107: 710726048
+      Cave entrance and stones by Ainama on DeviantArt_97: 1089739154
+      Cave entrance and stones by Ainama on DeviantArt_114: -725400099
+      Cave entrance and stones by Ainama on DeviantArt_47: 336066477
+      Cave entrance and stones by Ainama on DeviantArt_86: 2096413737
+      Cave entrance and stones by Ainama on DeviantArt_121: -162037419
+      Cave entrance and stones by Ainama on DeviantArt_49: 514168523
+      Cave entrance and stones by Ainama on DeviantArt_63: -1691926510
+      Cave entrance and stones by Ainama on DeviantArt_56: 1361047769
+      Cave entrance and stones by Ainama on DeviantArt_80: -1603176022
+      Cave entrance and stones by Ainama on DeviantArt_87: 373214197
+      Cave entrance and stones by Ainama on DeviantArt_130: 2033635778
+      Cave entrance and stones by Ainama on DeviantArt_125: -90299200
+      Cave entrance and stones by Ainama on DeviantArt_75: 1284127784
+      Cave entrance and stones by Ainama on DeviantArt_58: -1310420104
+      Cave entrance and stones by Ainama on DeviantArt_3: -1793139943
+      Cave entrance and stones by Ainama on DeviantArt_60: 894665848
+      Cave entrance and stones by Ainama on DeviantArt_41: 1594956451
+      Cave entrance and stones by Ainama on DeviantArt_24: -130955636
+      Cave entrance and stones by Ainama on DeviantArt_27: -2054679622
+      Cave entrance and stones by Ainama on DeviantArt_69: 567236008
+      Cave entrance and stones by Ainama on DeviantArt_7: -1679711696
+      Cave entrance and stones by Ainama on DeviantArt_115: -894686465
+      Cave entrance and stones by Ainama on DeviantArt_52: 788007181
+      Cave entrance and stones by Ainama on DeviantArt_18: -1202678480
+      Cave entrance and stones by Ainama on DeviantArt_126: 287235470
+      Cave entrance and stones by Ainama on DeviantArt_62: 1906494599
+      Cave entrance and stones by Ainama on DeviantArt_111: 928507303
+      Cave entrance and stones by Ainama on DeviantArt_73: 1567791162
+      Cave entrance and stones by Ainama on DeviantArt_104: 558416951
+      Cave entrance and stones by Ainama on DeviantArt_68: 2062945842
+      Cave entrance and stones by Ainama on DeviantArt_46: -1234045170
+      Cave entrance and stones by Ainama on DeviantArt_94: -549446326
+      Cave entrance and stones by Ainama on DeviantArt_50: -1456693065
+      Cave entrance and stones by Ainama on DeviantArt_12: -1203370582
+      Cave entrance and stones by Ainama on DeviantArt_4: 543982586
+      Cave entrance and stones by Ainama on DeviantArt_123: -548234129
+      Cave entrance and stones by Ainama on DeviantArt_61: 513998386
+      Cave entrance and stones by Ainama on DeviantArt_40: -609065794
+      Cave entrance and stones by Ainama on DeviantArt_124: 678779743
+      Cave entrance and stones by Ainama on DeviantArt_89: 879419988
+      Cave entrance and stones by Ainama on DeviantArt_96: 2074054441
+      Cave entrance and stones by Ainama on DeviantArt_19: -2120349907
+      Cave entrance and stones by Ainama on DeviantArt_108: -1966422687
+      Cave entrance and stones by Ainama on DeviantArt_127: 1681339077
+      Cave entrance and stones by Ainama on DeviantArt_34: -309017143
+      Cave entrance and stones by Ainama on DeviantArt_85: 49700301
+      Cave entrance and stones by Ainama on DeviantArt_31: 1322076462
+      Cave entrance and stones by Ainama on DeviantArt_23: -1466723819
+      Cave entrance and stones by Ainama on DeviantArt_71: -789059941
+      Cave entrance and stones by Ainama on DeviantArt_79: -1363692613
+      Cave entrance and stones by Ainama on DeviantArt_48: -360503456
+      Cave entrance and stones by Ainama on DeviantArt_57: -1730389911
+      Cave entrance and stones by Ainama on DeviantArt_65: -284352889
+      Cave entrance and stones by Ainama on DeviantArt_6: 78450089
+      Cave entrance and stones by Ainama on DeviantArt_32: 952195954
+      Cave entrance and stones by Ainama on DeviantArt_100: 2065141509
+      Cave entrance and stones by Ainama on DeviantArt_110: 902151833
+      Cave entrance and stones by Ainama on DeviantArt_128: 385658101
+      Cave entrance and stones by Ainama on DeviantArt_38: -1070991819
+      Cave entrance and stones by Ainama on DeviantArt_17: 330600305
+      Cave entrance and stones by Ainama on DeviantArt_105: 1769346825
+      Cave entrance and stones by Ainama on DeviantArt_45: 2073906548
+      Cave entrance and stones by Ainama on DeviantArt_11: -1100266668
+      Cave entrance and stones by Ainama on DeviantArt_103: 1611782135
+      Cave entrance and stones by Ainama on DeviantArt_118: -1995671062
+      Cave entrance and stones by Ainama on DeviantArt_10: -1099016571
+      Cave entrance and stones by Ainama on DeviantArt_119: -1276847583
+      Cave entrance and stones by Ainama on DeviantArt_129: -848687401
+      Cave entrance and stones by Ainama on DeviantArt_25: -1128116067
+      Cave entrance and stones by Ainama on DeviantArt_95: 666860155
+      Cave entrance and stones by Ainama on DeviantArt_35: 1636491062
+      Cave entrance and stones by Ainama on DeviantArt_98: -495142208
+      Cave entrance and stones by Ainama on DeviantArt_43: -1473451905
+      Cave entrance and stones by Ainama on DeviantArt_99: -1591515113
+      Cave entrance and stones by Ainama on DeviantArt_51: -888825644
+      Cave entrance and stones by Ainama on DeviantArt_39: 1925068153
+      Cave entrance and stones by Ainama on DeviantArt_44: 841506428
+      Cave entrance and stones by Ainama on DeviantArt_53: 438636531
+      Cave entrance and stones by Ainama on DeviantArt_74: 2132082921
+      Cave entrance and stones by Ainama on DeviantArt_109: -201381119
+      Cave entrance and stones by Ainama on DeviantArt_54: -1528114498
+      Cave entrance and stones by Ainama on DeviantArt_83: 2140964000
+      Cave entrance and stones by Ainama on DeviantArt_76: 1111850113
+      Cave entrance and stones by Ainama on DeviantArt_22: 606730840
+      Cave entrance and stones by Ainama on DeviantArt_21: 2106159495
+      Cave entrance and stones by Ainama on DeviantArt_26: 1340365477
+      Cave entrance and stones by Ainama on DeviantArt_59: -729456807
+      Cave entrance and stones by Ainama on DeviantArt_112: 981675500
+      Cave entrance and stones by Ainama on DeviantArt_91: -2110881893
+      Cave entrance and stones by Ainama on DeviantArt_92: -1412112061
+      Cave entrance and stones by Ainama on DeviantArt_15: -292591191
+      Cave entrance and stones by Ainama on DeviantArt_9: 302675113
+      Cave entrance and stones by Ainama on DeviantArt_14: -1607672450
+      Cave entrance and stones by Ainama on DeviantArt_90: 1105699559
+      Cave entrance and stones by Ainama on DeviantArt_70: 2020030565
+      Cave entrance and stones by Ainama on DeviantArt_55: -1772314939
+      Cave entrance and stones by Ainama on DeviantArt_64: -1588392195
+      Cave entrance and stones by Ainama on DeviantArt_28: -2121328291
+      Cave entrance and stones by Ainama on DeviantArt_77: -1372122422
+      Cave entrance and stones by Ainama on DeviantArt_106: 887147194
+      Cave entrance and stones by Ainama on DeviantArt_116: 1843837318
+      Cave entrance and stones by Ainama on DeviantArt_36: -27899239
+      Cave entrance and stones by Ainama on DeviantArt_78: 1844404806
+      Cave entrance and stones by Ainama on DeviantArt_93: -11466368
+      Cave entrance and stones by Ainama on DeviantArt_1: -1781201136
+      Cave entrance and stones by Ainama on DeviantArt_13: 1206430998
+      Cave entrance and stones by Ainama on DeviantArt_122: 1120477845
+      Cave entrance and stones by Ainama on DeviantArt_0: 1192826973
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

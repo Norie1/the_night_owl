@@ -1,0 +1,1684 @@
+fileFormatVersion: 2
+guid: a4e06be458f9ac043836275709a84842
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Pixel tree_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 753f738d96234cb4a9ec26312891b4c3
+      internalID: -706632830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd07c692d4c619e40b4130bb70bec220
+      internalID: -2062050365
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_2
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d3c87c53637d3948a6b7d3a8daca39e
+      internalID: -1241124241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ed22bf0df19aca4e97fb8473d5c6bbe
+      internalID: -149775143
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_4
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4db56c2566052546986d76964455837
+      internalID: -2042866748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_5
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd5118de07794ee4299216148a414cb0
+      internalID: 40554126
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_6
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04c7e0cbb4e4b8c48904d95a55d54c43
+      internalID: 99339646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_7
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 610
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db0ab10d8978a524691b7fabd61fbfbe
+      internalID: -1451911630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6415625b74407d24db2630ab9ac70c66
+      internalID: 460217025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecb8fb518615da149b00dab60db55fd2
+      internalID: 1997927779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ab02b594f3cae84f8de5e78db5f3547
+      internalID: -74444865
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89868a43d6120fb4c94c66975d0abf81
+      internalID: 995216700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_12
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c99ad60d58874cc4e85d831c66c68ba5
+      internalID: -1157682567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_13
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad1239262dddb764fb1c1d6123302811
+      internalID: -1892221503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_14
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08f66c10fbceaef4e8d655a93c4e6fad
+      internalID: -2112551590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_15
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ce80db2413acf146b111e2a06e645ae
+      internalID: -463328613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_16
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 546
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb45eb6d6f5e39d429722135a0726904
+      internalID: 1519554346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_17
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05b3d9f3e15f1a47ba11692de5dbe20
+      internalID: 1044099270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 286493a111ef3054fb5fa7924aa6c406
+      internalID: -1218419244
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_19
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52b4325a8a2d25d41948395492c4836c
+      internalID: -1854280451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f9737a6a2d29441ac50e0992b92120
+      internalID: 1105577552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_21
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb45bb37cf13c2b45b0a2aa03ea72ac2
+      internalID: -666022878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_22
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 46d6756b71ce567439c4ce4a1c9b8a9b
+      internalID: -156038811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_23
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 196919d852934d141a947a8ec1449a3c
+      internalID: -242923911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_24
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a06c9d9a863fb2e43bcf6a869c31fc06
+      internalID: -502474156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_25
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 482
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a73f0d2714c098f46b8985d3175b1c67
+      internalID: 299701148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_26
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf2e1e25bf35d9b43bd647d569d43ce5
+      internalID: 314536333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_27
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1865424082d690e4db31181f34b77ed1
+      internalID: 1467273071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff8b811921b73fd4596f78ab36a61155
+      internalID: 452047611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_29
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee76f99101eaf28478c6603df873112e
+      internalID: -1442247366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_30
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7163a8cc04eba7d49989bebe2e0fba19
+      internalID: -863893348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_31
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b48d9fbbcbefe8948b60a3dec60702f4
+      internalID: -102420401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_32
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9caf127e62f1502409148ac4c0341285
+      internalID: 9796791
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_33
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71bc63fc1601bb14bb9cff4dd68eb8f8
+      internalID: 1495817288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_34
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 418
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27bb8ded320c5ac4989e5f409ab8b3f8
+      internalID: -938115707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_35
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40958a4049d2c66469a72993e25cf88f
+      internalID: -343555312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_36
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62f3936c2293cb64aa19025a8b534119
+      internalID: 1603956678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_37
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06ded307ddead2144a92722d574082a9
+      internalID: -2115793172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_38
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4aeea39a8e234408a271e25e49f112
+      internalID: 2051627262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_39
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6451ca65fb6f1934dac146138afc99b6
+      internalID: -1301625416
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_40
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19c9561fd150a84bbe3ee254a4f406f
+      internalID: -1977992190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_41
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7f6004719f57fd4ea746c38a19e3e60
+      internalID: 616542203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_42
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 901e45c5d85b65243a69d1020899b578
+      internalID: 1472579967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_43
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 354
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7e285155614114408130c277e48f5b0
+      internalID: -47499768
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_44
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c83d82a6594b54e92a566f1e187062
+      internalID: 1943235007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_45
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd4a95c779244754ab6916f3811c125a
+      internalID: -261369746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_46
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28ea33511a6abf742a3c16b0ed1f9f2d
+      internalID: -1501492121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_47
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9ac74508ae35f849b2eca35bbbeba2c
+      internalID: 298649170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_48
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd641f65f789bbb4cbea14d59b4bb9ce
+      internalID: 154294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_49
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccf3fd3f9123f054cb9e3648c50bc29d
+      internalID: -1739735483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_50
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 850f850b92d0eec49b042067f5868b88
+      internalID: -1155553909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_51
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e63ab48741db0440a18092bb051a007
+      internalID: -831784175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_52
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 290
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06e2331790b88514ebd185cc0bd29d6c
+      internalID: -1970530593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_53
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef875f1513592e64f8cacb2f4f7e28c3
+      internalID: -1756201632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_54
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1d9dfef035e49749ba92a3a4988ed84
+      internalID: -1484057848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_55
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b9e089f0a036d64ea8adfcfd53d2043
+      internalID: 2145334652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_56
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2d32d1a6562904e8f99534169debbd
+      internalID: -972284931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dae218fd527dd14c82af0caf64ddab0
+      internalID: 1656387557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_58
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 432cbfa6e846ac9458e787f173d539b5
+      internalID: 798386892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_59
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 226
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac9ca5a23b6effe45bd76412467d5ff2
+      internalID: -1645872372
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_60
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eba6b98a7bae2614a81bea84104a211b
+      internalID: 2036042346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_61
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31d43ff6e46175f47a4e2e9e5131e7e1
+      internalID: 645602255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_62
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 065f707224723ed43b05f1fadcd38b56
+      internalID: 921192632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_63
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e5c605f34bf72440a028a630ea93d25
+      internalID: -1515791909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_64
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7dd7e966ea5b86943a65e8e0eeda3e34
+      internalID: 365705044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_65
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 162
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c9dcca64c7b81b428f84a492dfa29fd
+      internalID: 356907509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_66
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 710f10efd7b3bdd419dd799bb3d92188
+      internalID: -1043141192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_67
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273eef7c5629fee4aa33cd37b9197fc3
+      internalID: 1100451630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_68
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 98
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c15495baf2adbdc4bb398cbc09fbd41c
+      internalID: -897174724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_69
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaad04593c2b92649ad08f9741cfd63b
+      internalID: 708029408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pixel tree_70
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 34
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32ff4b084404fdb46be780524745b2a7
+      internalID: -72171223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Pixel tree_26: 314536333
+      Pixel tree_39: -1301625416
+      Pixel tree_27: 1467273071
+      Pixel tree_45: -261369746
+      Pixel tree_20: 1105577552
+      Pixel tree_11: 995216700
+      Pixel tree_63: -1515791909
+      Pixel tree_49: -1739735483
+      Pixel tree_30: -863893348
+      Pixel tree_28: 452047611
+      Pixel tree_19: -1854280451
+      Pixel tree_0: -706632830
+      Pixel tree_65: 356907509
+      Pixel tree_60: 2036042346
+      Pixel tree_34: -938115707
+      Pixel tree_31: -102420401
+      Pixel tree_62: 921192632
+      Pixel tree_36: 1603956678
+      Pixel tree_38: 2051627262
+      Pixel tree_46: -1501492121
+      Pixel tree_56: -972284931
+      Pixel tree_4: -2042866748
+      Pixel tree_41: 616542203
+      Pixel tree_64: 365705044
+      Pixel tree_25: 299701148
+      Pixel tree_37: -2115793172
+      Pixel tree_18: -1218419244
+      Pixel tree_66: -1043141192
+      Pixel tree_51: -831784175
+      Pixel tree_15: -463328613
+      Pixel tree_48: 154294
+      Pixel tree_52: -1970530593
+      Pixel tree_70: -72171223
+      Pixel tree_22: -156038811
+      Pixel tree_9: 1997927779
+      Pixel tree_14: -2112551590
+      Pixel tree_16: 1519554346
+      Pixel tree_47: 298649170
+      Pixel tree_69: 708029408
+      Pixel tree_7: -1451911630
+      Pixel tree_54: -1484057848
+      Pixel tree_13: -1892221503
+      Pixel tree_53: -1756201632
+      Pixel tree_55: 2145334652
+      Pixel tree_58: 798386892
+      Pixel tree_3: -149775143
+      Pixel tree_32: 9796791
+      Pixel tree_50: -1155553909
+      Pixel tree_2: -1241124241
+      Pixel tree_23: -242923911
+      Pixel tree_1: -2062050365
+      Pixel tree_35: -343555312
+      Pixel tree_29: -1442247366
+      Pixel tree_61: 645602255
+      Pixel tree_44: 1943235007
+      Pixel tree_17: 1044099270
+      Pixel tree_57: 1656387557
+      Pixel tree_5: 40554126
+      Pixel tree_42: 1472579967
+      Pixel tree_43: -47499768
+      Pixel tree_10: -74444865
+      Pixel tree_67: 1100451630
+      Pixel tree_68: -897174724
+      Pixel tree_12: -1157682567
+      Pixel tree_8: 460217025
+      Pixel tree_6: 99339646
+      Pixel tree_33: 1495817288
+      Pixel tree_24: -502474156
+      Pixel tree_21: -666022878
+      Pixel tree_59: -1645872372
+      Pixel tree_40: -1977992190
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
