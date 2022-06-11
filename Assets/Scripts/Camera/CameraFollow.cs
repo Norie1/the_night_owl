@@ -12,10 +12,7 @@ public class CameraFollow : MonoBehaviour
 
     void Update()
     {
-        if (!Moonwalk_S.instance.isDancing)
-        {
             //on déplace la caméra centré sur le joueur avec un déplacement dis "Smooth" ( fluide )
             transform.position = Vector3.SmoothDamp(transform.position, player.transform.position + posOffset, ref velocity, timeOffset);
-        }   
     }
 }
