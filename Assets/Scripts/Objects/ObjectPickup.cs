@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class ObjectPickup : MonoBehaviour
+public class ObjectPickUp : MonoBehaviour
 {
-    public static ObjectPickup instance;
+    public static ObjectPickUp instance;
 
     public int checkpointID;
 
@@ -18,13 +18,13 @@ public class ObjectPickup : MonoBehaviour
 
     private void Update()
     {
-        //Verification of reached checkpoint
-        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
+        // Verification of reached checkpoint
+        bool activeRespawn = !RespawnManager.instance.checkpoints[checkpointID];
 
-        //True if the player is dead
-        bool playerDeath = PlayerHealth_S.instance.playerDeath;
+        // True if the player is dead
+        bool playerDeath = PlayerHealth.instance.playerDeath;
 
-        //Object restored on player death if already destroyed and checkpoint not yet reached
+        // Object restored on player death if already destroyed and checkpoint not yet reached
         if (playerDeath && activeRespawn)
         {
             RestoreObject();
@@ -37,7 +37,7 @@ public class ObjectPickup : MonoBehaviour
         {
             if (gameObject.CompareTag("Coin"))
             {
-                Inventory_S.instance.AddCoins(1);
+                Inventory.instance.AddCoins(1);
                 RemoveObject();
             }
 
