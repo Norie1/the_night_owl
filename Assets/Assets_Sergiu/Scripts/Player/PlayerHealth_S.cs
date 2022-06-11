@@ -79,7 +79,6 @@ public class PlayerHealth_S : MonoBehaviour
     }
 
     //Restore player health
-    [HideInInspector]
     public void HealPlayer(int amount)
     {
         if (currentHealth + amount > maxHealth)
@@ -94,7 +93,11 @@ public class PlayerHealth_S : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    [HideInInspector]
+    public void KillPlayer()
+    {
+        currentHealth = 0;
+    }
+
     public IEnumerator RespawnPlayer()
     {
         playerDeath = true;

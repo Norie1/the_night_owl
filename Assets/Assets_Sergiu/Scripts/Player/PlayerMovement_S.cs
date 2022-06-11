@@ -20,14 +20,14 @@ public class PlayerMovement_S : MonoBehaviour
     private bool superJump;
     private bool doubleJump;
 
-    [HideInInspector]
+
     private bool flipPlayer;
 
     [HideInInspector]
     public bool freezePlayerMovement;
 
     public Transform groundCheck;
-    public LayerMask collisionLayer;
+    public LayerMask foundationLayer;
 
     public Transform WallCheckRUp;
     public Transform WallCheckRDown;
@@ -56,7 +56,10 @@ public class PlayerMovement_S : MonoBehaviour
     private Transform[] waypoints;
     private Transform target;
     private int destPoint;
-    public int speed;
+    public float speed;
+
+    //private bool lava;
+    //public LayerMask lavaLayer;
 
     private void Awake()
     {
@@ -72,8 +75,6 @@ public class PlayerMovement_S : MonoBehaviour
     {
         //respawnPoint intialization to the initial spawn position of the player
         respawnPoint = transform.position;
-
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
         activeDash = true;
         activeProjectile = true;
@@ -118,15 +119,17 @@ public class PlayerMovement_S : MonoBehaviour
                 spriteRenderer.flipX = !spriteRenderer.flipX;
             }
         }
-        else
+        
+        if (!freezePlayerMovement)
         {
+            //Verification of the proximity with the ground
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, foundationLayer);
+
             //Verification of proximity with a wall
             onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
-            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
+            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);   
 
-            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
-            if (Input.GetButtonDown("Jump") && !freezePlayerMovement)
+            if (Input.GetButtonDown("Jump"))
             {
                 //Normal jump
                 if (isGrounded)
@@ -185,10 +188,6 @@ public class PlayerMovement_S : MonoBehaviour
 
     void FixedUpdate()
     {
-        //Verification of proximity with the floor
-        //groundCheckRadius = 0.38f, to be adapted to the Player size if necessary (use OnDrawGizmos to test the radius)
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
         //Reinitialization of Double/Wall jump when grounded
         if (isGrounded)
         {
