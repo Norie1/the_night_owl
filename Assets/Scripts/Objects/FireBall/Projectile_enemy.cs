@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Projectile_enemy : MonoBehaviour
+public class Projectile_Enemy : MonoBehaviour
 {
     public float projectileSpeed = 20f;
     public GameObject impactEffect; 

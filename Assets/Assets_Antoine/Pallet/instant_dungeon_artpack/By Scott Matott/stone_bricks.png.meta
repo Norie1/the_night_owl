@@ -1470,7 +1470,6 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      stone_bricks_47: -1837598147
       stone_bricks_38: -1796181859
       stone_bricks_41: 189575321
       stone_bricks_29: -1018488197
@@ -1509,9 +1508,9 @@ TextureImporter:
       stone_bricks_27: -842271289
       stone_bricks_40: 77878788
       stone_bricks_2: -848926566
-      stone_bricks_30: -224474983
       stone_bricks_55: 2059151752
       stone_bricks_56: 1977427683
+      stone_bricks_30: -224474983
       stone_bricks_19: 774789893
       stone_bricks_57: -1311582054
       stone_bricks_11: -975816690
@@ -1525,10 +1524,11 @@ TextureImporter:
       stone_bricks_49: 1556353154
       stone_bricks_23: -494956538
       stone_bricks_13: 1766682671
+      stone_bricks_47: -1837598147
       stone_bricks_16: -161429341
       stone_bricks_21: -1510615428
-      stone_bricks_39: -548412855
       stone_bricks_31: -2032291099
+      stone_bricks_39: -548412855
       stone_bricks_7: 1834304021
       stone_bricks_10: -900653561
       stone_bricks_3: -2096740852
