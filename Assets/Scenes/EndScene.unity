@@ -2603,7 +2603,7 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
+    rgba: 16777215
   m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
@@ -3060,6 +3060,10 @@ PlayableDirector:
     value: {fileID: 331371743}
   - key: {fileID: -3173492445902453505, guid: c1e6bf0f7c6a1d343b23358159335616, type: 2}
     value: {fileID: 301492879}
+  - key: {fileID: -184948759230025655, guid: c1e6bf0f7c6a1d343b23358159335616, type: 2}
+    value: {fileID: 730716155}
+  - key: {fileID: -7789287932148448952, guid: c1e6bf0f7c6a1d343b23358159335616, type: 2}
+    value: {fileID: 507997843}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &607545628
@@ -5632,7 +5636,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!95 &2020287019
 Animator:
   serializedVersion: 4
