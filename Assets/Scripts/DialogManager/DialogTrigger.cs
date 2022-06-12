@@ -29,7 +29,7 @@ public class DialogTrigger : MonoBehaviour
             {
                 if (!dialogManager.DisplayNextSentence())
                 {
-                    interactMessage.enabled = true;
+                    interactMessage.enabled = false;
                 }
             }
         }
@@ -40,7 +40,6 @@ public class DialogTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             isInRange = true;
-            interactMessage.enabled = true;
         }
       
     }
@@ -51,6 +50,7 @@ public class DialogTrigger : MonoBehaviour
         {
             isInRange = false;
             interactMessage.enabled = false;
+            dialogManager.EndDialog();
         }
        
     }

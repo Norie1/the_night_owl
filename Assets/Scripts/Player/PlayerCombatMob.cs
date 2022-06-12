@@ -47,8 +47,16 @@
 			foreach(Collider2D enemy in hitEnemies)
 			{
 				
-				enemy.GetComponent<EnemyHealth>().TakeDamage(attackDamage);
-				
+				EnemyHealth eh = enemy.GetComponent<EnemyHealth>();
+				EnemyHealth_J ehj = enemy.GetComponent<EnemyHealth_J>();
+				if(eh != null)
+				{
+					eh.TakeDamage(attackDamage);
+				}
+				if(ehj != null)
+				{
+				enemy.GetComponent<EnemyHealth_J>().TakeDamage(attackDamage);
+				}
 			}
 		}
 		

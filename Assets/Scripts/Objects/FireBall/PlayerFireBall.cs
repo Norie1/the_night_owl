@@ -9,9 +9,9 @@ public class PlayerFireBall : MonoBehaviour
     public Transform fireProjectileRight;
     public GameObject projectile;
 
-    public bool canThrowFireBall = false;
+    public bool canThrowFireBall;
 
-    void Update()
+   public void Update()
     {
         if(canThrowFireBall == true)
         {
@@ -30,6 +30,10 @@ public class PlayerFireBall : MonoBehaviour
             }
        }
     }
+    }
+    public void canThrow()
+    {
+        canThrowFireBall = true;
     }
 
 }
