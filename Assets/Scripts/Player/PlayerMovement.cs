@@ -80,6 +80,22 @@ public class PlayerMovement : MonoBehaviour
         
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
 
+		if (!isGrounded) 
+		{
+			playerAnimator.SetBool("Grounded", false);
+		}
+		else 
+		{
+			playerAnimator.SetBool("Grounded", true);
+		}
+			
+		
+		if (onTheWallL || onTheWallR)
+		{
+			playerAnimator.SetBool("WallSlide", true);
+		}
+			
+		
         if (Input.GetButtonDown("Jump"))
         {
             //Normal jump
@@ -108,6 +124,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isJumping = true;
                 doubleJump = false;
+                playerAnimator.SetBool("Jump", true);
             }
         }
         if (Input.GetKeyDown(KeyCode.X) && activeDash)
@@ -167,6 +184,7 @@ public class PlayerMovement : MonoBehaviour
                 impulse = jumpForce;
             }
             rigidBody.AddForce(new Vector2(0f, impulse));
+            playerAnimator.SetBool("Jump", true);
             isJumping = false;
         }
     }
@@ -192,7 +210,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.MovePosition(transform.position + destination * Time.deltaTime * dashSpeed);
         
         //Play animation of Dash
-        playerAnimator.Play("PlayerDashing");
+        playerAnimator.SetBool("Roll", true);
         
         //2 second delay before reactivating the dash
         yield return new WaitForSeconds(2f);
