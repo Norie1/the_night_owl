@@ -33,7 +33,7 @@
 	    
 	    public void PlayerAttack()
 	    {
-			animator.SetBool("Attack1", true);
+			animator.Play("Attack1");
 			
 			Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, Boss);
 			

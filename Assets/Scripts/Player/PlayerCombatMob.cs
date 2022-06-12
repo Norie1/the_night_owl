@@ -34,7 +34,7 @@
 	    
 	    public void PlayerAttack()
 	    {
-			animator.SetBool("Attack1", true);
+			animator.Play("Attack1");
 			GameObject player = GameObject.Find("Player");
             SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
 			Collider2D[] hitEnemies;

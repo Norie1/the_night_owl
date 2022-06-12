@@ -61,10 +61,9 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isInvincible)
         {
-			player.SetBool("Hurt", true);
+			player.Play("Hurt");
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
-            player.SetBool("Hurt", false);
 
             //Respawn
             if (currentHealth <= 0)

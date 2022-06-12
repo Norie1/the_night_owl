@@ -88,13 +88,6 @@ public class PlayerMovement : MonoBehaviour
 		{
 			playerAnimator.SetBool("Grounded", true);
 		}
-			
-		
-		if (onTheWallL || onTheWallR)
-		{
-			playerAnimator.SetBool("WallSlide", true);
-		}
-			
 		
         if (Input.GetButtonDown("Jump"))
         {
@@ -124,7 +117,7 @@ public class PlayerMovement : MonoBehaviour
             {
                 isJumping = true;
                 doubleJump = false;
-                playerAnimator.SetBool("Jump", true);
+                playerAnimator.Play("Jump");
             }
         }
         if (Input.GetKeyDown(KeyCode.X) && activeDash)
@@ -184,7 +177,7 @@ public class PlayerMovement : MonoBehaviour
                 impulse = jumpForce;
             }
             rigidBody.AddForce(new Vector2(0f, impulse));
-            playerAnimator.SetBool("Jump", true);
+            playerAnimator.Play("Jump");
             isJumping = false;
         }
     }
@@ -210,7 +203,7 @@ public class PlayerMovement : MonoBehaviour
         rigidBody.MovePosition(transform.position + destination * Time.deltaTime * dashSpeed);
         
         //Play animation of Dash
-        playerAnimator.SetBool("Roll", true);
+        playerAnimator.Play("Roll");
         
         //2 second delay before reactivating the dash
         yield return new WaitForSeconds(2f);
