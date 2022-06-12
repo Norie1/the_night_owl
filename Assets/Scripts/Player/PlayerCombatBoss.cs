@@ -7,8 +7,9 @@
 		
 		public Animator animator;
 		
-		public Transform attackPoint;
-		
+		public Transform attackPointRight;
+		public Transform attackPointLeft;
+
 		public float attackRange = 1f;
 		
 		public int attackDamage = 40;
@@ -17,6 +18,7 @@
 		public float nextAttackTime = 0f;
 		
 		public LayerMask Boss;
+		private Collider2D[] hitEnemies;
 	
 	    // Update is called once per frame
 	    void Update()
@@ -34,24 +36,29 @@
 	    public void PlayerAttack()
 	    {
 			animator.Play("Attack1");
-			
-			Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, Boss);
-			
+			GameObject player = GameObject.Find("Player");
+            SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
+			if(sprite.flipX == false){
+				hitEnemies = Physics2D.OverlapCircleAll(attackPointRight.position, attackRange, Boss);
+			}
+			else {
+				hitEnemies = Physics2D.OverlapCircleAll(attackPointLeft.position, attackRange, Boss);
+			}
 			foreach(Collider2D enemy in hitEnemies)
 			{
 				
-				enemy.GetComponent<Boss_Health>().TakeDamage(attackDamage);
+				enemy.GetComponent<Boss_Health_J>().TakeDamage(attackDamage);
 				
 			}
 		}
 		
-		public void OnDrawGizmosSelected()
+	/*	public void OnDrawGizmosSelected()
 		{
 			if (attackPoint == null) {
 				return;
 			}
 				
 			Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-		}
+		}*/
 	    
 	}

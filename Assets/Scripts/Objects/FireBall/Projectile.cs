@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameObject player = GameObject.Find("Graphics");
+        GameObject player = GameObject.Find("Player");
         SpriteRenderer sprite = player.GetComponent<SpriteRenderer>(); 
         if(sprite.flipX == false)
         {
@@ -33,6 +33,12 @@ public class Projectile : MonoBehaviour
         if(enemy != null )
         {
         enemy.TakeDamage(100);
+        Instantiate(impactEffect, transform.position, transform.rotation);
+        }
+        Boss_Health_J boss = collision.GetComponent<Boss_Health_J>();
+        if(boss != null )
+        {
+        boss.TakeDamage(100);
         Instantiate(impactEffect, transform.position, transform.rotation);
         }
         Destroy(gameObject);

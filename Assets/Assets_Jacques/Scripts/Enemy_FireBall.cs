@@ -6,9 +6,7 @@ public class Enemy_FireBall : MonoBehaviour
 {
     public Transform fireProjectile;
     public GameObject projectile;
-
-    private bool check = false;
- 
+     
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         yield return new WaitForSeconds(3f);

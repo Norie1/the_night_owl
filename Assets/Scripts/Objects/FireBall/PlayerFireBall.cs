@@ -9,8 +9,12 @@ public class PlayerFireBall : MonoBehaviour
     public Transform fireProjectileRight;
     public GameObject projectile;
 
+    public bool canThrowFireBall = false;
+
     void Update()
     {
+        if(canThrowFireBall == true)
+        {
         if(Input.GetButtonDown("Fire1"))
         {
             SpriteRenderer player = GetComponent<SpriteRenderer>();
@@ -26,4 +30,6 @@ public class PlayerFireBall : MonoBehaviour
             }
        }
     }
+    }
+
 }
