@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerFireBall : MonoBehaviour
 {
-    public Animator player;
+    public Animator playerAnimator;
     public Transform fireProjectileLeft;
     public Transform fireProjectileRight;
     public GameObject projectile;
@@ -16,12 +16,12 @@ public class PlayerFireBall : MonoBehaviour
             SpriteRenderer player = GetComponent<SpriteRenderer>();
             if(player.flipX == true)
             {
-                player.Play("Attack2");
+                playerAnimator.Play("Attack2");
                 Instantiate(projectile, fireProjectileLeft.position, fireProjectileLeft.rotation);
             }
             else 
             {
-                player.Play("Attack2");
+                playerAnimator.Play("Attack2");
                 Instantiate(projectile, fireProjectileRight.position, fireProjectileRight.rotation);
             }
        }

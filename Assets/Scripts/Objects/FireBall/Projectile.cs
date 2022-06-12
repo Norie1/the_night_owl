@@ -13,7 +13,7 @@ public class Projectile : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        GameObject player = GameObject.Find("Player");
+        GameObject player = GameObject.Find("Graphics");
         SpriteRenderer sprite = player.GetComponent<SpriteRenderer>(); 
         if(sprite.flipX == false)
         {
