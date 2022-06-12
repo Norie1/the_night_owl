@@ -13,7 +13,7 @@ public class Boss_Health_J : MonoBehaviour
     {
 		health -= damage;
 		if (health <= 0)
-		{
+		{			
 			Transform t = GetComponent<Transform>();
 			Instantiate(lootKey,t.position,t.rotation);
 			Die();

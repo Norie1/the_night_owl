@@ -11,8 +11,7 @@ public class Key_J : MonoBehaviour
     {
        if(isInRange && Input.GetKeyDown(KeyCode.E))
        {
-           myEvents.Invoke();
-           Destroy(gameObject);
+            Destroy(transform.parent.gameObject);
        }
     }
 

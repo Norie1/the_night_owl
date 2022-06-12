@@ -41,6 +41,12 @@ public class Projectile : MonoBehaviour
         boss.TakeDamage(100);
         Instantiate(impactEffect, transform.position, transform.rotation);
         }
+        Boss_Health_LastMob miniBoss = collision.GetComponent<Boss_Health_LastMob>();
+        if (miniBoss != null )
+        {
+            miniBoss.TakeDamage(100);
+            Instantiate(impactEffect, transform.position, transform.rotation);
+        }
         Destroy(gameObject);
     }
 
