@@ -24,7 +24,6 @@ public class DialogTrigger : MonoBehaviour
             if (!dialogManager.dialogStarted)
             {
                 dialogManager.StartDialog(dialog);
-                interactMessage.enabled = false;
             }
             else
             {
@@ -38,19 +37,21 @@ public class DialogTrigger : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             isInRange = true;
+            interactMessage.enabled = true;
         }
-        interactMessage.enabled = true;
+      
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag == "Player")
         {
             isInRange = false;
+            interactMessage.enabled = false;
         }
-        interactMessage.enabled = false;
+       
     }
 }

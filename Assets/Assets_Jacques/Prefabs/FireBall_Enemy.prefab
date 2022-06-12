@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2267752645548056161}
   - component: {fileID: 1308702027999096623}
   - component: {fileID: 5404693427586875052}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: FireBall_Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -159,4 +159,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectileSpeed: 20
   impactEffect: {fileID: 288177569095503478, guid: f13828c73ffbbc74783ee66c98b5af0b, type: 3}
-  isFlipped: 0

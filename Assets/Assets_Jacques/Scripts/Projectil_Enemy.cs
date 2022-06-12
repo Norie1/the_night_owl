@@ -17,6 +17,10 @@ public class Projectil_Enemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     { 
+         if(collision.tag == "Foundation")
+        {
+            Destroy(gameObject);    
+        }
         PlayerHealth player = collision.GetComponent<PlayerHealth>();
         if(player != null )
         {
@@ -24,6 +28,7 @@ public class Projectil_Enemy : MonoBehaviour
         Instantiate(impactEffect, transform.position, transform.rotation);
         Destroy(gameObject);
         }
+       
         
     }
 }
