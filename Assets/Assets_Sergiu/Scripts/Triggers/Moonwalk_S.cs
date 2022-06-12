@@ -3,7 +3,6 @@ using UnityEngine.UI;
 
 public class Moonwalk_S : MonoBehaviour
 {
-    public float speed;
     public Transform[] waypoints;
     public SpriteRenderer playerSprite;
     public Animator playerAnimator;
@@ -13,6 +12,8 @@ public class Moonwalk_S : MonoBehaviour
 
     [HideInInspector]
     public bool isDancing;
+
+    private PlayerMovement_S playerMovement;
 
     public static Moonwalk_S instance;
 
@@ -24,6 +25,8 @@ public class Moonwalk_S : MonoBehaviour
             return;
         }
         instance = this;
+
+        playerMovement = PlayerMovement_S.instance;
     }
     
 
@@ -32,8 +35,8 @@ public class Moonwalk_S : MonoBehaviour
         //Start moonwalking when near the trigger and when pressing E
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !isDancing)
         {
-            isDancing = true;
-            PlayerMovement_S.instance.freezePlayerMovement = true;
+            playerMovement.freezePlayerMovement = true;
+            isDancing = true;           
             playerAnimator.Play("Moonwalk_S");
             playerSprite.flipX = false;
             moonwalkText.enabled = false;
@@ -42,7 +45,8 @@ public class Moonwalk_S : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.E) && isDancing)
         {
             isDancing = false;
-            PlayerMovement_S.instance.freezePlayerMovement = false;
+            playerMovement.freezePlayerMovement = false;
+            playerMovement.ReintializeMoonwalk();
             playerAnimator.Play("PlayerIdle");
         }
     }

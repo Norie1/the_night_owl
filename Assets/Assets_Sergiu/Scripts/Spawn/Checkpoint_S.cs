@@ -9,12 +9,18 @@ public class Checkpoint_S : MonoBehaviour
     [SerializeField]
     private int checkpointID;
 
+    public bool facingForward;
+
+    private RespawnManager_S respawnManager;
+
     public Text checkpointText;
 
     private void Awake()
     {
         //Initializing respawnPoint to the position PlayerSpawn (initial player spawn position)
         respawnPoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+
+        respawnManager = RespawnManager_S.instance;
     }
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
@@ -29,7 +35,10 @@ public class Checkpoint_S : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
-            RespawnManager_S.instance.checkpointReached(checkpointID);
+            respawnManager.checkpointReached(checkpointID);
+
+            //Bool used by PlayerMovement script to establish the direction of the player when respawning
+            respawnManager.facingForward = facingForward;
 
             //Displaying checkpoint indicator
             checkpointText.enabled = true;

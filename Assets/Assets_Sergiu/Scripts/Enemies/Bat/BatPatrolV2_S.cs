@@ -1,8 +1,7 @@
 using UnityEngine;
 
-public class BatPatrol_S : MonoBehaviour
+public class BatPatrolV2_S : MonoBehaviour
 {
-
     public float speed;
     public Transform[] waypoints;
 
@@ -19,8 +18,9 @@ public class BatPatrol_S : MonoBehaviour
     void Start()
     {
         //Initialization of the first target/destination
-        target = waypoints[0];
-        destPoint = 0;
+        destPoint = waypoints.Length - 1;
+        target = waypoints[destPoint];
+        
     }
 
     void Update()

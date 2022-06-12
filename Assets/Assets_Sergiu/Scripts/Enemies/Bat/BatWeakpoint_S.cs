@@ -8,6 +8,11 @@ public class BatWeakpoint_S : MonoBehaviour
     [SerializeField]
     private int checkpointID;
 
+    private void Start()
+    {
+        batSprite.flipX = true;
+    }
+
     private void Update()
     {
         //Verification of reached checkpoint

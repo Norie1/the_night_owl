@@ -20,14 +20,13 @@ public class PlayerMovement_S : MonoBehaviour
     private bool superJump;
     private bool doubleJump;
 
-
     private bool flipPlayer;
 
     [HideInInspector]
     public bool freezePlayerMovement;
 
-    public Transform groundCheck;
     public LayerMask foundationLayer;
+    public Transform groundCheck;
 
     public Transform WallCheckRUp;
     public Transform WallCheckRDown;
@@ -52,14 +51,12 @@ public class PlayerMovement_S : MonoBehaviour
     private PlayerHealth_S playerHealth;
     private Moonwalk_S moonwalk;
 
-    public static PlayerMovement_S instance;
     private Transform[] waypoints;
     private Transform target;
     private int destPoint;
-    public float speed;
 
-    //private bool lava;
-    //public LayerMask lavaLayer;
+    public static PlayerMovement_S instance;
+
 
     private void Awake()
     {
@@ -83,7 +80,6 @@ public class PlayerMovement_S : MonoBehaviour
         playerHealth = PlayerHealth_S.instance;
         moonwalk = Moonwalk_S.instance;
 
-
         //Importing the rigid body, animator and the sprite renderer of the player
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         playerAnimator = gameObject.GetComponent<Animator>();
@@ -91,9 +87,8 @@ public class PlayerMovement_S : MonoBehaviour
 
         waypoints = Moonwalk_S.instance.waypoints;
 
-        //Initialization of the first target/destination
-        target = waypoints[0];
-        destPoint = 0;
+        //Initialization of the first target/destination for the Moonwalk
+        ReintializeMoonwalk();
     }
 
     // Update is called once per frame
@@ -106,9 +101,9 @@ public class PlayerMovement_S : MonoBehaviour
             Vector3 direction = target.position - transform.position;
 
             //Player movement (normalization of the movement vector)
-            transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
+            transform.Translate(direction.normalized * 2 * Time.deltaTime, Space.World);
 
-            //When the enemy is close to the target
+            //When the player is close to the target
             if (Vector3.Distance(transform.position, target.position) < 0.3f)
             {
                 //target = next target
@@ -120,6 +115,7 @@ public class PlayerMovement_S : MonoBehaviour
             }
         }
         
+        //Move player if freezePlayer movement is inactive
         if (!freezePlayerMovement)
         {
             //Verification of the proximity with the ground
@@ -159,11 +155,13 @@ public class PlayerMovement_S : MonoBehaviour
                     doubleJump = false;
                 }
             }
+
             if (Input.GetKeyDown(KeyCode.X) && activeDash)
             {
                 StartCoroutine(Dash(horizontalMovement));
                 activeDash = false;
             }
+
             if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
             {
                 projectilePrefab.flipPlayer = flipPlayer;
@@ -179,11 +177,8 @@ public class PlayerMovement_S : MonoBehaviour
                     launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
                     Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
                 }
-
             }
-        }
-
-        
+        }      
     }
 
     void FixedUpdate()
@@ -288,16 +283,28 @@ public class PlayerMovement_S : MonoBehaviour
     public void RespawnPlayer()
     {
         transform.position = respawnPoint;
-        spriteRenderer.flipX = false;
+
+        //Bool initialized in the Checkpoint inspector
+        spriteRenderer.flipX = !RespawnManager_S.instance.facingForward;
     }
 
-    //Respawn when falling into a hole
+    public void ReintializeMoonwalk()
+    {
+        target = waypoints[0];
+        destPoint = 0;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FallDetector")
         {
             playerHealth.TakeDamage(10);
             RespawnPlayer();
+        }
+        else if (collision.tag == "Lava")
+        {
+            playerHealth.TakeDamage(100);
+
         }
     }
 }

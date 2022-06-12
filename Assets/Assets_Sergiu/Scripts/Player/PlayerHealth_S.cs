@@ -8,6 +8,12 @@ public class PlayerHealth_S : MonoBehaviour
 
     private bool isInvincible;
 
+    [SerializeField]
+    private Dialog_S dialog;
+
+    [HideInInspector]
+    public bool postmortemDialog;
+
     public HealthBar_S healthBar;
     public SpriteRenderer playerSprite;
 
@@ -93,11 +99,6 @@ public class PlayerHealth_S : MonoBehaviour
         healthBar.SetHealth(currentHealth);
     }
 
-    public void KillPlayer()
-    {
-        currentHealth = 0;
-    }
-
     public IEnumerator RespawnPlayer()
     {
         playerDeath = true;
@@ -105,6 +106,10 @@ public class PlayerHealth_S : MonoBehaviour
 
         //Use of respawn() method from the PlayerMovement_S script
         playerMovement.RespawnPlayer();
+        DialogManager_S.instance.StartDialog(dialog);
+
+        //Bool used by DialogTrigger script in order to be able to advance in the dialog
+        postmortemDialog = true;
         yield return new WaitForSeconds(1f);
         playerDeath = false;
     }

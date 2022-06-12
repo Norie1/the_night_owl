@@ -19,6 +19,7 @@ TagManager:
   - Coin
   - Bat
   - Projectile
+  - Lava
   layers:
   - Default
   - TransparentFX
@@ -32,7 +33,7 @@ TagManager:
   - Enemies
   - Boss
   - Collider
-  - Lava
+  - 
   - 
   - 
   - 
