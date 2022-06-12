@@ -3,7 +3,6 @@ using UnityEngine;
 public class MovingPlatforms : MonoBehaviour
 {
     public float speed;
-    public int startingPoint;
     public Transform[] waypoints;
 
     private int index;
