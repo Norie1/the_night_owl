@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ObjectPickup_S : MonoBehaviour
+public class ObjectPickUp_S : MonoBehaviour
 {
     [SerializeField]
     private int checkpointID;

@@ -9,12 +9,15 @@ public class DialogTrigger_S : MonoBehaviour
 
     private bool isInRange;
 
+    private PlayerHealth_S playerHealth;
+
     DialogManager_S dialogManager;
 
     void Start()
     {
-        //Importing public methods and attributes of the DialogManager_S script
+        //Importing public methods and attributes of the DialogManager_S and PlayerHealth_S scripts
         dialogManager = DialogManager_S.instance;
+        playerHealth = PlayerHealth_S.instance;
     }
 
     void Update()
@@ -33,6 +36,12 @@ public class DialogTrigger_S : MonoBehaviour
                     interactMessage.enabled = true;
                 }
             }
+        }
+        //If postmortem dialog is started
+        else if (playerHealth.postmortemDialog && Input.GetKeyDown(KeyCode.E))
+        {
+            dialogManager.DisplayNextSentence();
+            playerHealth.postmortemDialog = false;
         }
     }
 

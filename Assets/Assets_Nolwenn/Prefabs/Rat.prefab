@@ -367,7 +367,7 @@ GameObject:
   - component: {fileID: 3910855869321378465}
   - component: {fileID: 3910855869321378464}
   - component: {fileID: 3910855869321378467}
-  - component: {fileID: 3910855869291256675}
+  - component: {fileID: 8809187114577565685}
   m_Layer: 0
   m_Name: EnemyRat
   m_TagString: Untagged
@@ -392,6 +392,7 @@ Transform:
   - {fileID: 3910855868521555933}
   - {fileID: 3910855868938908329}
   - {fileID: 3910855869358163973}
+  - {fileID: 1087226904216338370}
   m_Father: {fileID: 1139466456628740827}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -475,7 +476,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   damage: 10
---- !u!114 &3910855869291256675
+--- !u!114 &8809187114577565685
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -484,12 +485,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 3910855869321378526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b18cce56742584e1bb3157c39d238004, type: 3}
+  m_Script: {fileID: 11500000, guid: aef92953249d4324db9ddb5eb0ddd1ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
+  maxHealth: 75
   currentHealth: 0
-  objectToDestroy: {fileID: 555114300888630520}
+  invicibilityTime: 1.5
+  isInvincible: 0
+  enemySprite: {fileID: 3910855868070591560}
+  enemyCollider: {fileID: 3910855869389897676}
+  enemyRb: {fileID: 3910855869321378466}
+  enemyScript: {fileID: 3910855869321378464}
+  flyingScript: {fileID: 0}
+  checkpointID: 0
 --- !u!1 &3910855869358163972
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,3 +587,76 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.6594795, y: 0.4845543}
   m_EdgeRadius: 0
+--- !u!1 &6379169439988120531
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087226904216338370}
+  - component: {fileID: 8536598426063448531}
+  - component: {fileID: 6231543669359324913}
+  m_Layer: 0
+  m_Name: WeakSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1087226904216338370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379169439988120531}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3910855869321378527}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &8536598426063448531
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379169439988120531}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.123814434, y: -0.25157762}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.26865512, y: 0.32309294}
+  m_EdgeRadius: 0
+--- !u!114 &6231543669359324913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6379169439988120531}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f12f5fcebe304714292a7072b900f7df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemyHealth: {fileID: 8809187114577565685}
+  damageTaken: 25

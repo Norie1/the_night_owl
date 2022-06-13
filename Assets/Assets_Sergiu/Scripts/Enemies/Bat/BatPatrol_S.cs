@@ -27,7 +27,7 @@ public class BatPatrol_S : MonoBehaviour
     {
         Vector3 direction = target.position - transform.position;
 
-        //Snake movement (normalization of the movement vector)
+        //Bat movement (normalization of the movement vector)
         transform.Translate(direction.normalized * speed * Time.deltaTime, Space.World);
 
 

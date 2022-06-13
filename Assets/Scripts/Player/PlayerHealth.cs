@@ -5,6 +5,7 @@ public class PlayerHealth : MonoBehaviour
 {
     public int maxHealth = 100;
     public int currentHealth;
+    public Animator player;
 
     public bool isInvincible;
 
@@ -60,6 +61,7 @@ public class PlayerHealth : MonoBehaviour
     {
         if (!isInvincible)
         {
+			player.Play("Hurt");
             currentHealth -= damage;
             healthBar.SetHealth(currentHealth);
 
@@ -97,12 +99,14 @@ public class PlayerHealth : MonoBehaviour
     //[HideInInspector]
     public IEnumerator RespawnPlayer()
     {
+		player.SetBool("Death", true);
         playerDeath = true;
         ResetPlayerHealth();
 
         //Use of respawn() method from the PlayerMovement_S script
         playerMovement.RespawnPlayer();
         yield return new WaitForSeconds(1f);
+        player.SetBool("Death", false);
         playerDeath = false;
     }
 

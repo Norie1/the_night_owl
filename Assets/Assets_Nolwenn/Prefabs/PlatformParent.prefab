@@ -74,10 +74,10 @@ GameObject:
   m_Component:
   - component: {fileID: 38590340428404400}
   - component: {fileID: 38590340428404407}
-  - component: {fileID: 38590340428404401}
   - component: {fileID: 38590340428404406}
   - component: {fileID: 38590340428404405}
   - component: {fileID: 546459306}
+  - component: {fileID: 902562395141426551}
   m_Layer: 6
   m_Name: Platform
   m_TagString: Untagged
@@ -121,24 +121,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &38590340428404401
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 38590340428404403}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b34c627b59656684bafb00e7c682ff84, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  waypoints:
-  - {fileID: 38590339299364400}
-  - {fileID: 38590341193621992}
-  activated: 0
-  index: 0
 --- !u!61 &38590340428404406
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -152,18 +134,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: -0.0012748241, y: -0.0023044944}
+  m_Offset: {x: -0.0011768341, y: -0.0023044944}
   m_SpriteTilingProperty:
     border: {x: 0.34375, y: 0.53125, z: 0.28125, w: 0.3125}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 3.9840329, y: 0.53914857}
+    newSize: {x: 2.3380897, y: 0.54775465}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.9850936, y: 0.5407709}
+  m_Size: {x: 2.3399315, y: 0.5407709}
   m_EdgeRadius: 0
 --- !u!61 &38590340428404405
 BoxCollider2D:
@@ -178,18 +160,18 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03170395, y: 0.2880176}
+  m_Offset: {x: -0.0029449463, y: 0.2880176}
   m_SpriteTilingProperty:
     border: {x: 0.34375, y: 0.53125, z: 0.28125, w: 0.3125}
     pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
-    newSize: {x: 3.9840329, y: 0.53914857}
+    newSize: {x: 2.3380897, y: 0.54775465}
     adaptiveTilingThreshold: 0.5
     drawMode: 2
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.7044506, y: 0.13513297}
+  m_Size: {x: 2.2889252, y: 0.13513297}
   m_EdgeRadius: 0
 --- !u!251 &546459306
 PlatformEffector2D:
@@ -210,6 +192,58 @@ PlatformEffector2D:
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
+--- !u!212 &902562395141426551
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 38590340428404403}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 3479403978206809528, guid: 243724bf4192cec438e4ab1adda6d6d3, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 2
+  m_Size: {x: 2.3380897, y: 0.54775465}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
 --- !u!1 &38590340518143391
 GameObject:
   m_ObjectHideFlags: 0

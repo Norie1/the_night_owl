@@ -10,6 +10,7 @@ public class PlayerMovement_S : MonoBehaviour
     private float horizontalMovement;
 
     private bool isJumping;
+    private bool isDancing;
     private bool activeDash;
     private bool isGrounded;
     private bool onTheWallR;
@@ -19,14 +20,13 @@ public class PlayerMovement_S : MonoBehaviour
     private bool superJump;
     private bool doubleJump;
 
-    [HideInInspector]
     private bool flipPlayer;
 
     [HideInInspector]
     public bool freezePlayerMovement;
 
+    public LayerMask foundationLayer;
     public Transform groundCheck;
-    public LayerMask collisionLayer;
 
     public Transform WallCheckRUp;
     public Transform WallCheckRDown;
@@ -49,8 +49,14 @@ public class PlayerMovement_S : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     private PlayerHealth_S playerHealth;
+    private Moonwalk_S moonwalk;
+
+    private Transform[] waypoints;
+    private Transform target;
+    private int destPoint;
 
     public static PlayerMovement_S instance;
+
 
     private void Awake()
     {
@@ -67,101 +73,116 @@ public class PlayerMovement_S : MonoBehaviour
         //respawnPoint intialization to the initial spawn position of the player
         respawnPoint = transform.position;
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
         activeDash = true;
         activeProjectile = true;
 
         //Import of public methods and attributes from PlayerHealth script
         playerHealth = PlayerHealth_S.instance;
+        moonwalk = Moonwalk_S.instance;
 
         //Importing the rigid body, animator and the sprite renderer of the player
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         playerAnimator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+
+        waypoints = Moonwalk_S.instance.waypoints;
+
+        //Initialization of the first target/destination for the Moonwalk
+        ReintializeMoonwalk();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //Verification of proximity with a wall
-        onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
-        onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
+        isDancing = moonwalk.isDancing;
 
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
-        if (Input.GetButtonDown("Jump") && !freezePlayerMovement)
+        if (isDancing)
         {
-            //Normal jump
-            if (isGrounded)
+            Vector3 direction = target.position - transform.position;
+
+            //Player movement (normalization of the movement vector)
+            transform.Translate(direction.normalized * 2 * Time.deltaTime, Space.World);
+
+            //When the player is close to the target
+            if (Vector3.Distance(transform.position, target.position) < 0.3f)
             {
-                isJumping = true;
-            }
-            //Wall jump right side
-            else if (onTheWallR && wallJumpR)
-            {
-                isJumping = true;
-                wallJumpR = false;
-                wallJumpL = true;
-                superJump = true;
-            }
-            //Wall jump left side
-            else if (onTheWallL && wallJumpL)
-            {
-                isJumping = true;
-                wallJumpL = false;
-                wallJumpR = true;
-                superJump = true;
-            }
-            //Double jump
-            else if (doubleJump && !onTheWallL && !onTheWallR)
-            {
-                isJumping = true;
-                doubleJump = false;
+                //target = next target
+                destPoint = (destPoint + 1) % waypoints.Length;
+                target = waypoints[destPoint];
+
+                //Player flip
+                spriteRenderer.flipX = !spriteRenderer.flipX;
             }
         }
-        if (Input.GetKeyDown(KeyCode.X) && activeDash)
+        
+        //Move player if freezePlayer movement is inactive
+        if (!freezePlayerMovement)
         {
-            StartCoroutine(Dash(horizontalMovement));
-            activeDash = false;
-        }
-        if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
-        {
-            projectilePrefab.flipPlayer = flipPlayer;
+            //Verification of the proximity with the ground
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, foundationLayer);
 
-            /*
-            Vector3 launchOffset;
-            if (!flipPlayer)
+            //Verification of proximity with a wall
+            onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
+            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);   
+
+            if (Input.GetButtonDown("Jump"))
             {
-                launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
+                //Normal jump
+                if (isGrounded)
+                {
+                    isJumping = true;
+                }
+                //Wall jump right side
+                else if (onTheWallR && wallJumpR)
+                {
+                    isJumping = true;
+                    wallJumpR = false;
+                    wallJumpL = true;
+                    superJump = true;
+                }
+                //Wall jump left side
+                else if (onTheWallL && wallJumpL)
+                {
+                    isJumping = true;
+                    wallJumpL = false;
+                    wallJumpR = true;
+                    superJump = true;
+                }
+                //Double jump
+                else if (doubleJump && !onTheWallL && !onTheWallR)
+                {
+                    isJumping = true;
+                    doubleJump = false;
+                }
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.X) && activeDash)
             {
-                launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
+                StartCoroutine(Dash(horizontalMovement));
+                activeDash = false;
             }
-            Instantiate(projectilePrefab, launchOffset, transform.rotation);
-            */
-            Vector3 launchOffset;
-            if (!flipPlayer)
+
+            if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
             {
-                launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
-                Instantiate(projectilePrefab, launchOffset, launchOffsetR.rotation);
+                projectilePrefab.flipPlayer = flipPlayer;
+
+                Vector3 launchOffset;
+                if (!flipPlayer)
+                {
+                    launchOffset = new Vector3(launchOffsetR.position.x, launchOffsetR.position.y, launchOffsetR.position.z);
+                    Instantiate(projectilePrefab, launchOffset, launchOffsetR.rotation);
+                }
+                else
+                {
+                    launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
+                    Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
+                }
             }
-            else
-            {
-                launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
-                Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
-            }
-            
-        }
+        }      
     }
 
     void FixedUpdate()
     {
-        //Verification of proximity with the floor
-        //groundCheckRadius = 0.38f, to be adapted to the Player size if necessary (use OnDrawGizmos to test the radius)
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
         //Reinitialization of Double/Wall jump when grounded
         if (isGrounded)
         {
@@ -262,16 +283,28 @@ public class PlayerMovement_S : MonoBehaviour
     public void RespawnPlayer()
     {
         transform.position = respawnPoint;
-        spriteRenderer.flipX = false;
+
+        //Bool initialized in the Checkpoint inspector
+        spriteRenderer.flipX = !RespawnManager_S.instance.facingForward;
     }
 
-    //Respawn when falling into a hole
+    public void ReintializeMoonwalk()
+    {
+        target = waypoints[0];
+        destPoint = 0;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FallDetector")
         {
             playerHealth.TakeDamage(10);
             RespawnPlayer();
+        }
+        else if (collision.tag == "Lava")
+        {
+            playerHealth.TakeDamage(100);
+
         }
     }
 }

@@ -17,24 +17,24 @@ public class LevelIntro : MonoBehaviour
 
     void Start()
     {
-        // Import of public methods and attributes from PlayerMovement and DialogManager scripts
+        //Import of public methods and attributes from PlayerMovement_S and DialogManager_S scripts
         playerMovement = PlayerMovement.instance;
         dialogManager = DialogManager.instance;
 
         //playerMovement.freezePlayerMovement = true;
 
-        StartCoroutine(Intro());
+        StartCoroutine(StartLevelIntro());
     }
 
     void Update()
     {
-        if ( Input.GetKeyDown(KeyCode.E))
+        if (isInRange && Input.GetKeyDown(KeyCode.E))
         {
             dialogManager.DisplayNextSentence();
         }
     }
 
-    private IEnumerator Intro()
+    private IEnumerator StartLevelIntro()
     {
         levelIntroText.enabled = true;
         yield return new WaitForSeconds(3f);
