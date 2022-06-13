@@ -5,7 +5,7 @@ To install the game The Night Owl, you first need to download the current LTS ve
 <https://unity3d.com/get-unity/download/archive>
 
 
-# Getting Started
+## Getting Started
 
 Then you have to clone the repository with the command :
 
