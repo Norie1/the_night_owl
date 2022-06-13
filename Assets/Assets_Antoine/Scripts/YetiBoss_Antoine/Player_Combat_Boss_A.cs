@@ -1,8 +1,8 @@
-	using System.Collections;
-	using System.Collections.Generic;
-	using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 	
-	public class PlayerCombatBoss : MonoBehaviour
+	public class Player_Combat_Boss_A : MonoBehaviour
 	{
 		
 		public Animator animator;
@@ -46,30 +46,12 @@
 			}
 			foreach(Collider2D enemy in hitEnemies)
 			{
-				Boss_Health_A bhj = enemy.GetComponent<Boss_Health_A>();
-				Boss_Health_LastMob bhlm = enemy.GetComponent<Boss_Health_LastMob>();
+				Boss_Health_A bha = enemy.GetComponent<Boss_Health_A>();
 				
-				if(bhj != null)
+				if (bha != null)
 				{
 					enemy.GetComponent<Boss_Health_A>().TakeDamage(attackDamage);
-
 				}
-				else if(bhlm != null)
-				{
-					enemy.GetComponent<Boss_Health_LastMob>().TakeDamage(attackDamage);
-				}
-				
-
 			}
 		}
-		
-	/*	public void OnDrawGizmosSelected()
-		{
-			if (attackPoint == null) {
-				return;
-			}
-				
-			Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-		}*/
-	    
 	}

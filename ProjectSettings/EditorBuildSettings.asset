@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BossFight_Antoine.unity
     guid: 87630c9f7904b4dc591ff08a2b695012
+  - enabled: 1
+    path: Assets/Scenes/TransitionLevelSceneNolwenn.unity
+    guid: d6d71f4cc4802f6448e9da3100c53872
   m_configObjects: {}
