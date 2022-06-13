@@ -1,4 +1,4 @@
-# the_night_owl
+# The Night Owl
 
 "The Night Owl" project is a video game, it's a 2D platformer, which means the game is base on multiple layers of 2D (backgrounds, characters, etc..) and as old games like 'Mario Bros', you advance in the game by walking, jumping, dashing, and some others capacities, through the game, but only horizontally and vertically (2D).  
 
