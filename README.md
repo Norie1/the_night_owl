@@ -10,9 +10,6 @@ You will embody a character called Billy (or something else), he is a young boy 
 We choosed this scenario because, we wanted that each member of the group development could create his own level design, the dream context provide us a total freedom on the map and the capacities of the character. So on every levels, he can walk, run, jump, dash, hook, fight with multiples weapons and also take damages and die.
 
 
-```
-
-
 The technology used to make this game is the graphics engine called 'Unity', on the version 2021.3.3f1, the members of the group are :
 
 Jacques Le Guevel, Sergio XXX, Nolwenn XXX, Cecilia XXX and myself Antoine Quere.
