@@ -1,35 +1,34 @@
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class ActivableMovingPlatform : MovingPlatforms
 {
-    public float speed = 2;
-    public Transform[] waypoints;
-    private Transform target;
+    //public float speed = 2;
+    //public Transform[] waypoints;
     [SerializeField] private bool activated;
 
-    [SerializeField] private int index;
+    //[SerializeField] private int index;
 
     // Start is called before the first frame update
     void Start()
     {
-        target = waypoints[0];
+        speed = 2;
+        index = 0;
     }
 
     // Update is called once per frame
-    void Update()
+    private void Update()
     {
 
         //Vector2 dir = target.position - transform.position;
         //transform.Translate(dir.normalized * speed * Time.deltaTime, Space.World);
         if(!activated)
-        {
+        { //Platform's not activated, do nothing
             return;
         }
 
-        if (Vector2.Distance(transform.position, target.position) < 0.3f)
-        {
+        if (Vector2.Distance(transform.position, waypoints[index].position) < 0.3f)
+        { //If target is reached, select next one to move to
             index = (index+1) % waypoints.Length;
-            target = waypoints[index];
         }
 
         transform.position = Vector2.MoveTowards(transform.position, waypoints[index].position, speed * Time.deltaTime);

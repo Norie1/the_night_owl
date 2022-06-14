@@ -78,6 +78,7 @@ public class EnemyHealth_N : MonoBehaviour
         enemySprite.enabled = true;
         enemyRb.bodyType = RigidbodyType2D.Dynamic;
         enemyCollider.isTrigger = false;
+        currentHealth = maxHealth;
 
         if(enemyScript != null) { enemyScript.enabled = true; }
         if(flyingScript != null) { flyingScript.enabled = true; }
