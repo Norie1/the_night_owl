@@ -3,9 +3,9 @@ using UnityEngine.UI;
 using UnityEngine.Events;
 
 
-public class Lever : MonoBehaviour
+public class Lever : ObjectTrigger
 {   
-    public UnityEvent myEvents;
+    /*public UnityEvent myEvents;
     [SerializeField] private bool activated;
     private bool isInRange;
     private Text interactUI;
@@ -40,6 +40,19 @@ public class Lever : MonoBehaviour
         {
             isInRange = false;
             interactUI.enabled = false;
+        }
+    }
+    */
+
+    [SerializeField] private bool activated;
+
+    protected override void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.E) && !activated && isInRange)
+        {
+            activated = true;
+            interactUI.enabled = false;
+            myEvents.Invoke();
         }
     }
 }
