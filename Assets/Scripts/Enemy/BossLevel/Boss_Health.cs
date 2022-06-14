@@ -5,11 +5,9 @@ using UnityEngine;
 public class Boss_Health : MonoBehaviour
 {
     public int health = 400;
-    
     public GameObject objectToDestroy;
-    
     public bool isInvulnerable = false;
-    
+
     public void TakeDamage(int damage)
     {
 		if (isInvulnerable)

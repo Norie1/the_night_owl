@@ -5,7 +5,7 @@ public class MovingPlatforms : MonoBehaviour
     public float speed;
     public Transform[] waypoints;
 
-    private int index;
+    protected int index;
 
     private void Start()
     {

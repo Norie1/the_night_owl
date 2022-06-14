@@ -46,12 +46,12 @@
 			}
 			foreach(Collider2D enemy in hitEnemies)
 			{
-				Boss_Health_J bhj = enemy.GetComponent<Boss_Health_J>();
+				Boss_Health_A bhj = enemy.GetComponent<Boss_Health_A>();
 				Boss_Health_LastMob bhlm = enemy.GetComponent<Boss_Health_LastMob>();
 				
 				if(bhj != null)
 				{
-					enemy.GetComponent<Boss_Health_J>().TakeDamage(attackDamage);
+					enemy.GetComponent<Boss_Health_A>().TakeDamage(attackDamage);
 
 				}
 				else if(bhlm != null)

@@ -2,9 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
 
-public class Key : MonoBehaviour
+public class Key : ObjectTrigger
 {
-    public UnityEvent myEvents;
+    /*public UnityEvent myEvents;
     private bool isInRange;
     private Text interactUI;
 
@@ -39,5 +39,15 @@ public class Key : MonoBehaviour
             isInRange = false;
             interactUI.enabled = false;
         }
+    } */
+
+    override protected void Update()
+    {
+        if(isInRange && Input.GetKeyDown(KeyCode.E))
+       {
+           myEvents.Invoke();
+           interactUI.enabled = false;
+           Destroy(gameObject);
+       }
     }
 }
