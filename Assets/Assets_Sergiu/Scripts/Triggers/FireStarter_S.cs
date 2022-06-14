@@ -9,47 +9,50 @@ public class FireStarter_S : MonoBehaviour
     public Dialog_S dialog;
 
     private bool isInRange;
+    private bool dialogFinished;
+    private bool disableTrigger;
 
-    private PlayerMovement_S playerMovement;
     private DialogManager_S dialogManager;
 
     void Start()
     {
-        //Import of public methods and attributes from PlayerMovement_S and DialogManager_S scripts
-        playerMovement = PlayerMovement_S.instance;
+        //Import of public methods attributes from DialogManager_S script
         dialogManager = DialogManager_S.instance;
     }
 
     private void Update()
     {
-        bool dialogFinished = false;
-        //Starting FireStarter dialog when entering the trigger area
-        if (isInRange && Input.GetKeyDown(KeyCode.E))
+        if (isInRange)
         {
-            dialogFinished = !dialogManager.DisplayNextSentence();
-        }
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                dialogFinished = !dialogManager.DisplayNextSentence();
+            }
 
-        //Activating the on-screen FireStarterText when the dialog is finished
-        if (isInRange && dialogFinished)
-        {
-            firestarterText.enabled = true;
-        }
+            //Activating the on-screen FireStarterText when the dialog is finished
+            if (isInRange && dialogFinished && !disableTrigger)
+            {
+                firestarterText.enabled = true;
+            }
 
-        //Disabling the on-screen FireStarterText when pushing the F button
-        if (isInRange && Input.GetKeyDown(KeyCode.F))
-        {
-            firestarterText.enabled = false;
+            //Disabling the on-screen FireStarterText when pushing the F button
+            if (Input.GetKeyDown(KeyCode.F))
+            {
+                firestarterText.enabled = false;
+                disableTrigger = true;
+            }
         }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        //Starting FireStarter dialog when entering the trigger area
+        if (collision.CompareTag("Player") && !disableTrigger)
         {
             dialogManager.StartDialog(dialog);
-            playerMovement.freezePlayerMovement = true;
             isInRange = true;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -57,6 +60,7 @@ public class FireStarter_S : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = false;
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
         }
     }
 

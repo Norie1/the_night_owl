@@ -23,12 +23,15 @@ public class Projectile_S : MonoBehaviour
         }
 
         time -= Time.deltaTime;
+
+        //Projectile destroyed after 2 seconds
         if (time < 0)
         {
             Destroy(gameObject);
         }
     }
 
+    //Projectile destroyed when hitting a bat or a wall
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Bat") || collision.CompareTag("Foundation"))

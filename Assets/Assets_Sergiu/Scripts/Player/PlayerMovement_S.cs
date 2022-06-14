@@ -25,6 +25,9 @@ public class PlayerMovement_S : MonoBehaviour
     [HideInInspector]
     public bool freezePlayerMovement;
 
+    [HideInInspector]
+    public bool playerFall;
+
     public LayerMask foundationLayer;
     public Transform groundCheck;
 
@@ -285,7 +288,7 @@ public class PlayerMovement_S : MonoBehaviour
         transform.position = respawnPoint;
 
         //Bool initialized in the Checkpoint inspector
-        spriteRenderer.flipX = !RespawnManager_S.instance.facingForward;
+        spriteRenderer.flipX = !RespawnManager_S.instance.facingRight;
     }
 
     public void ReintializeMoonwalk()
@@ -294,12 +297,16 @@ public class PlayerMovement_S : MonoBehaviour
         destPoint = 0;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FallDetector")
         {
             playerHealth.TakeDamage(10);
             RespawnPlayer();
+
+            playerFall = true;
+            yield return new WaitForSeconds(3f);
+            playerFall = false;
         }
         else if (collision.tag == "Lava")
         {

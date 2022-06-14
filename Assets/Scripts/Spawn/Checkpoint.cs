@@ -27,7 +27,7 @@ public class Checkpoint : MonoBehaviour
 
             //Update of the respawnPoint attribute from PlayerMovement_S script
             PlayerMovement.instance.respawnPoint = transform.position;
-            Destroy(gameObject);
+            gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
             RespawnManager.instance.checkpointReached(checkpointID);

@@ -9,7 +9,10 @@ public class Checkpoint_S : MonoBehaviour
     [SerializeField]
     private int checkpointID;
 
-    public bool facingForward;
+    [HideInInspector]
+    public bool disableInteractMsg;
+
+    public bool facingRight;
 
     private RespawnManager_S respawnManager;
 
@@ -38,12 +41,15 @@ public class Checkpoint_S : MonoBehaviour
             respawnManager.checkpointReached(checkpointID);
 
             //Bool used by PlayerMovement script to establish the direction of the player when respawning
-            respawnManager.facingForward = facingForward;
+            respawnManager.facingRight = facingRight;
 
-            //Displaying checkpoint indicator
-            checkpointText.enabled = true;
-            yield return new WaitForSeconds(3f);
-            checkpointText.enabled = false;
+            if (!disableInteractMsg)
+            {
+                //Displaying checkpoint indicator
+                checkpointText.enabled = true;
+                yield return new WaitForSeconds(3f);
+                checkpointText.enabled = false;
+            }            
         }
     }
 }

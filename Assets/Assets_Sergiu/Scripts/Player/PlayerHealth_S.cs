@@ -22,7 +22,7 @@ public class PlayerHealth_S : MonoBehaviour
 
     public static PlayerHealth_S instance;
 
-    //Attribute used by enemies and pickups to know when to respawn
+    //Attribute used by enemies, pickups and platforms to know when to respawn
     [HideInInspector]
     public bool playerDeath;
 

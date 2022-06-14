@@ -2230,9 +2230,15 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+<<<<<<< Updated upstream
   m_text: "Kerua Production \n\n\n\n\nDeveloppeurs :\n\nJacques Le Guevel\n\nAntoine
     Quere\n\nSergiu Mocano\n\nNolwenn Dujardin\n\nC\xE9cilia Djouhaer\n\n\n\n\nBande
     Son : \n\nKevin Macleod\n\n\n\n\nThanks to OpenGameArt\n\n"
+=======
+  m_text: "Kerua Production \n\n\n\n\n\n\nDeveloppeurs :\n\nJacques Le Guevel\n\nAntoine
+    Quere\n\nSergiu MocanuS\n\nNolwenn Dujardin\n\nC\xE9cilia Djouhaer\n\n\n\n\nBande
+    Son : \n\nKevin Macleod\n\n"
+>>>>>>> Stashed changes
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

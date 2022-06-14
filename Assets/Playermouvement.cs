@@ -14,6 +14,7 @@ public class PlayerMouvement : MonoBehaviour
     public Rigidbody2D rb;
     private Vector3 velocity = Vector3.zero;
 
+    /*
     void FixedUpdate()
     {
         isGrounded = Physics2d.OverlapArea(groundCheckLeft.position,groundCheckRight.position)
@@ -39,6 +40,6 @@ public class PlayerMouvement : MonoBehaviour
             isJumping = false; 
         }
     }
-
+    */
 
 }
