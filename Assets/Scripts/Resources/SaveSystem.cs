@@ -5,14 +5,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 public static class SaveSystem 
 {
 
-public static void SavePlayer (PlayerHealth ph , PlayerFireBall pfb , int IndexScene , Transform pTransform)
+public static void SavePlayer (int IndexScene)
 {
     BinaryFormatter formatter = new BinaryFormatter();
 
     string path = Application.persistentDataPath + "/save.owl";
     FileStream stream = new FileStream(path , FileMode.Create);
 
-    Player_Info info = new Player_Info(ph , pfb , IndexScene , pTransform);
+    Player_Info info = new Player_Info(IndexScene);
 
     formatter.Serialize(stream , info);
     stream.Close();
