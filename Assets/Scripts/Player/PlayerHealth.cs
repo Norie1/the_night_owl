@@ -13,7 +13,6 @@ public class PlayerHealth : MonoBehaviour
     public SpriteRenderer playerSprite;
 
     public PlayerMovement playerMovement;
-    public Inventory inventory;
 
     public static PlayerHealth instance;
 
@@ -39,7 +38,6 @@ public class PlayerHealth : MonoBehaviour
 
         //Import of public methods and attributes from PlayerMovement script
         playerMovement = PlayerMovement.instance;
-        inventory = Inventory.instance;
     }
 
 
@@ -68,7 +66,6 @@ public class PlayerHealth : MonoBehaviour
             //Respawn
             if (currentHealth <= 0)
             {
-                inventory.ResetWallet();
                 StartCoroutine(RespawnPlayer());
             }
             else

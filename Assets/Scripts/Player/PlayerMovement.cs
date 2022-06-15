@@ -39,7 +39,6 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     private PlayerHealth playerHealth;
-    private Inventory inventory;
 
     public static PlayerMovement instance;
 

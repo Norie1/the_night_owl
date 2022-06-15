@@ -35,11 +35,6 @@ public class ObjectPickUp : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            if (gameObject.CompareTag("Coin"))
-            {
-                Inventory.instance.AddCoins(1);
-                RemoveObject();
-            }
 
         }
     }
