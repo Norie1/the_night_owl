@@ -27,7 +27,7 @@ public class enemypatrol : MonoBehaviour
         {
             desPoint = (desPoint + 1) % waypoints.Length;
             target = waypoints[desPoint];
-            graphics.flipX = !graphics.flipX
+            graphics.flipX = !graphics.flipX;
         }
     }
 }

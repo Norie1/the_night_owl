@@ -16,7 +16,7 @@ public class PlayerMouvement : MonoBehaviour
 
     void FixedUpdate()
     {
-        isGrounded = Physics2d.OverlapArea(groundCheckLeft.position,groundCheckRight.position)
+        isGrounded = Physics2d.OverlapArea(groundCheckLeft.position,groundCheckRight.position);
         float horizontalMovement = Input.GetAxis("Horizontal") * mouveSpeed * Time.deltaTime;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
@@ -25,11 +25,11 @@ public class PlayerMouvement : MonoBehaviour
         }
 
         MovePlayer(horizontalMovement);
-        float (charactervelocity = Matf)
+        float charactervelocity = Matf;
         animator.Setfloat("speed", rb.velocity.x);
     }
 
-    void MovePlayer(float_horizontalMovement)
+    void MovePlayer(float _horizontalMovement)
     {
         vector3 targetvelocity = new vector2(_horizontalMovement, rb.velocity.y);
         rb.velocity = Vector3.Smoothdamp(rb.velocity, targetvelocity, ref velocity, .05f);
