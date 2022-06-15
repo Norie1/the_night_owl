@@ -10,7 +10,7 @@ public class Checkpoint_S : MonoBehaviour
     private int checkpointID;
 
     [HideInInspector]
-    public bool disableInteractMsg;
+    public bool disableCheckpointMsg;
 
     public bool facingRight;
 
@@ -43,7 +43,8 @@ public class Checkpoint_S : MonoBehaviour
             //Bool used by PlayerMovement script to establish the direction of the player when respawning
             respawnManager.facingRight = facingRight;
 
-            if (!disableInteractMsg)
+            //Checkpoint message disabled by the Platforms_S script (Triggers)
+            if (!disableCheckpointMsg)
             {
                 //Displaying checkpoint indicator
                 checkpointText.enabled = true;

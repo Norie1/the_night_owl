@@ -18,7 +18,7 @@ public class Platforms_S : MonoBehaviour
         //Import of public methods and attributes from DialogManager_S script
         dialogManager = DialogManager_S.instance;
 
-        checkpoint.disableInteractMsg = true;
+        checkpoint.disableCheckpointMsg = true;
     }
 
     void Update()
