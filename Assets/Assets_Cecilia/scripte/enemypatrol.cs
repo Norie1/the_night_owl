@@ -20,14 +20,15 @@ public class enemypatrol : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /*
         Vector3 dir = target.position - transform.position;
-        transform.Translater(dir.normalizedn * rapide * Time.deltaTime, Space.word);
+        transform.Translater(dir.normalizedn * rapide * Time.deltaTime, Space.world);
         // si l'ennemi arrive a sa destination
         if(vector3.Distance(transform.position) < 0.3f)
         {
             desPoint = (desPoint + 1) % waypoints.Length;
             target = waypoints[desPoint];
             graphics.flipX = !graphics.flipX;
-        }
+        }*/
     }
 }

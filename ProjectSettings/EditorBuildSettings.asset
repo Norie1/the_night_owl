@@ -15,6 +15,9 @@ EditorBuildSettings:
     path: Assets/Scenes/IntroScene.unity
     guid: e01926c341846314197b776e6ca2eed1
   - enabled: 1
+    path: Assets/Scenes/TransitionLevelSceneJacques.unity
+    guid: 0a7d75440ed57194aa76094e38074a04
+  - enabled: 1
     path: Assets/Scenes/Level_Jacques.unity
     guid: d6adf0ecc5dbf694d96406f3f32d2129
   - enabled: 1
@@ -23,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_Donjon_Jacques.unity
     guid: 8376836a7a36fd44c923045f16972fca
+  - enabled: 1
+    path: Assets/Scenes/TransitionLevelSceneAntoine.unity
+    guid: a571ca45514fb1c4bbdcf079f51ade44
   - enabled: 1
     path: Assets/Scenes/Level_Antoine.unity
     guid: 01018d088a5bfa84286a1cba0115ea44

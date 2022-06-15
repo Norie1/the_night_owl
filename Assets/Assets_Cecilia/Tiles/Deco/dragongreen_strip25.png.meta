@@ -112380,19 +112380,20 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      dragongreen_strip25_1350: -2087910135
+      dragongreen_strip25_3717: 1284144051
       dragongreen_strip25_212: -161432091
       dragongreen_strip25_2374: 401326716
       dragongreen_strip25_2455: 227356433
       dragongreen_strip25_1719: 1165587129
       dragongreen_strip25_4844: 261518706
-      dragongreen_strip25_598: -1328144901
+      dragongreen_strip25_3407: 1153550456
       dragongreen_strip25_4304: -1305593404
       dragongreen_strip25_4981: -352990550
-      dragongreen_strip25_3066: -334889908
+      dragongreen_strip25_158: 1378636025
       dragongreen_strip25_2471: -69661271
       dragongreen_strip25_4172: 513697780
-      dragongreen_strip25_3407: 1153550456
+      dragongreen_strip25_5002: -1961854273
+      dragongreen_strip25_1350: -2087910135
       dragongreen_strip25_1143: -293399590
       dragongreen_strip25_185: 457111353
       dragongreen_strip25_1868: -2111564467
@@ -112400,21 +112401,22 @@ TextureImporter:
       dragongreen_strip25_1536: -1188581217
       dragongreen_strip25_396: -703268742
       dragongreen_strip25_2522: -831871416
-      dragongreen_strip25_3717: 1284144051
+      dragongreen_strip25_4181: 1991019917
       dragongreen_strip25_2925: -271649934
       dragongreen_strip25_4535: 1070873718
       dragongreen_strip25_4663: 1403939823
-      dragongreen_strip25_4181: 1991019917
+      dragongreen_strip25_5330: 1433388508
       dragongreen_strip25_4944: 578591315
       dragongreen_strip25_2309: -162446856
       dragongreen_strip25_4115: -85709234
       dragongreen_strip25_5044: -2001270168
-      dragongreen_strip25_5002: -1961854273
+      dragongreen_strip25_5121: 263908481
       dragongreen_strip25_4032: -1965155619
       dragongreen_strip25_2783: -267512036
-      dragongreen_strip25_5121: 263908481
+      dragongreen_strip25_5331: -822430882
       dragongreen_strip25_5063: 371735694
       dragongreen_strip25_5193: -257519590
+      dragongreen_strip25_598: -1328144901
       dragongreen_strip25_5105: -2111752114
       dragongreen_strip25_1604: 1543513061
       dragongreen_strip25_370: 571764640
@@ -112424,14 +112426,12 @@ TextureImporter:
       dragongreen_strip25_4143: -356627211
       dragongreen_strip25_1762: -2145789875
       dragongreen_strip25_2199: -759986107
-      dragongreen_strip25_5330: 1433388508
       dragongreen_strip25_1112: -1687901665
       dragongreen_strip25_4683: 777565624
       dragongreen_strip25_4580: 2048151043
       dragongreen_strip25_281: -118142485
       dragongreen_strip25_1103: -2008235998
       dragongreen_strip25_5135: -526126435
-      dragongreen_strip25_5331: -822430882
       dragongreen_strip25_1520: 1581574936
       dragongreen_strip25_2111: -960655831
       dragongreen_strip25_4564: -1706223678
@@ -115045,44 +115045,44 @@ TextureImporter:
       dragongreen_strip25_2586: -1681031298
       dragongreen_strip25_178: 288022539
       dragongreen_strip25_4763: 1135609652
-      dragongreen_strip25_2497: -1938272257
-      dragongreen_strip25_1110: -58265249
-      dragongreen_strip25_1898: -2051285049
       dragongreen_strip25_2797: 931355829
-      dragongreen_strip25_1114: -209289591
+      dragongreen_strip25_1110: -58265249
       dragongreen_strip25_4256: -1252385043
+      dragongreen_strip25_2497: -1938272257
+      dragongreen_strip25_1114: -209289591
       dragongreen_strip25_2490: 493368038
       dragongreen_strip25_408: -1993702792
       dragongreen_strip25_4550: -520319299
+      dragongreen_strip25_4169: -454317015
       dragongreen_strip25_2106: 784420860
       dragongreen_strip25_1466: 670798218
       dragongreen_strip25_448: 1644558482
       dragongreen_strip25_4019: -1900684722
       dragongreen_strip25_2710: -1128080306
-      dragongreen_strip25_4169: -454317015
       dragongreen_strip25_674: -1548638262
-      dragongreen_strip25_3361: -2015009815
+      dragongreen_strip25_3493: -799416894
       dragongreen_strip25_2515: -807848278
       dragongreen_strip25_4740: -1027034828
-      dragongreen_strip25_3493: -799416894
-      dragongreen_strip25_3585: -1787815660
-      dragongreen_strip25_1943: -1715670158
-      dragongreen_strip25_3246: 687922467
       dragongreen_strip25_5274: 1475203291
+      dragongreen_strip25_1898: -2051285049
+      dragongreen_strip25_1943: -1715670158
+      dragongreen_strip25_3585: -1787815660
+      dragongreen_strip25_3246: 687922467
       dragongreen_strip25_5096: -1887197550
       dragongreen_strip25_545: 78667732
+      dragongreen_strip25_3361: -2015009815
       dragongreen_strip25_656: 203694380
-      dragongreen_strip25_3490: -1655983615
       dragongreen_strip25_3964: -374802185
       dragongreen_strip25_243: 1012572150
       dragongreen_strip25_2788: 2137245859
+      dragongreen_strip25_3490: -1655983615
       dragongreen_strip25_1904: -105764267
       dragongreen_strip25_101: -511544926
       dragongreen_strip25_637: -125061493
       dragongreen_strip25_2042: -207858423
       dragongreen_strip25_1168: 1313304736
-      dragongreen_strip25_2138: 1346081253
       dragongreen_strip25_3085: -1386712891
+      dragongreen_strip25_2138: 1346081253
       dragongreen_strip25_3858: 141538139
       dragongreen_strip25_3405: 1552177043
       dragongreen_strip25_3260: 1396741900
@@ -117720,10 +117720,10 @@ TextureImporter:
       dragongreen_strip25_4238: -2027542196
       dragongreen_strip25_2482: -177389715
       dragongreen_strip25_433: 1605532041
-      dragongreen_strip25_158: 1378636025
+      dragongreen_strip25_1378: 343143068
       dragongreen_strip25_2087: -218125524
       dragongreen_strip25_1518: -1370611470
-      dragongreen_strip25_1378: 343143068
+      dragongreen_strip25_3066: -334889908
       dragongreen_strip25_1255: -839329792
       dragongreen_strip25_2395: 522530599
   spritePackingTag: 

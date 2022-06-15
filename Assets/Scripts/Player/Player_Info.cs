@@ -8,9 +8,9 @@ public class Player_Info
     public int health;
     public bool canThrow;
     public float[] transform; 
-    public string scene;
+    public int scene;
 
-    public Player_Info(PlayerHealth ph , PlayerFireBall pfb , string nameScene , Transform pTransform)
+    public Player_Info(PlayerHealth ph , PlayerFireBall pfb , int nameScene , Transform pTransform)
     {
 
         health = ph.currentHealth;

@@ -1251,6 +1251,8 @@ GameObject:
   - component: {fileID: 220926061}
   - component: {fileID: 220926070}
   - component: {fileID: 220926069}
+  - component: {fileID: 220926072}
+  - component: {fileID: 220926071}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -1504,6 +1506,39 @@ DistanceJoint2D:
   m_AutoConfigureDistance: 0
   m_Distance: 5
   m_MaxDistanceOnly: 1
+--- !u!114 &220926071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220926060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f48ed36ed3aa3204b9404547b07cacc8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 220926060}
+  pTransform: {fileID: 220926065}
+  pfb: {fileID: 220926072}
+  ph: {fileID: 220926068}
+--- !u!114 &220926072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 220926060}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fd300a470ed967439f8fd29586001af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerAnimator: {fileID: 220926067}
+  fireProjectileLeft: {fileID: 606736562}
+  fireProjectileRight: {fileID: 2026962235}
+  projectile: {fileID: 2267752645548056163, guid: 2f913f59164f6bc42b3b40047b1254a4, type: 3}
+  canThrowFireBall: 1
 --- !u!1 &236756783
 GameObject:
   m_ObjectHideFlags: 0
@@ -58215,9 +58250,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: OpenSettingsWindow
+      - m_Target: {fileID: 220926071}
+        m_TargetAssemblyTypeName: PlayerSave, Assembly-CSharp
+        m_MethodName: SaveScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
