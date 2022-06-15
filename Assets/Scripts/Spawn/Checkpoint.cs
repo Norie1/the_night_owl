@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
 
     public bool facingRight;
 
-    private RespawnManager respawnManager;
+    //private RespawnManager respawnManager;
 
     public Text checkpointText;
 
@@ -34,10 +34,10 @@ public class Checkpoint : MonoBehaviour
             gameObject.GetComponent<BoxCollider2D>().enabled = false;
 
             //Update of reached checkpoints in RespawnManager_S script (enemy and object respawn related)
-            respawnManager.checkpointReached(checkpointID);
+            RespawnManager.instance.checkpointReached(checkpointID);
 
             //Bool used by PlayerMovement script to establish the direction of the player when respawning
-            respawnManager.facingRight = facingRight;
+            RespawnManager.instance.facingRight = facingRight;
 
             //Displaying checkpoint indicator
             checkpointText.enabled = true;

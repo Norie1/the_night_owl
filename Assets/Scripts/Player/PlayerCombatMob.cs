@@ -35,8 +35,8 @@
 	    public void PlayerAttack()
 	    {
 			animator.Play("Attack1");
-			GameObject player = GameObject.Find("Player");
-            SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
+			//GameObject player = GameObject.Find("Player");
+            SpriteRenderer sprite = /*player.*/GetComponent<SpriteRenderer>();
 			Collider2D[] hitEnemies;
 			if(sprite.flipX == false){
 				hitEnemies = Physics2D.OverlapCircleAll(attackPointRight.position, attackRange, Enemies);
@@ -49,13 +49,19 @@
 				
 				EnemyHealth eh = enemy.GetComponent<EnemyHealth>();
 				EnemyHealth_J ehj = enemy.GetComponent<EnemyHealth_J>();
-				if(eh != null)
+				EnemyHealth_N ehn = enemy.GetComponent<EnemyHealth_N>();
+				
+				if((eh = enemy.GetComponent<EnemyHealth>()) != null)
 				{
 					eh.TakeDamage(attackDamage);
 				}
 				if(ehj != null)
 				{
 				enemy.GetComponent<EnemyHealth_J>().TakeDamage(attackDamage);
+				}
+				if(ehn != null)
+				{
+					ehn.TakeDamage(attackDamage);
 				}
 			}
 		}
