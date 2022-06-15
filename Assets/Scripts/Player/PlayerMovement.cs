@@ -229,7 +229,9 @@ public class PlayerMovement : MonoBehaviour
     public void RespawnPlayer()
     {
         transform.position = respawnPoint;
-        spriteRenderer.flipX = false;
+
+        //Bool initialized in the Checkpoint inspector
+        spriteRenderer.flipX = !RespawnManager_S.instance.facingRight;
     }
 
     //Respawn when falling into a hole

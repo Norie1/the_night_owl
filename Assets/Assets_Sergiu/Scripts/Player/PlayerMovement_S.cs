@@ -79,7 +79,7 @@ public class PlayerMovement_S : MonoBehaviour
         activeDash = true;
         activeProjectile = true;
 
-        //Import of public methods and attributes from PlayerHealth script
+        //Import of public methods and attributes from PlayerHealth_S and Moonwalk_S scripts
         playerHealth = PlayerHealth_S.instance;
         moonwalk = Moonwalk_S.instance;
 
@@ -97,27 +97,6 @@ public class PlayerMovement_S : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        isDancing = moonwalk.isDancing;
-
-        if (isDancing)
-        {
-            Vector3 direction = target.position - transform.position;
-
-            //Player movement (normalization of the movement vector)
-            transform.Translate(direction.normalized * 2 * Time.deltaTime, Space.World);
-
-            //When the player is close to the target
-            if (Vector3.Distance(transform.position, target.position) < 0.3f)
-            {
-                //target = next target
-                destPoint = (destPoint + 1) % waypoints.Length;
-                target = waypoints[destPoint];
-
-                //Player flip
-                spriteRenderer.flipX = !spriteRenderer.flipX;
-            }
-        }
-
         //Move player if freezePlayer movement is inactive
         if (!freezePlayerMovement)
         {
@@ -165,6 +144,7 @@ public class PlayerMovement_S : MonoBehaviour
                 activeDash = false;
             }
 
+            //Firing a projectile
             if (Input.GetKeyDown(KeyCode.F) && activeProjectile)
             {
                 projectilePrefab.flipPlayer = flipPlayer;
@@ -180,6 +160,27 @@ public class PlayerMovement_S : MonoBehaviour
                     launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
                     Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
                 }
+            }
+        }
+
+        isDancing = moonwalk.isDancing;
+
+        if (isDancing)
+        {
+            Vector3 direction = target.position - transform.position;
+
+            //Player movement (normalization of the movement vector)
+            transform.Translate(direction.normalized * 2 * Time.deltaTime, Space.World);
+
+            //When the player is close to the target
+            if (Vector3.Distance(transform.position, target.position) < 0.3f)
+            {
+                //target = next target
+                destPoint = (destPoint + 1) % waypoints.Length;
+                target = waypoints[destPoint];
+
+                //Player flip
+                spriteRenderer.flipX = !spriteRenderer.flipX;
             }
         }
     }
