@@ -17315,8 +17315,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackDamage: 20
   enragedAttackDamage: 40
-  attackOffset: {x: 0, y: 0, z: 0}
   attackRange: 2
+  attackOffset: {x: 0, y: 0, z: 0}
   attackMask:
     serializedVersion: 2
     m_Bits: 256
@@ -17497,7 +17497,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 400
-  nameScene: TransitionLevelSceneNolwenn
+  nameScene: TransitionLevelSceneCecilia
   objectToDestroy: {fileID: 661335739}
   isInvulnerable: 0
 --- !u!1 &671694724

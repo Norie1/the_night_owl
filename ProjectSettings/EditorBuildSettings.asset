@@ -36,6 +36,24 @@ EditorBuildSettings:
     path: Assets/Scenes/BossFight_Antoine.unity
     guid: 87630c9f7904b4dc591ff08a2b695012
   - enabled: 1
+    path: Assets/Scenes/TransitionLevelSceneCecilia.unity
+    guid: cb1089edf2128ed4fbd9747b16d6e367
+  - enabled: 1
+    path: Assets/Scenes/Level_Cecilia.unity
+    guid: 2172f83eefdf09a4f8b0268e9f21aa55
+  - enabled: 1
     path: Assets/Scenes/TransitionLevelSceneNolwenn.unity
     guid: d6d71f4cc4802f6448e9da3100c53872
+  - enabled: 1
+    path: Assets/Scenes/Level_Nolwenn.unity
+    guid: 43e83356d368d634c9f9d2a0fc28b3ac
+  - enabled: 1
+    path: Assets/Scenes/TransitionLevelSceneSergiu.unity
+    guid: 7ecb2c75e5f46374b95e15c3807772c7
+  - enabled: 1
+    path: Assets/Scenes/Level_sergiu.unity
+    guid: 2e58f85a59fc4a54d813d536b7c801ce
+  - enabled: 1
+    path: Assets/Scenes/EndScene.unity
+    guid: 285cc9d8f0327d443a7e3d73fd9f745b
   m_configObjects: {}
