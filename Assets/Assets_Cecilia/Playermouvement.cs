@@ -25,6 +25,8 @@ public class PlayerMouvement : MonoBehaviour
         }
 
         MovePlayer(horizontalMovement);
+        float (charactervelocity = Matf)
+        animator.Setfloat("speed", rb.velocity.x);
     }
 
     void MovePlayer(float_horizontalMovement)
