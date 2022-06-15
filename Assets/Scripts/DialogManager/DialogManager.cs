@@ -52,10 +52,11 @@ public class DialogManager : MonoBehaviour
         nameText.enabled = true;
         dialogText.enabled = true;
 
+        //Bool used by the DialogTrigger script
         dialogStarted = true;
 
         // Blocking player movement while dialog is active
-        // PlayerMovement.instance.freezePlayerMovement = true;
+        PlayerMovement.instance.freezePlayerMovement = true;
 
         DisplayNextSentence();
     }
@@ -81,8 +82,9 @@ public class DialogManager : MonoBehaviour
         dialogText.enabled = false;
 
         // Unblocking player movement
-        //PlayerMovement.instance.freezePlayerMovement = false;
+        PlayerMovement.instance.freezePlayerMovement = false;
 
+        //Bool used by the DialogTrigger script
         dialogStarted = false;
     }
 }

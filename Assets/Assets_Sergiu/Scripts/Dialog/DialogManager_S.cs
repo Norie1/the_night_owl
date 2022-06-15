@@ -13,6 +13,8 @@ public class DialogManager_S : MonoBehaviour
     [HideInInspector]
     public bool dialogStarted;
 
+    public PlayerHealth_S playerHealth;
+
     public static DialogManager_S instance;
 
     private void Awake()
@@ -33,6 +35,8 @@ public class DialogManager_S : MonoBehaviour
         dialogBox.enabled = false;
         nameText.enabled = false;
         dialogText.enabled = false;
+
+        playerHealth = PlayerHealth_S.instance;
     }
 
     //Method called by the DialogueTrigger_S and LevelIntro_S scripts
@@ -52,6 +56,7 @@ public class DialogManager_S : MonoBehaviour
         nameText.enabled = true;
         dialogText.enabled = true;
 
+        //Bool used by the DialogTrigger_S script
         dialogStarted = true;
 
         //Blocking player movement while dialog is active
@@ -65,6 +70,12 @@ public class DialogManager_S : MonoBehaviour
         if (queue.Count == 0)
         {
             EndDialog();
+
+            if (playerHealth.postmortemDialog)
+            {
+                playerHealth.postmortemDialog = false;
+            }
+
             return false;
         }
 
@@ -83,6 +94,7 @@ public class DialogManager_S : MonoBehaviour
         //Unblocking player movement
         PlayerMovement_S.instance.freezePlayerMovement = false;
 
+        //Bool used by the DialogTrigger_S script
         dialogStarted = false;
     }
 }

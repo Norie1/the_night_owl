@@ -29,19 +29,16 @@ public class DialogTrigger_S : MonoBehaviour
                 dialogManager.StartDialog(dialog);
                 interactMessage.enabled = false;
             }
-            else
+            else if (!dialogManager.DisplayNextSentence())
             {
-                if (!dialogManager.DisplayNextSentence())
-                {
-                    interactMessage.enabled = true;
-                }
+                interactMessage.enabled = true;
             }
         }
+        
         //If postmortem dialog is started
-        else if (playerHealth.postmortemDialog && Input.GetKeyDown(KeyCode.E))
+        if (playerHealth.postmortemDialog && Input.GetKeyDown(KeyCode.E))
         {
             dialogManager.DisplayNextSentence();
-            playerHealth.postmortemDialog = false;
         }
     }
 
@@ -50,8 +47,8 @@ public class DialogTrigger_S : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = true;
-        }
-        interactMessage.enabled = true;
+            interactMessage.enabled = true;
+        }   
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -59,7 +56,8 @@ public class DialogTrigger_S : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = false;
+            interactMessage.enabled = false;
         }
-        interactMessage.enabled = false;
+        
     }
 }

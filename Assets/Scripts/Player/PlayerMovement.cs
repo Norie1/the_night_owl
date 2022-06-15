@@ -9,6 +9,9 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontalMovement;
 
+    [HideInInspector]
+    public bool freezePlayerMovement;
+
     public bool isJumping;
     public bool activeDash;
     public bool isGrounded;
@@ -29,7 +32,7 @@ public class PlayerMovement : MonoBehaviour
 
     [HideInInspector]
     public Vector3 respawnPoint;
-    public GameObject fallDetector;
+    public GameObject deathZone;
 
     
     private Rigidbody2D rigidBody;
@@ -73,60 +76,60 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Verification of proximity with a wall
-        onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
-        onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
-        
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
-
-		if (!isGrounded) 
-		{
-			playerAnimator.SetBool("Grounded", false);
-		}
-		else 
-		{
-			playerAnimator.SetBool("Grounded", true);
-		}
-		
-        if (Input.GetButtonDown("Jump"))
+        if (!freezePlayerMovement)
         {
-            //Normal jump
-            if (isGrounded)
+            //Verification of proximity with a wall
+            onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
+            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
+
+            isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, collisionLayer);
+
+            if (!isGrounded)
             {
-                isJumping = true;
+                playerAnimator.SetBool("Grounded", false);
             }
-            //Wall jump right side
-            else if (onTheWallR && wallJumpR)
+            else
             {
-                isJumping = true;
-                wallJumpR = false;
-                wallJumpL = true;
-                superJump = true;
+                playerAnimator.SetBool("Grounded", true);
             }
-            //Wall jump left side
-            else if (onTheWallL && wallJumpL)
+
+            if (Input.GetButtonDown("Jump"))
             {
-                isJumping = true;
-                wallJumpL = false;
-                wallJumpR = true;
-                superJump = true;
+                //Normal jump
+                if (isGrounded)
+                {
+                    isJumping = true;
+                }
+                //Wall jump right side
+                else if (onTheWallR && wallJumpR)
+                {
+                    isJumping = true;
+                    wallJumpR = false;
+                    wallJumpL = true;
+                    superJump = true;
+                }
+                //Wall jump left side
+                else if (onTheWallL && wallJumpL)
+                {
+                    isJumping = true;
+                    wallJumpL = false;
+                    wallJumpR = true;
+                    superJump = true;
+                }
+                //Double jump
+                else if (doubleJump && !onTheWallL && !onTheWallR)
+                {
+                    isJumping = true;
+                    doubleJump = false;
+                    playerAnimator.Play("Jump");
+                }
             }
-            //Double jump
-            else if (doubleJump && !onTheWallL && !onTheWallR)
+            if (Input.GetKeyDown(KeyCode.X) && activeDash)
             {
-                isJumping = true;
-                doubleJump = false;
-                playerAnimator.Play("Jump");
+                StartCoroutine(Dash(horizontalMovement));
+                activeDash = false;
             }
         }
-        if (Input.GetKeyDown(KeyCode.X) && activeDash)
-        {
-            StartCoroutine(Dash(horizontalMovement));
-            activeDash = false;
-        }
-
-        //Fall detector following the player
-        fallDetector.transform.position = new Vector2(transform.position.x, fallDetector.transform.position.y);
     }
 
     void FixedUpdate()
@@ -218,9 +221,6 @@ public class PlayerMovement : MonoBehaviour
         else if (_velocity < -0.1f)
         {
             spriteRenderer.flipX = true;
-            //To shoot the fire ball to the left, we have to rotate the transform of the fire ball movement
-            //transform.Rotate(0f,180f,0f);
-            
         }
     }
 

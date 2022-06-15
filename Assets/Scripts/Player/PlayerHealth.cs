@@ -17,7 +17,7 @@ public class PlayerHealth : MonoBehaviour
     public static PlayerHealth instance;
 
     //Attribute used by enemies and pickups to know when to respawn
-    //[HideInInspector]
+    [HideInInspector]
     public bool playerDeath;
 
     private void Awake()

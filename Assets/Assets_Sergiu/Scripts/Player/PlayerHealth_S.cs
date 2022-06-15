@@ -18,7 +18,6 @@ public class PlayerHealth_S : MonoBehaviour
     public SpriteRenderer playerSprite;
 
     private PlayerMovement_S playerMovement;
-    private Inventory_S inventory;
 
     public static PlayerHealth_S instance;
 
@@ -42,9 +41,8 @@ public class PlayerHealth_S : MonoBehaviour
 
         ResetPlayerHealth();
 
-        //Import of public methods and attributes from PlayerMovement script
+        //Import of public methods and attributes from PlayerMovement_S script
         playerMovement = PlayerMovement_S.instance;
-        inventory = Inventory_S.instance;
     }
 
     void Update()
@@ -72,7 +70,6 @@ public class PlayerHealth_S : MonoBehaviour
             //Respawn
             if (currentHealth <= 0)
             {
-                inventory.ResetWallet();
                 StartCoroutine(RespawnPlayer());
             }
             else
@@ -104,8 +101,9 @@ public class PlayerHealth_S : MonoBehaviour
         playerDeath = true;
         ResetPlayerHealth();
 
-        //Use of respawn() method from the PlayerMovement_S script
         playerMovement.RespawnPlayer();
+
+        //Starting the postmortem dialog
         DialogManager_S.instance.StartDialog(dialog);
 
         //Bool used by DialogTrigger script in order to be able to advance in the dialog

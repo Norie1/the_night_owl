@@ -20,6 +20,8 @@ public class Checkpoint : MonoBehaviour
     {
         //Initializing respawnPoint to the position PlayerSpawn (initial player spawn position)
         respawnPoint = GameObject.FindGameObjectWithTag("PlayerSpawn").transform;
+
+        respawnManager = RespawnManager_S.instance;
     }
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
