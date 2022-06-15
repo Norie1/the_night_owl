@@ -9,6 +9,7 @@ public class RespawnManager : MonoBehaviour
     [HideInInspector]
     public bool[] checkpoints;
 
+    [HideInInspector]
     public bool facingRight;
 
     public static RespawnManager instance;

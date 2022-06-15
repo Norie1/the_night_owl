@@ -12,7 +12,7 @@ public class Checkpoint : MonoBehaviour
 
     public bool facingRight;
 
-    private RespawnManager_S respawnManager;
+    private RespawnManager respawnManager;
 
     public Text checkpointText;
 
@@ -24,7 +24,7 @@ public class Checkpoint : MonoBehaviour
 
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.tag == "Player" )
         {
             //Moving respawnPoint to the next checkpoint
             respawnPoint.position = transform.position;
