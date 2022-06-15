@@ -12,15 +12,15 @@ public class Enemy_behaviour : MonoBehaviour
     public float timer;
     public Transform leftLimit;
     public Transform rightLimit;
-    [HideInInspector] public Transform target;
-    [HideInInspector] public bool isInRange; //Check if enemy is in range
+    /*[HideInInspector]*/ public Transform target;
+    /*[HideInInspector]*/ public bool isInRange; //Check if player is in range
     public GameObject hotZone;
     public GameObject triggerArea;
 
     private Animator anim;
     private float distance; //Store distance between enemy and target
-    private bool inAttackRange;
-    private bool attackMode;
+    [SerializeField] private bool inAttackRange;
+    [SerializeField] private bool attackMode;
     private bool cooling; //Check if enemy is cooling after attack
     private float intTimer;
 
@@ -153,4 +153,10 @@ public class Enemy_behaviour : MonoBehaviour
 
         transform.eulerAngles = rotation;
     }
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, attackDistance);
+    }
+
 }

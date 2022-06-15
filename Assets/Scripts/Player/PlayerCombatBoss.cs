@@ -36,8 +36,8 @@
 	    public void PlayerAttack()
 	    {
 			animator.Play("Attack1");
-			GameObject player = GameObject.Find("Player");
-            SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
+			//GameObject player = GameObject.Find("Player");
+            SpriteRenderer sprite = /*player.*/GetComponent<SpriteRenderer>();
 			if(sprite.flipX == false){
 				hitEnemies = Physics2D.OverlapCircleAll(attackPointRight.position, attackRange, Boss);
 			}
