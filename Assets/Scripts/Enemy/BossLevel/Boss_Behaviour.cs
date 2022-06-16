@@ -12,15 +12,15 @@ public class Boss_Behaviour : MonoBehaviour
     public float timer;
     public Transform leftLimit;
     public Transform rightLimit;
-    /*[HideInInspector]*/ public Transform target;
+    public Transform target;
     public bool isInRange; //Check if player is in range
     public GameObject hotZone;
     public GameObject triggerArea;
 
     private Animator anim;
     private float distance; //Store distance between enemy and target
-    /*[SerializeField]*/ public bool inAttackRange;
-    /*[SerializeField]*/ public bool attackMode;
+    public bool inAttackRange;
+    public bool attackMode;
     private bool cooling; //Check if enemy is cooling after attack
     private float intTimer;
 
@@ -60,10 +60,14 @@ public class Boss_Behaviour : MonoBehaviour
             attackMode = false;
         }
         
-        else if(inAttackRange) //Target is near enemy and can be attacked
+        else if(inAttackRange && !cooling) //Target is near enemy and can be attacked
         {
             Attack();
         }
+        if (cooling)
+        {
+			Cooldown();
+		}
     }
 
     void Move(){
@@ -84,7 +88,6 @@ public class Boss_Behaviour : MonoBehaviour
         anim.SetBool("canWalk", false); //Deactivate walk animation
         anim.SetBool("Attack", true); //Activate attack animation
         Boss_Attack.instance.CheckAttackPlayer();
-        StopAttack();
     }
 
     public void StopAttack(){

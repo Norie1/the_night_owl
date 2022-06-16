@@ -37,8 +37,8 @@ public class Boss_Hotzone : MonoBehaviour
             enemyParent.StopAttack();
             enemyParent.triggerArea.SetActive(true); //Activate trigger Area
             gameObject.SetActive(false); //Deactivate hotZone
-            
             enemyParent.SelectTarget(); //Select next target
+
         }
     }
 }
