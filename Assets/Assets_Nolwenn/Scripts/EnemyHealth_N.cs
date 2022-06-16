@@ -17,7 +17,10 @@ public class EnemyHealth_N : MonoBehaviour
     public EnemyFlying_behaviour flyingScript;
 
     [SerializeField]
-    private int checkpointID; 
+    private int checkpointID;
+    public AudioClip soundEffect;
+
+    private bool dead;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +46,7 @@ public class EnemyHealth_N : MonoBehaviour
     
     public void TakeDamage(int damage)
     {   
-        if (!isInvincible){ 
+        if (!isInvincible && !dead){ 
             currentHealth -= damage;
 		
 		    if (currentHealth <= 0)
@@ -63,9 +66,11 @@ public class EnemyHealth_N : MonoBehaviour
 	
 	public void Die()
 	{
+        AudioManager.instance.PlayClipAt(soundEffect, transform.position);
         enemySprite.enabled = false;
         enemyRb.bodyType = RigidbodyType2D.Static;
         enemyCollider.isTrigger = true;
+        dead = true;
 
         if(enemyScript != null) { enemyScript.enabled = false; }
         if(flyingScript != null) { flyingScript.enabled = false; }
@@ -75,6 +80,7 @@ public class EnemyHealth_N : MonoBehaviour
 
     public void RestoreEnemy()
     {
+        dead = false;
         enemySprite.enabled = true;
         enemyRb.bodyType = RigidbodyType2D.Dynamic;
         enemyCollider.isTrigger = false;

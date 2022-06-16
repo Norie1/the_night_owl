@@ -240,6 +240,7 @@ MonoBehaviour:
   enemyScript: {fileID: 0}
   flyingScript: {fileID: 3857564812046864237}
   checkpointID: 0
+  soundEffect: {fileID: 8300000, guid: 69cde6af59acba442b1cb27f7e541571, type: 3}
 --- !u!1 &3857564812481404641
 GameObject:
   m_ObjectHideFlags: 0

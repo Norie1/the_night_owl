@@ -45,9 +45,10 @@ public class Key : ObjectTrigger
     {
         if(isInRange && Input.GetKeyDown(KeyCode.E))
        {
-           myEvents.Invoke();
-           interactUI.enabled = false;
-           Destroy(gameObject);
+        AudioManager.instance.PlayClipAt(soundEffect, transform.position);
+        myEvents.Invoke();
+        interactUI.enabled = false;
+        Destroy(gameObject);
        }
     }
 }

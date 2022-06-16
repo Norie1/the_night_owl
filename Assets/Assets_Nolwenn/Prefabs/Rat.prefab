@@ -526,6 +526,7 @@ MonoBehaviour:
   enemyScript: {fileID: 3910855869321378464}
   flyingScript: {fileID: 0}
   checkpointID: 0
+  soundEffect: {fileID: 8300000, guid: 69cde6af59acba442b1cb27f7e541571, type: 3}
 --- !u!1 &3910855869358163972
 GameObject:
   m_ObjectHideFlags: 0

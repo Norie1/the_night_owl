@@ -3,7 +3,13 @@ guid: aef92953249d4324db9ddb5eb0ddd1ff
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - enemySprite: {instanceID: 0}
+  - enemyCollider: {instanceID: 0}
+  - enemyRb: {instanceID: 0}
+  - enemyScript: {instanceID: 0}
+  - flyingScript: {instanceID: 0}
+  - soundEffect: {fileID: 8300000, guid: 69cde6af59acba442b1cb27f7e541571, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
