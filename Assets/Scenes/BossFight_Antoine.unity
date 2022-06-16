@@ -826,7 +826,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4254035658722286794, guid: 9b39dc0a0aa76e84bb571294e50f2ac5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.34
+      value: -8.66
       objectReference: {fileID: 0}
     - target: {fileID: 4254035658722286794, guid: 9b39dc0a0aa76e84bb571294e50f2ac5, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17309,7 +17309,7 @@ GameObject:
   - component: {fileID: 661335750}
   m_Layer: 10
   m_Name: Yeti_Boss
-  m_TagString: Player
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17326,6 +17326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 152c4ef17d86d46089ebb3b84acf12eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 0}
   attackDamage: 20
   enragedAttackDamage: 40
   attackRange: 2
@@ -17870,7 +17871,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!156049354 &781474223
 Grid:
   m_ObjectHideFlags: 0
@@ -27884,6 +27885,7 @@ MonoBehaviour:
   movementSpeed: 200
   jumpForce: 200
   dashSpeed: 5
+  freezePlayerMovement: 0
   isJumping: 0
   activeDash: 0
   isGrounded: 0
@@ -27902,7 +27904,7 @@ MonoBehaviour:
   WallCheckLUp: {fileID: 1992081883}
   WallCheckLDown: {fileID: 1046096427}
   respawnPoint: {x: 0, y: 0, z: 0}
-  fallDetector: {fileID: 1068600690}
+  deathZone: {fileID: 0}
 --- !u!114 &2132366287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28040,7 +28042,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2132366282}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -20.03, y: -5.66, z: 0}
+  m_LocalPosition: {x: -20.03, y: -5.46, z: 0}
   m_LocalScale: {x: 1.0728942, y: 1.633125, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
