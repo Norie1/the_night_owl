@@ -8,10 +8,10 @@ public class bordevie : MonoBehaviour
     public Image fill;
     public void SetMaxHealth(int health)
     {
-        slider.maxValua = health;
+        slider.maxValue = health;
         slider.value = health;
 
-        fill.color = gradient.Evaluate(1f)
+        fill.color = gradient.Evaluate(1f);
     }
     public void SetHealth(int health)
     {  
