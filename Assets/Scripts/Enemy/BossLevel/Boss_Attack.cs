@@ -4,52 +4,29 @@ using UnityEngine;
 
 public class Boss_Attack : MonoBehaviour
 {
-	public Transform player;
-	private Transform boss;
-    public int attackDamage = 20;
-    public int enragedAttackDamage = 40;
-    public float attackRange = 1f;
+    public Transform attackArea;
+    public float attackRadius;
+    public LayerMask layerMask;
+    public int damage;
+    public static Boss_Attack instance;
     
-    public Vector3 attackOffset;
-    public LayerMask attackMask;
+	void Start()
+	{
+		instance = this;
+	}
+
     
-    void Start()
+    public void CheckAttackPlayer()
     {
-		boss = GetComponent<Transform>();
-	}
-    
-    void FixedUpdate()
-    {
-		
-		if (Vector3.Distance(boss.position, player.position) < 0.3f)
-		{
-			Attack();
-		}
-	}
-    
-    public void Attack()
-    {
-		Vector3 pos = transform.position;
-		pos += transform.right * attackOffset.x;
-		pos += transform.up * attackOffset.y;
-		
-		Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-		if (colInfo != null)
-		{
-			colInfo.GetComponent<PlayerHealth>().TakeDamage(attackDamage);
-		}
-	}
-	
-	public void EnrageAttack()
-    {
-		Vector3 pos = transform.position;
-		pos += transform.right * attackOffset.x;
-		pos += transform.up * attackOffset.y;
-		
-		Collider2D colInfo = Physics2D.OverlapCircle(pos, attackRange, attackMask);
-		if (colInfo != null)
-		{
-			colInfo.GetComponent<PlayerHealth>().TakeDamage(enragedAttackDamage);
-		}
-	}
+        if(Physics2D.OverlapCircle(attackArea.position, attackRadius,layerMask))
+        {
+            PlayerHealth.instance.TakeDamage(damage);
+        }
+    }
+
+    private void OnDrawGizmos() {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(attackArea.position, attackRadius);
+    }
+
 }
