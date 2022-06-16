@@ -60,7 +60,11 @@ public class FireStarter_S : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isInRange = false;
-            gameObject.GetComponent<BoxCollider2D>().enabled = false;
+
+            if (disableTrigger)
+            {
+                gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            } 
         }
     }
 

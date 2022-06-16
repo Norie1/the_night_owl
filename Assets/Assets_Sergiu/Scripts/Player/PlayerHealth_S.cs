@@ -6,7 +6,8 @@ public class PlayerHealth_S : MonoBehaviour
     private int maxHealth = 100;
     private int currentHealth;
 
-    private bool isInvincible;
+    [HideInInspector]
+    public bool isInvincible;
 
     [SerializeField]
     private Dialog_S dialog;
@@ -135,10 +136,14 @@ public class PlayerHealth_S : MonoBehaviour
         isInvincible = false;
     }
 
-    [HideInInspector]
     public void ResetPlayerHealth()
     {
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth);
+    }
+
+    public bool IsFullLife()
+    {
+        return currentHealth == maxHealth;
     }
 }

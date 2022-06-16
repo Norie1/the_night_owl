@@ -1,17 +1,27 @@
 using UnityEngine;
 
-public class ObjectPickUp_S : MonoBehaviour
+public class HealthPickup_S : MonoBehaviour
 {
     [SerializeField]
     private int checkpointID;
 
+    private bool playerDeath;
+    private bool activeRespawn;
+
+    private PlayerHealth_S playerHealth;
+
+    private void Start()
+    {
+        playerHealth = PlayerHealth_S.instance;
+    }
+
     private void Update()
     {
         //Verification of reached checkpoint
-        bool activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
+        activeRespawn = !RespawnManager_S.instance.checkpoints[checkpointID];
 
         //True if the player is dead
-        bool playerDeath = PlayerHealth_S.instance.playerDeath;
+        playerDeath = playerHealth.playerDeath;
 
         //Object restored on player death if already destroyed and checkpoint not yet reached
         if (playerDeath && activeRespawn)
@@ -22,29 +32,24 @@ public class ObjectPickUp_S : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        if (collision.CompareTag("Player") && !playerHealth.IsFullLife())
         {
-            if (gameObject.CompareTag("Coin"))
-            {
-                Inventory_S.instance.AddCoins(1);
-                RemoveObject();
-            }   
+            playerHealth.HealPlayer(50);
+            RemoveObject();
         }
     }
 
     //Disables object collider and graphics
-    [HideInInspector]
     public void RemoveObject()
     {
-        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
         gameObject.GetComponent<SpriteRenderer>().enabled = false;
     }
 
     //Restores object collider and graphics
-    [HideInInspector]
     public void RestoreObject()
     {
-        gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
         gameObject.GetComponent<SpriteRenderer>().enabled = true;
     }
 }

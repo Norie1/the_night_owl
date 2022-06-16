@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class Moonwalk_S : MonoBehaviour
 {
     public Transform[] waypoints;
+
+    public Transform player;
     public SpriteRenderer playerSprite;
     public Animator playerAnimator;
     public Text moonwalkText;
@@ -12,6 +14,12 @@ public class Moonwalk_S : MonoBehaviour
 
     [HideInInspector]
     public bool isDancing;
+
+    private Transform target;
+    private int destPoint;
+
+    private float countdown = 0.3f;
+    private bool startCountdown;
 
     private PlayerMovement_S playerMovement;
 
@@ -24,30 +32,74 @@ public class Moonwalk_S : MonoBehaviour
             Debug.LogWarning("Player movement already initialized.");
             return;
         }
-        instance = this;
+        instance = this;        
+    }
+
+    private void Start()
+    {
+        target = waypoints[0];
+        destPoint = 0;
 
         playerMovement = PlayerMovement_S.instance;
     }
-    
+
 
     void Update()
     {
         //Start moonwalking when near the trigger and when pressing E
         if (isInRange && Input.GetKeyDown(KeyCode.E) && !isDancing)
         {
+            
+            isDancing = true;
+            startCountdown = true;
+
             playerMovement.freezePlayerMovement = true;
-            isDancing = true;           
             playerAnimator.Play("Moonwalk_S");
             playerSprite.flipX = false;
+
             moonwalkText.enabled = false;
         }
         //Stop dancing
         else if (Input.GetKeyDown(KeyCode.E) && isDancing)
         {
             isDancing = false;
+
+            countdown = 0.3f;
+
             playerMovement.freezePlayerMovement = false;
-            playerMovement.ReintializeMoonwalk();
             playerAnimator.Play("PlayerIdle");
+
+            target = waypoints[0];
+            destPoint = 0; 
+        }
+
+        if (isDancing)
+        {
+            if (startCountdown)
+            {
+                countdown -= Time.deltaTime;
+            }
+
+            if (countdown <= 0)
+            {
+                startCountdown = false;
+
+                Vector3 direction = target.position - transform.position;
+
+                //Player movement (normalization of the movement vector)
+                player.Translate(direction.normalized * 2 * Time.deltaTime, Space.World);
+
+                //When the player is close to the target
+                if (Vector3.Distance(player.position, target.position) < 0.3f)
+                {
+                    //target = next target
+                    destPoint = (destPoint + 1) % waypoints.Length;
+                    target = waypoints[destPoint];
+
+                    //Player flip
+                    playerSprite.flipX = !playerSprite.flipX;
+                }
+            }    
         }
     }
 

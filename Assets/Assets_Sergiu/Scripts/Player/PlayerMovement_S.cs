@@ -10,7 +10,6 @@ public class PlayerMovement_S : MonoBehaviour
     private float horizontalMovement;
 
     private bool isJumping;
-    private bool isDancing;
     private bool activeDash;
     private bool isGrounded;
     private bool onTheWallR;
@@ -52,11 +51,7 @@ public class PlayerMovement_S : MonoBehaviour
     private Vector3 velocity = Vector3.zero;
 
     private PlayerHealth_S playerHealth;
-    private Moonwalk_S moonwalk;
 
-    private Transform[] waypoints;
-    private Transform target;
-    private int destPoint;
 
     public static PlayerMovement_S instance;
 
@@ -81,17 +76,11 @@ public class PlayerMovement_S : MonoBehaviour
 
         //Import of public methods and attributes from PlayerHealth_S and Moonwalk_S scripts
         playerHealth = PlayerHealth_S.instance;
-        moonwalk = Moonwalk_S.instance;
 
         //Importing the rigid body, animator and the sprite renderer of the player
         rigidBody = gameObject.GetComponent<Rigidbody2D>();
         playerAnimator = gameObject.GetComponent<Animator>();
         spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
-
-        waypoints = Moonwalk_S.instance.waypoints;
-
-        //Initialization of the first target/destination for the Moonwalk
-        ReintializeMoonwalk();
     }
 
     // Update is called once per frame
@@ -160,27 +149,6 @@ public class PlayerMovement_S : MonoBehaviour
                     launchOffset = new Vector3(launchOffsetL.position.x, launchOffsetL.position.y, launchOffsetL.position.z);
                     Instantiate(projectilePrefab, launchOffset, launchOffsetL.rotation);
                 }
-            }
-        }
-
-        isDancing = moonwalk.isDancing;
-
-        if (isDancing)
-        {
-            Vector3 direction = target.position - transform.position;
-
-            //Player movement (normalization of the movement vector)
-            transform.Translate(direction.normalized * 2 * Time.deltaTime, Space.World);
-
-            //When the player is close to the target
-            if (Vector3.Distance(transform.position, target.position) < 0.3f)
-            {
-                //target = next target
-                destPoint = (destPoint + 1) % waypoints.Length;
-                target = waypoints[destPoint];
-
-                //Player flip
-                spriteRenderer.flipX = !spriteRenderer.flipX;
             }
         }
     }
@@ -292,12 +260,6 @@ public class PlayerMovement_S : MonoBehaviour
         spriteRenderer.flipX = !RespawnManager_S.instance.facingRight;
     }
 
-    public void ReintializeMoonwalk()
-    {
-        target = waypoints[0];
-        destPoint = 0;
-    }
-
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "FallDetector")
@@ -311,8 +273,8 @@ public class PlayerMovement_S : MonoBehaviour
         }
         else if (collision.tag == "Lava")
         {
+            playerHealth.isInvincible = false;
             playerHealth.TakeDamage(100);
-
         }
     }
 }
