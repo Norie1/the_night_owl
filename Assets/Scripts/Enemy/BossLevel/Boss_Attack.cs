@@ -4,12 +4,28 @@ using UnityEngine;
 
 public class Boss_Attack : MonoBehaviour
 {
+	public Transform player;
+	private Transform boss;
     public int attackDamage = 20;
     public int enragedAttackDamage = 40;
     public float attackRange = 1f;
     
     public Vector3 attackOffset;
     public LayerMask attackMask;
+    
+    void Start()
+    {
+		boss = GetComponent<Transform>();
+	}
+    
+    void FixedUpdate()
+    {
+		
+		if (Vector3.Distance(boss.position, player.position) < 0.3f)
+		{
+			Attack();
+		}
+	}
     
     public void Attack()
     {
