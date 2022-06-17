@@ -44,6 +44,7 @@ https://www.youtube.com/watch?v=5wKti8yEgRU
 ## Basic inputs :
 
 * Press "X" to roll
+* Press "C" to Grappin
 * Press "V" to slash with your sword 
 * Press "E" to interact
 * Press "space" to jump
