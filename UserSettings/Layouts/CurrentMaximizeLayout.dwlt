@@ -23,7 +23,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 1
-  controlID: 5575
+  controlID: 7975
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -140,7 +140,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 5576
+  controlID: 7976
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 5577
+  controlID: 7977
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -190,7 +190,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5578
+  controlID: 7978
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -250,7 +250,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: defa0100
       m_LastClickedID: 129758
-      m_ExpandedIDs: aeb1ffff10fbffff225a0000f65b000076fc0100
+      m_ExpandedIDs: aeb1ffff10fbffff225a0000f65b0000ccff0100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -549,9 +549,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 399.33813, y: 42.404175, z: 0.53177404}
+    m_Target: {x: 346.18573, y: 58.649475, z: 3.8019066}
     speed: 2
-    m_Value: {x: 399.33813, y: 42.404175, z: 0.53177404}
+    m_Value: {x: 346.19885, y: 58.5671, z: 3.796882}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -602,9 +602,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.401814
+    m_Target: 10.66312
     speed: 2
-    m_Value: 7.401814
+    m_Value: 11.165571
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -734,7 +734,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 5486
+  controlID: 8008
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -802,21 +802,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Assets_Sergiu/Scripts/Triggers
+    - Assets/Assets_Sergiu/Scripts/Player
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Assets_Sergiu/Scripts/Triggers
+  - Assets/Assets_Sergiu/Scripts/Player
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Documents\GitHub\the_night_owl
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 122.33331}
-    m_SelectedIDs: 3ecf0000
-    m_LastClickedID: 53054
+    m_SelectedIDs: 3acf0000
+    m_LastClickedID: 53050
     m_ExpandedIDs: 0000000012620000146200005ac6000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 5478
+  controlID: 8000
 --- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
