@@ -44,7 +44,8 @@ public class SnakePatrolV2_S : MonoBehaviour
     {
         if (collision.transform.CompareTag("Player"))
         {
-            PlayerHealth_S.instance.TakeDamage(damageOnCollision);
+            bool activateInvincibility = true;
+            PlayerHealth_S.instance.TakeDamage(damageOnCollision, activateInvincibility);
         }
     }
 }

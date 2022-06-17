@@ -10,6 +10,8 @@ public class Moonwalk_S : MonoBehaviour
     public Animator playerAnimator;
     public Text moonwalkText;
 
+    public AudioSource mainMusic;
+
     private bool isInRange;
 
     [HideInInspector]
@@ -58,6 +60,9 @@ public class Moonwalk_S : MonoBehaviour
             playerSprite.flipX = false;
 
             moonwalkText.enabled = false;
+
+            mainMusic.Stop();
+            GetComponent<AudioSource>().Play();
         }
         //Stop dancing
         else if (Input.GetKeyDown(KeyCode.E) && isDancing)
@@ -70,7 +75,10 @@ public class Moonwalk_S : MonoBehaviour
             playerAnimator.Play("PlayerIdle");
 
             target = waypoints[0];
-            destPoint = 0; 
+            destPoint = 0;
+
+            GetComponent<AudioSource>().Stop();
+            mainMusic.Play();
         }
 
         if (isDancing)

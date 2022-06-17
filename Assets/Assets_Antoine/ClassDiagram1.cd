@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EnnemyPatrol_A">
+    <Position X="6.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAECAAAAAAIAAEAAAABAIAAQAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\Enemy_Antoine\EnnemyPatrol_A.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeakSpot_A">
+    <Position X="6.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\Enemy_Antoine\WeakSpot_A.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Health_A">
+    <Position X="6.75" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgEAwAAAAAg=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\YetiBoss_Antoine\Boss_Health_A.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Hotzone">
+    <Position X="8.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAAAAAAAAAAEAAAAAAAQAABAIAAEA=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\YetiBoss_Antoine\Boss_Hotzone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_TriggerArea">
+    <Position X="10.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAEA=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\YetiBoss_Antoine\Boss_TriggerArea.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PassageBossLevel">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAACAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\YetiBoss_Antoine\PassageBossLevel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player_Combat_Boss_A">
+    <Position X="10.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAEAAgARAIQEAAAAAAAAAIAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Assets_Antoine\Scripts\YetiBoss_Antoine\Player_Combat_Boss_A.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

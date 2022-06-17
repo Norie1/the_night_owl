@@ -93,8 +93,8 @@ public class PlayerMovement_S : MonoBehaviour
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, 0.38f, foundationLayer);
 
             //Verification of proximity with a wall
-            onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position);
-            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position);
+            onTheWallR = Physics2D.OverlapArea(WallCheckRUp.position, WallCheckRDown.position, foundationLayer);
+            onTheWallL = Physics2D.OverlapArea(WallCheckLUp.position, WallCheckLDown.position, foundationLayer);
 
             if (Input.GetButtonDown("Jump"))
             {
@@ -260,21 +260,28 @@ public class PlayerMovement_S : MonoBehaviour
         spriteRenderer.flipX = !RespawnManager_S.instance.facingRight;
     }
 
+    private IEnumerator Wait(int amount)
+    {
+        yield return new WaitForSeconds(amount);
+    }
+
     private IEnumerator OnTriggerEnter2D(Collider2D collision)
     {
+        bool activateInvincibility = false;
         if (collision.tag == "FallDetector")
         {
-            playerHealth.TakeDamage(10);
+
+            playerHealth.TakeDamage(10, activateInvincibility);
             RespawnPlayer();
 
             playerFall = true;
-            yield return new WaitForSeconds(3f);
+            yield return new WaitForSeconds(0.1f);
             playerFall = false;
         }
         else if (collision.tag == "Lava")
         {
             playerHealth.isInvincible = false;
-            playerHealth.TakeDamage(100);
+            playerHealth.TakeDamage(100, activateInvincibility);
         }
     }
 }

@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AudioManager">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAAAAAACAAAAAAQCAAAAAAAABAEAAAAAAAAAAEEEA=</HashCode>
+      <FileName>Assets\Scripts\AudioManager\AudioManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CameraFollow">
+    <Position X="11.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAEAAA=</HashCode>
+      <FileName>Assets\Scripts\Camera\CameraFollow.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dialog">
+    <Position X="3" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\DialogManager\Dialog.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogManager">
+    <Position X="4.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAJAAAACACAAACAAAABgAAAAAABAAAAAAAIAAAAAAkA=</HashCode>
+      <FileName>Assets\Scripts\DialogManager\DialogManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogTrigger">
+    <Position X="6.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAICAAAAAAAAAQAAAAAEAQAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DialogManager\DialogTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageTrigger">
+    <Position X="13.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\DialogManager\MessageTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Quit">
+    <Position X="10" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\EndScene\Quit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Attack">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAACAAgAAAAAAAACAAAABQAAAAAAAAAEAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\BossLevel\Boss_Attack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Behaviour">
+    <Position X="15.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgACiEIAAAAAAIAgAAAUEAMAYAGAgAUAAKACAAUA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\BossLevel\Boss_Behaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Enrage">
+    <Position X="8.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\BossLevel\Boss_Enrage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Health">
+    <Position X="10" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAwAAAAAg=</HashCode>
+      <FileName>Assets\Scripts\Enemy\BossLevel\Boss_Health.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth">
+    <Position X="10" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIACAAAAAgAAAAAAAAAAAEAAAAAgAAwAIAAAA=</HashCode>
+      <FileName>Assets\Scripts\Enemy\EnemyInter\EnemyHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exit">
+    <Position X="11.75" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAACAA=</HashCode>
+      <FileName>Assets\Scripts\IntroScene\Exit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadSpecificScene">
+    <Position X="10" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LoadingScene\LoadSpecificScene.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TransitionShop">
+    <Position X="6.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\LoadingScene\TransitionShop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MainMenuScript">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\MainMenuScript.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PauseMenu">
+    <Position X="6.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQgAAAAAAAAgAAAABAAAABAAAAAAAAQABAAAAgAAAA=</HashCode>
+      <FileName>Assets\Scripts\Menu\PauseMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SettingsMenu">
+    <Position X="8.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAJAgCAAAABAAAAAIAgAAAAAQQ=</HashCode>
+      <FileName>Assets\Scripts\Menu\SettingsMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerFireBall">
+    <Position X="13.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQgAAAAAAAAAAAAAAAAAAAAABEAAABAAAAACBAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\FireBall\PlayerFireBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectile">
+    <Position X="11.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQBAEAQAAAAAAAEAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\FireBall\Projectile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectile_Enemy">
+    <Position X="15.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAQBAEAQAAAAAAAEAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\FireBall\Projectile_enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPickup">
+    <Position X="4.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAACAAACAAAAAIAAAAkAAAAEAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\HealthPickup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectPickUp">
+    <Position X="4.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAAAAAAAAAAAAAEAAAAEBAAAAAAAACAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Objects\ObjectPickup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RopeRatio">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAQCAAAAAAAAAAAAAAAAAAAAABAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Objects\RopeRatio.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisappearingPlatforms">
+    <Position X="8.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Platform\DesappearingPlatforms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovingPlatforms">
+    <Position X="3" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAQAAAAAAAAAAIAAQAAAAAgAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Platform\MovingPlatforms.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GrapplingHook">
+    <Position X="13.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAgAAAAAAAAACAEAgAAAACAAQAAABAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\GrapplingHook.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBar">
+    <Position X="3" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAgEAgAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\HealthBar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Player_Info">
+    <Position X="8.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\Player_Info.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerCombatBoss">
+    <Position X="10" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAAEAAgARAIQEAAAAAAAAAIAAAAAAAAgAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerCombatBoss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerCombatMob">
+    <Position X="11.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAQAAAAAAAIEAAgABAIQEAAAAAEAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerCombatMob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHealth">
+    <Position X="17" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACIACAAABACAAAAgAQAAQBEAAABAAAAgAIQAMA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerHealth.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement">
+    <Position X="17" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAQIAkAAAiAAIiAAAAAQASUBAlxAAECoAAQAAKAAQEA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerMovement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSave">
+    <Position X="8.25" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAACIAAAAAAAAgAQAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Player\PlayerSave.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSystem">
+    <Position X="8.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Resources\SaveSystem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Checkpoint">
+    <Position X="13.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAIAAECAAAEAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Spawn\Checkpoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelIntro">
+    <Position X="6.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAKAACAAABAAAAAQAAAAAEAQAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Spawn\LevelIntro.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelRestart">
+    <Position X="11.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Scripts\Spawn\LevelRestart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSpawn">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Spawn\PlayerSpawn.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RespawnManager">
+    <Position X="15.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Scripts\Spawn\RespawnManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

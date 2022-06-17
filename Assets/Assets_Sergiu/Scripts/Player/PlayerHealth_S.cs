@@ -46,22 +46,8 @@ public class PlayerHealth_S : MonoBehaviour
         playerMovement = PlayerMovement_S.instance;
     }
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            TakeDamage(50);
-        }
-
-        //Appuyer sur J ajoute 20HP au joueur
-        if (Input.GetKeyDown(KeyCode.J))
-        {
-            HealPlayer(20);
-        }
-    }
-
     [HideInInspector]
-    public void TakeDamage(int damage)
+    public void TakeDamage(int damage, bool invincibility)
     {
         if (!isInvincible)
         {
@@ -71,9 +57,10 @@ public class PlayerHealth_S : MonoBehaviour
             //Respawn
             if (currentHealth <= 0)
             {
-                StartCoroutine(RespawnPlayer());
+                //StartCoroutine(RespawnPlayer());
+                RespawnPlayer();
             }
-            else
+            else if (invincibility)
             {
                 isInvincible = true;
                 StartCoroutine(InvincibilityFlash());
@@ -109,8 +96,8 @@ public class PlayerHealth_S : MonoBehaviour
 
         //Bool used by DialogTrigger script in order to be able to advance in the dialog
         postmortemDialog = true;
-        yield return new WaitForSeconds(1f);
-        playerDeath = false;
+        yield return new WaitForSeconds(0.1f);
+        playerDeath = false; 
     }
 
     //Apply a flash effect on the player (graphics only) when invincible - after taking damage

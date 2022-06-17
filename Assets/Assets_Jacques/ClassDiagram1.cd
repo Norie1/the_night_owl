@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Boss_Health_J">
+    <Position X="12.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAgAAAAAg=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Boss_Health_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Boss_Health_LastMob">
+    <Position X="14.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAgAAwAIAAAg=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Boss_Health_LastMob.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Destroy_Bulle_Pnj">
+    <Position X="16.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAABCAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Destroy_Bulle_Pnj.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy_FireBall">
+    <Position X="18" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Enemy_FireBall.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth_J">
+    <Position X="12.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIADAAAAAgAAAAAAAAAAAEAAABAgAAwAIAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\EnemyHealth_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnnemyPatrol_J">
+    <Position X="14.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAECAAAAAAIAAEAAAABAIAAQAAAAAgAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\EnnemyPatrol_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Key_Boss">
+    <Position X="16.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAEAAAAAAAAEAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Key_Boss.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Key_J">
+    <Position X="18" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAEAAAAAAAAEAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Key_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="KeyBoss_J">
+    <Position X="12.75" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAEAAAAAAAAEAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\KeyBoss_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LoadSpecificSceneInDonjon">
+    <Position X="14.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\LoadSpecificSceneInDonjon.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LockedDoor_J">
+    <Position X="16.25" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAAAAAAAAAgGAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\LockedDoor_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectil_Enemy">
+    <Position X="18" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAABAEAAAAAAAAAEAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\Projectil_Enemy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="transi_overWorld">
+    <Position X="19.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\transi_overWorld.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WeakSpot_test_Jump_J">
+    <Position X="19.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Jacques\Scripts\WeakSpot_test_Jump_J.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

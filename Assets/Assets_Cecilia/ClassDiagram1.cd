@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="bordevie">
+    <Position X="5.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAgEAgAAAAA=</HashCode>
+      <FileName>Assets\Assets_Cecilia\Scripts\bordevie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="enemypatrol">
+    <Position X="7.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACQAAAAAIAAAQAAAAAIAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Cecilia\Scripts\enemypatrol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMouvement">
+    <Position X="9.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAgAAAgAAAAAEAAAAAAAAAEAgAAAIEAQAAAAEAAA=</HashCode>
+      <FileName>Assets\Assets_Cecilia\Scripts\Playermouvement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement1">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAEgAAIAAEAAAAAAAAAEAgAEAIAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Cecilia\Scripts\Playermouvement1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="viedujoueur">
+    <Position X="7.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAIACAAAAAAAAAAAAAAAAAEAAAAAAAAgAAQAAA=</HashCode>
+      <FileName>Assets\Assets_Cecilia\Scripts\viedujoueur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="weakSpot_C">
+    <Position X="9.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Cecilia\Scripts\weakSpot_C.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
