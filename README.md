@@ -32,6 +32,12 @@ Features and Updates are available on the game, feel free to add anything.
 
 This project does not have any license yet.
 
+## Presentation :
+
+```
+https://www.youtube.com/watch?v=5wKti8yEgRU
+```
+
 ## Authors :
 
 * Jacques Le Guevel
