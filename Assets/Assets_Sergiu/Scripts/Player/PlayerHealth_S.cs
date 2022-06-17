@@ -57,8 +57,7 @@ public class PlayerHealth_S : MonoBehaviour
             //Respawn
             if (currentHealth <= 0)
             {
-                //StartCoroutine(RespawnPlayer());
-                RespawnPlayer();
+                StartCoroutine(RespawnPlayer());
             }
             else if (invincibility)
             {

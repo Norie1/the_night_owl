@@ -767,7 +767,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d167f8444d7ac3d4c962635d106c35e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbOfCheckpoints: 7
+  nbOfCheckpoints: 8
   checkpoints: 
   facingRight: 0
 --- !u!4 &133836771
@@ -38606,7 +38606,7 @@ GameObject:
   - component: {fileID: 1145164450}
   - component: {fileID: 1145164449}
   m_Layer: 0
-  m_Name: Mushroon
+  m_Name: Moonshroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38646,7 +38646,7 @@ MonoBehaviour:
     - "A   MUSHROOM.....   \nON THE......   MOON??"
     - 'A   MOON   MUSHROOM.
 
-      A....   MUSHROON?'
+      A....   MOONSHROOM?'
     - "HMMM.... \nI  WONDER  WHAT  THAT  MEANS."
     - 'ANYWAY,   I    DON''T   KNOW   WHY   '
     - BUT   I   FEEL   A   SUDDEN   URGE   TO   DOUBLE   JUMP.
@@ -43720,6 +43720,16 @@ Tilemap:
       m_TileObjectToInstantiateIndex: 65535
       dummyAlignment: 0
       m_AllTileFlags: 1073741825
+  - first: {x: 351, y: 42, z: 0}
+    second:
+      serializedVersion: 2
+      m_TileIndex: 0
+      m_TileSpriteIndex: 0
+      m_TileMatrixIndex: 0
+      m_TileColorIndex: 0
+      m_TileObjectToInstantiateIndex: 65535
+      dummyAlignment: 0
+      m_AllTileFlags: 1073741825
   - first: {x: 389, y: 42, z: 0}
     second:
       serializedVersion: 2
@@ -43872,7 +43882,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 7
+  - m_RefCount: 8
     m_Data: {fileID: 11400000, guid: f1df9d2dc0518e9449852b07477be481, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: bfc8d54b0b4880e409d6413f278667d5, type: 2}
@@ -43953,7 +43963,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: e878704f22761cd46a4bbc80f95eeed9, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 7
+  - m_RefCount: 8
     m_Data: {fileID: 21300000, guid: 7cfcb96219e0eeb4fb1aff4e621943d1, type: 3}
   - m_RefCount: 36
     m_Data: {fileID: 21300000, guid: 8ce0942ab0e5f0e40b53b4978b374afb, type: 3}
@@ -44034,7 +44044,7 @@ Tilemap:
   - m_RefCount: 1
     m_Data: {fileID: 21300000, guid: 6ffc20e740af3b040bec7bfb4951767e, type: 3}
   m_TileMatrixArray:
-  - m_RefCount: 107
+  - m_RefCount: 108
     m_Data:
       e00: 1
       e01: 0
@@ -44053,7 +44063,7 @@ Tilemap:
       e32: 0
       e33: 1
   m_TileColorArray:
-  - m_RefCount: 107
+  - m_RefCount: 108
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
@@ -45204,6 +45214,81 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1686062095
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1686062096}
+  - component: {fileID: 1686062098}
+  - component: {fileID: 1686062097}
+  m_Layer: 0
+  m_Name: Checkpoint (7)
+  m_TagString: Untagged
+  m_Icon: {fileID: 7866945982896999795, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1686062096
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686062095}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 289.07, y: 42.25, z: 62.09787}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2059682037}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1686062097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686062095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8b95e635efb194f8350fd30cba1322, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  checkpointID: 7
+  disableCheckpointMsg: 0
+  facingRight: 1
+  checkpointText: {fileID: 1070454961}
+--- !u!61 &1686062098
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1686062095}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 5.368321}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 13.976296}
+  m_EdgeRadius: 0
 --- !u!1 &1691852448
 GameObject:
   m_ObjectHideFlags: 0
@@ -60118,6 +60203,7 @@ GameObject:
   - component: {fileID: 1773735049}
   - component: {fileID: 1773735051}
   - component: {fileID: 1773735052}
+  - component: {fileID: 1773735053}
   m_Layer: 0
   m_Name: DeathZone
   m_TagString: FallDetector
@@ -60373,6 +60459,32 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 27.506866, y: 0.7086797}
+  m_EdgeRadius: 0
+--- !u!61 &1773735053
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1773735042}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 332.1338, y: 44.01689}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 43.86258, y: 1.0170898}
   m_EdgeRadius: 0
 --- !u!1 &1773905296
 GameObject:
@@ -63325,6 +63437,7 @@ Transform:
   - {fileID: 1290348358}
   - {fileID: 1522191926}
   - {fileID: 732371854}
+  - {fileID: 1686062096}
   m_Father: {fileID: 1565573907}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
