@@ -4,12 +4,14 @@ using UnityEngine.UI;
 public class DialogTrigger : MonoBehaviour
 {
     public Text interactMessage;
+   // public DialogBox dialogBox;
 
     public Dialog dialog;
 
     private bool isInRange;
 
     DialogManager dialogManager;
+
 
     void Start()
     {
@@ -23,11 +25,12 @@ public class DialogTrigger : MonoBehaviour
         {
             if (!dialogManager.dialogStarted)
             {
+                interactMessage.enabled = true;
                 dialogManager.StartDialog(dialog);
             }
             else if (!dialogManager.DisplayNextSentence())
             {
-                interactMessage.enabled = true;
+                interactMessage.enabled = false;
             }
         }
     }
@@ -37,7 +40,6 @@ public class DialogTrigger : MonoBehaviour
         if (collision.tag == "Player")
         {
             isInRange = true;
-            interactMessage.enabled = true;
         }
       
     }
@@ -46,8 +48,8 @@ public class DialogTrigger : MonoBehaviour
     {
         if (collision.tag == "Player")
         {
+            dialogManager.EndDialog();
             isInRange = false;
-            interactMessage.enabled = false;
         }      
     }
 }
