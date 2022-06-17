@@ -136,4 +136,9 @@ public class PlayerHealth : MonoBehaviour
         currentHealth = maxHealth;
         healthBar.SetHealth(currentHealth);
     }
+
+    public bool IsFullLife()
+    {
+        return currentHealth == maxHealth;
+    }
 }
