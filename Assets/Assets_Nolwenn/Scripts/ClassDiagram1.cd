@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TriggerAreaCheck">
+    <Position X="13.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAABAAAAEA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\TriggerAreaCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy_attack">
+    <Position X="6.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAgAAAAAAAACAAAAAQAAAAAAAAAEAgAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\Enemy_attack.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy_behaviour">
+    <Position X="9.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgACiEIAAAAAAIAgAAAUEAMAYAGAgAUAAKACAAUA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\Enemy_behaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Enemy_weakspot_N">
+    <Position X="6.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAgAAAAAAAAAEAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\Enemy_weakspot_N.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyFlying_behaviour">
+    <Position X="8" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAEAIAAMiAAgAAMAAKAAAEAAEAAEQAMAQBAIEABAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\EnemyFlying_behaviour.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EnemyHealth_N">
+    <Position X="11.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASADAAYACAAAAAiAACgEAAAAAAEAAAIAAAAwAIAAEA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\EnemyHealth_N.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HotZoneCheck">
+    <Position X="13.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAAAAAAAAAAAAAAAEAAAAAAAQAABAIAAEA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\HotZoneCheck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Key">
+    <Position X="1.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\Key.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lever">
+    <Position X="1.75" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\Lever.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LockedDoor">
+    <Position X="3.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAQAAAAAAAAAAAAgGAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\LockedDoor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectTrigger">
+    <Position X="3.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASAAACAACAQAAAAEAAAAAAAAEAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\ObjectTrigger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ActivableMovingPlatform">
+    <Position X="1.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAAAAAAAAAAQAAAAEAAAAAAAAAIAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Nolwenn\Scripts\ActivableMovingPlatform.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

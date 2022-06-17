@@ -20,9 +20,12 @@ The technology used to make this game is Unity : ```<https://unity.com/>
 ## Current Features :
 
 * Local game
+* Save/Load system
 * Story cutscenes 
 * Cutscenes to introduce levels
-* Six functional levels
+* Five functional levels
+* Multiple weapons
+* Interactive levels
 
 ## Future Features :
 
@@ -31,6 +34,12 @@ Features and Updates are available on the game, feel free to add anything.
 ## License :
 
 This project does not have any license yet.
+
+## Presentation :
+
+```
+https://www.youtube.com/watch?v=5wKti8yEgRU
+```
 
 ## Authors :
 
