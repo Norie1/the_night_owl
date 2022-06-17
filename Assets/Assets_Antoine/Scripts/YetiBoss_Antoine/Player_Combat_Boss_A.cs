@@ -1,6 +1,6 @@
 using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+	using System.Collections.Generic;
+	using UnityEngine;
 	
 	public class Player_Combat_Boss_A : MonoBehaviour
 	{
@@ -36,25 +36,36 @@ using UnityEngine;
 	    public void PlayerAttack()
 	    {
 			animator.Play("Attack1");
-			GameObject player = GameObject.Find("Player");
-            SpriteRenderer sprite = player.GetComponent<SpriteRenderer>();
 			
-			if(sprite.flipX == false)
-			{
+			//GameObject player = GameObject.Find("Player");
+            
+            SpriteRenderer sprite = /*player.*/GetComponent<SpriteRenderer>();
+			
+			if(sprite.flipX == false){
 				hitEnemies = Physics2D.OverlapCircleAll(attackPointRight.position, attackRange, Boss);
 			}
-			else 
-			{
+			else {
 				hitEnemies = Physics2D.OverlapCircleAll(attackPointLeft.position, attackRange, Boss);
 			}
 			foreach(Collider2D enemy in hitEnemies)
 			{
-				Boss_Health_A bha = enemy.GetComponent<Boss_Health_A>();
+				Boss_Health bhj = enemy.GetComponent<Boss_Health>();
 				
-				if (bha != null)
+				if(bhj != null)
 				{
-					enemy.GetComponent<Boss_Health_A>().TakeDamage(attackDamage);
+					enemy.GetComponent<Boss_Health>().TakeDamage(attackDamage);
+
 				}
 			}
 		}
+		
+	/*	public void OnDrawGizmosSelected()
+		{
+			if (attackPoint == null) {
+				return;
+			}
+				
+			Gizmos.DrawWireSphere(attackPoint.position, attackRange);
+		}*/
+	    
 	}
