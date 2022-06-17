@@ -16,6 +16,6 @@ git clone https://github.com/Norie1/the_night_owl.git
 
 ## Open the project in Unity
 
-You need to open the_night_owl from Unity Hub in order to edit the levels.
+You need to open the_night_owl from Unity Hub and you can start editing the game.
 
 
