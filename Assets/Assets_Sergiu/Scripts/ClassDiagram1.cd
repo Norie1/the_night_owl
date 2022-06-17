@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CameraFollow_S">
+    <Position X="11.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QARAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Camera\CameraFollow_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Dialog_S">
+    <Position X="13.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Dialog\Dialog_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogManager_S">
+    <Position X="11.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAJAAAACACAAACAAAABgAAAAAABAAAAAAAIAAAAAAkA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Dialog\DialogManager_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DialogTrigger_S">
+    <Position X="15.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAAACAICAAAAAAAAAQAAAAAEAQAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Dialog\DialogTrigger_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MessageTrigger_S">
+    <Position X="13.5" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAEAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Dialog\MessageTrigger_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BatPatrol_S">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACAAAAAAIAAEAAAABAIAAQAAAAAgQAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Enemies\Bat\BatPatrol_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BatPatrolV2_S">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAACAAAAAAIAAEAAAABAIAAQAAAAAgQAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Enemies\Bat\BatPatrolV2_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BatWeakpoint_S">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQABAgAACAAAAAAAAAAEAAAAEAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Enemies\Bat\BatWeakpoint_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnakePatrol_S">
+    <Position X="13.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAIAAEAAAABAIAAQAAAAAgQAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Enemies\Snake\SnakePatrol_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnakePatrolV2_S">
+    <Position X="15.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAAIAAEAAAABAIAAQAAAAAgQAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Enemies\Snake\SnakePatrolV2_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnakeWeakSpot_S">
+    <Position X="17" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQABAAAAAAAAEAAAAAAEAAAAEAAAAAAAAgAAIAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Enemies\Snake\SnakeWeakSpot_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Projectile_S">
+    <Position X="24" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAAAAAAAAAAAAAAAAAEBAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Objects\Projectile_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisappearingPlatform_S">
+    <Position X="22.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Platforms\DisappearingPlatform_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DisappearingPlatformV2_S">
+    <Position X="20.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQBAAABAAAIABAAAAAAAAAAAAAgAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Platforms\DisappearingPlatformV2_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovingPlatform_S">
+    <Position X="18.75" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAACAAAAAQAAEAAAAAAAIAAQAAAAAgAAABAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Platforms\MovingPlatform_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MovingPlatformV2_S">
+    <Position X="17" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAIAQAAEAAAAAAAAAAQAAAAAgRAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Platforms\MovingPlatformV2_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthBar_S">
+    <Position X="10" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAgEAgAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Player\HealthBar_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerHealth_S">
+    <Position X="10" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAgACIACAAABACAAAAgAQAAQBUAAAAAAAAgAIQAMA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Player\PlayerHealth_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerMovement_S">
+    <Position X="8.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kAQIAkAAAiAAIiAAgABQASUBAlRAEECoAAQAIKAIQEA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Player\PlayerMovement_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Checkpoint_S">
+    <Position X="18.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAACAAAAAAAIAAECAAAEAAAAAAAAAAAAgAAEA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Spawn\Checkpoint_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PlayerSpawn_S">
+    <Position X="22.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Spawn\PlayerSpawn_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RespawnManager_S">
+    <Position X="20.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAABBAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Spawn\RespawnManager_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FireStarter_S">
+    <Position X="22.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAACAACAAAAAAAAQQAAAAAEAQAAAAABAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\FireStarter_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelIntro_S">
+    <Position X="18.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAACAACAAABAAAAAQAAAAAEgQAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\LevelIntro_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="LevelOutro_S">
+    <Position X="17" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAEAACAAAJAAIABQQAQCBFYAAAABCAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\LevelOutro_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Moonwalk_S">
+    <Position X="15.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAACAAABAAIAAAAAQEBFJAAAABAAAECAAAIEA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\Moonwalk_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Platforms_S">
+    <Position X="24" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAACAACAAAAAAAAIQAAAAAEAQAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\Platforms_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SnakeTrigger_S">
+    <Position X="13.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAIAGAACAAANAAQABQAAQAAEAAAAAAABAADAIAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\SnakeTrigger_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Volcano_S">
+    <Position X="20.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAUAAACAACAAAAAAAAAQIAAAAFAQAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Triggers\Volcano_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HealthPickup_S">
+    <Position X="24" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAQAACAAACAAAAAIAAAAkAAAAEAAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>Assets\Assets_Sergiu\Scripts\Objects\HealthPickup_S.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

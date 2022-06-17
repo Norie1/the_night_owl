@@ -174,6 +174,8 @@ GameObject:
   - component: {fileID: 4068691573406644288}
   - component: {fileID: 4068691573406644295}
   - component: {fileID: 4068691573406644294}
+  - component: {fileID: 3787869791637857437}
+  - component: {fileID: 7656423584625587387}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -289,9 +291,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f48ed36ed3aa3204b9404547b07cacc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pTransform: {fileID: 4068691573406644349}
-  pfb: {fileID: 4068691573406644288}
-  ph: {fileID: 4068691573406644290}
 --- !u!114 &4068691573406644291
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -307,6 +306,7 @@ MonoBehaviour:
   movementSpeed: 200
   jumpForce: 200
   dashSpeed: 10
+  freezePlayerMovement: 0
   isJumping: 0
   activeDash: 0
   isGrounded: 0
@@ -325,7 +325,7 @@ MonoBehaviour:
   WallCheckLUp: {fileID: 4068691573214874373}
   WallCheckLDown: {fileID: 4068691573558709274}
   respawnPoint: {x: 0, y: 0, z: 0}
-  fallDetector: {fileID: 0}
+  deathZone: {fileID: 0}
 --- !u!114 &4068691573406644290
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,7 +345,6 @@ MonoBehaviour:
   healthBar: {fileID: 0}
   playerSprite: {fileID: 4068691573406644348}
   playerMovement: {fileID: 4068691573406644291}
-  inventory: {fileID: 0}
   playerDeath: 0
 --- !u!114 &4068691573406644289
 MonoBehaviour:
@@ -445,6 +444,43 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &3787869791637857437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068691573406644292}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51655688daf30402487ff21bb6d83f33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Line: {fileID: 0}
+  distance: 10
+  Platform:
+    serializedVersion: 2
+    m_Bits: 64
+  step: 0.05
+--- !u!232 &7656423584625587387
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4068691573406644292}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 1
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 0}
+  m_AutoConfigureDistance: 1
+  m_Distance: 0.005
+  m_MaxDistanceOnly: 0
 --- !u!1 &4068691573505303949
 GameObject:
   m_ObjectHideFlags: 0

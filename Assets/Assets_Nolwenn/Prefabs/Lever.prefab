@@ -101,6 +101,7 @@ MonoBehaviour:
   myEvents:
     m_PersistentCalls:
       m_Calls: []
+  soundEffect: {fileID: 8300000, guid: c0f3731301bd96142a489203b6da738f, type: 3}
   activated: 0
 --- !u!61 &6316889549717356325
 BoxCollider2D:

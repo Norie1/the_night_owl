@@ -7,6 +7,7 @@ abstract public class ObjectTrigger : MonoBehaviour
     public UnityEvent myEvents;
     protected bool isInRange;
     protected Text interactUI;
+    public AudioClip soundEffect;
 
     // Start is called before the first frame update
     protected void Start()

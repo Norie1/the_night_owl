@@ -139,3 +139,4 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  soundEffect: {fileID: 8300000, guid: 6932ccfac9c522d46baf83480fe40e26, type: 3}

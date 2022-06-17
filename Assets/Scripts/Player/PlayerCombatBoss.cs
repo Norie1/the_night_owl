@@ -46,19 +46,22 @@
 			}
 			foreach(Collider2D enemy in hitEnemies)
 			{
+				Boss_Health bh = enemy.GetComponent<Boss_Health>();
 				Boss_Health_A bhj = enemy.GetComponent<Boss_Health_A>();
 				Boss_Health_LastMob bhlm = enemy.GetComponent<Boss_Health_LastMob>();
-				
+				if(bh != null)
+				{
+					bh.TakeDamage(attackDamage);	
+				}
 				if(bhj != null)
 				{
-					enemy.GetComponent<Boss_Health_A>().TakeDamage(attackDamage);
+					bhj.TakeDamage(attackDamage);
 
 				}
 				else if(bhlm != null)
 				{
-					enemy.GetComponent<Boss_Health_LastMob>().TakeDamage(attackDamage);
+					bhlm.TakeDamage(attackDamage);
 				}
-				
 
 			}
 		}

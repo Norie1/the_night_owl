@@ -51,6 +51,7 @@ public class Lever : ObjectTrigger
         if(Input.GetKeyDown(KeyCode.E) && !activated && isInRange)
         {
             activated = true;
+            AudioManager.instance.PlayClipAt(soundEffect, transform.position);
             interactUI.enabled = false;
             myEvents.Invoke();
         }

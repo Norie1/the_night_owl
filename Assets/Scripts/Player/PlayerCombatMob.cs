@@ -66,14 +66,14 @@
 			}
 		}
 		
-		/*public void OnDrawGizmosSelected()
+		public void OnDrawGizmosSelected()
 		{
-			if (attackPoint == null) {
+			if (attackPointRight == null) {
 				return;
 			}
 				
-			Gizmos.DrawWireSphere(attackPoint.position, attackRange);
-		}*/
+			Gizmos.DrawWireSphere(attackPointRight.position, attackRange);
+		}
 	    
 	}
 	
