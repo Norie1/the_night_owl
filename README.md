@@ -41,6 +41,15 @@ This project does not have any license yet.
 https://www.youtube.com/watch?v=5wKti8yEgRU
 ```
 
+## Basic inputs :
+
+* Press "X" to roll
+* Press "V" to slash with your sword 
+* Press "E" to interact
+* Press "space" to jump
+* Press "leftClick" to throw a fire ball
+* movements directions are on "W,Q,S,D" keybord inputs, or directionnal arrows
+
 ## Authors :
 
 * Jacques Le Guevel
